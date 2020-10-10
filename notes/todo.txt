@@ -1,3 +1,4 @@
+Try Inter font
 Bring the dynamic stuff into FundingGrid
 Once that's working well build NewsGrid and CategoriesGrid off it.
 use <Img> for logo in Header
