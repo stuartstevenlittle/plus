@@ -57,8 +57,18 @@ module.exports = {
         '96': '24rem',
       },
       colors: {
-        'warm-gray-200': 'hsl(40, 15%, 92%)',
-        'warm-gray-400': 'hsl(40, 15%, 67%)'
+        // 'warm-gray-200': 'hsl(40, 15%, 92%)',
+        // 'warm-gray-400': 'hsl(40, 15%, 67%)'
+        'warm-grey-50': 'hsl(40, 23%, 97%)',
+        'warm-grey-100': 'hsl(43, 13%, 90%)',
+        'warm-grey-200': 'hsl(40, 15%, 80%)',
+        'warm-grey-300': 'hsl(39, 11%, 69%)',
+        'warm-grey-400': 'hsl(41, 8%, 61%)',
+        'warm-grey-500': 'hsl(41, 8%, 48%)',
+        'warm-grey-600': 'hsl(41, 9%, 35%)',
+        'warm-grey-700': 'hsl(37, 11%, 28%)',
+        'warm-grey-800': 'hsl(40, 13%, 23%)',
+        'warm-grey-900': 'hsl(42, 15%, 13%)',
       },
       opacity: {
         '90': '.9',
