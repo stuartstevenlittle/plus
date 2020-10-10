@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from '../components/Slider'
 // import PostGrid from '../components/PostGrid'
-// import Section from '../components/Section'
+import Section from '../components/Section'
 // import CategoryGrid from '../components/CategoryGrid'
 import FunderGrid from '../components/FunderGrid'
 import { graphql } from 'gatsby'
@@ -21,7 +21,9 @@ const Home = ({ data }) => {
         <p className="pb-8 max-w-4xl mx-auto text-2xl text-center text-gray-600">“Our vision is for a world of wellbeing where people experiencing mental distress are fairly treated with compassion, understanding and respect and can follow their hopes and dreams wherever they lead.”</p>
         <CategoryGrid categories={categories} />
       </Section> */}
-      <FunderGrid funders={funders} />
+      <Section title="Funding Providers" colour='white'>
+        <FunderGrid funders={funders} />
+      </Section>
     </div>
   )
 }

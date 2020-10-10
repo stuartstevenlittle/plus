@@ -1,3 +1,4 @@
-create <Section> using FunderGrid
+Bring the dynamic stuff into FundingGrid
+Once that's working well build NewsGrid and CategoriesGrid off it.
 use <Img> for logo in Header
 in mobile footer put elan below plus
