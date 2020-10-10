@@ -5,5 +5,8 @@ class=				className=
 stroke-width 		strokeWidth
 stroke-linejoin 	strokeLinejoin
 stroke-linecap 		strokeLinecap
+fill-rule			fillRule
+clip-rule			clipRule
+
 a href= 			Link to=
 

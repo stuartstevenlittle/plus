@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css" />
+        {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css" /> */}
       </Helmet>
       <div className="h-stretch min-h-screen text-gray-900">
         <div className={`mx-auto shadow ${route === 'digital-garden' ? 'bg-gray-50' : 'bg-white'} `}>

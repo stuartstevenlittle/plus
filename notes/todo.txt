@@ -1,5 +1,15 @@
-Try Inter font
 Bring the dynamic stuff into FundingGrid
 Once that's working well build NewsGrid and CategoriesGrid off it.
 use <Img> for logo in Header
 in mobile footer put elan below plus
+redesign logo - the teal becomes the site primary colour
+Try Inter font
+
+
+Categories:
+Digital Garden
+Inspiring Words
+Real People, Real Stories
+What's Happening
+Coaching Services
+About plus

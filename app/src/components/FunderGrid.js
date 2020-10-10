@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+// import { Link } from 'gatsby'
+// import Img from 'gatsby-image'
 
 
 const FunderGrid = ({ funders }) => (
@@ -30,17 +30,17 @@ const FunderGrid = ({ funders }) => (
 // }
 
 
-const Funder = ({ funder }) => (
-  <li className="col-span-1 flex flex-col px-8 mt-2">
-    <Link className="flex-1 flex flex-col" to={funder.slug.current}>
-      <div className="flex items-start">
-        <div>
-          <Img className="h-32 w-32 flex-shrink-0 mx-auto" fluid={funder.image.asset.fluid} alt={funder.title} />
-        </div>
-      </div>
-    </Link>
-  </li >
-)
+// const Funder = ({ funder }) => (
+//   <li className="col-span-1 flex flex-col px-8 mt-2">
+//     <Link className="flex-1 flex flex-col" to={funder.slug.current}>
+//       <div className="flex items-start">
+//         <div>
+//           <Img className="h-32 w-32 flex-shrink-0 mx-auto" fluid={funder.image.asset.fluid} alt={funder.title} />
+//         </div>
+//       </div>
+//     </Link>
+//   </li >
+// )
 
 
 export default FunderGrid
