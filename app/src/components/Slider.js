@@ -23,7 +23,7 @@ const Slider = ({ slideData }) => {
   })
 
   return (
-    <Swiper id="main" tag="section" wrapperTag="ul"
+    <Swiper className="hidden sm:block" id="main" tag="section" wrapperTag="ul"
       loop={true}
       speed={2000}
       effect="fade"
