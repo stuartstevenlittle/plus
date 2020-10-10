@@ -75,7 +75,7 @@ export default function Header() {
 
       Open: "block", closed: "hidden"
     --> */}
-      <div className="block sm:hidden">
+      <div className="hidden sm:hidden">
         <div className="pt-2 pb-3 space-y-1">
           <Link to="#" className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">
             Home
