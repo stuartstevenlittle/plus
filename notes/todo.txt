@@ -1,9 +1,9 @@
-Once that's working well build NewsGrid and CategoriesGrid off it.
+NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
 in mobile footer put elan below plus
 
 
 Categories:
-Slef-Help
+Self-Help
 Inspiring Words
 Real People, Real Stories
 What's Happening

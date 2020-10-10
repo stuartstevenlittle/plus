@@ -1,6 +1,7 @@
 import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
+import missionStatement from './missionStatement'
 import category from './category'
 import post from './post'
 import author from './author'
@@ -13,6 +14,7 @@ import plantType from './plantType'
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
+    missionStatement,
     post,
     author,
     category,
