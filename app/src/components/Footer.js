@@ -6,14 +6,14 @@ const Footer = () => {
         {/* Left */}
         <div className="mt-2 order-3 md:mt-0 md:order-1">
           <p className="text-center  text-sm sm:text-base leading-6 text-gray-400">
-            Website by <a href="https://www.elansoftware.co.uk" className="text-blue-800 hover:text-blue-700 animate" >Elan Software</a>
+            Website by <a href="https://www.elansoftware.co.uk" className="text-blue-700 hover:text-blue-800 animate" >Elan Software</a>
           </p>
         </div>
 
         {/* Middle */}
         <div className="mt-2 order-2 md:mt-0 md:order-1">
           <p className="text-center text-base leading-6 text-gray-400">
-            &copy; Plus Perth 2020
+            &copy; Plus Perth {new Date().getFullYear()}
           </p>
           {/* {/* <div className="mt-4 md:mt-0 md:order-2">
           <p className="text-center text-sm sm:text-base leading-6 text-gray-400">
