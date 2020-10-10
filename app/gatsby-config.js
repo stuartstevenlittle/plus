@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 dotenv.config({ path: '.env' })
-export default {
+module.exports = {
   siteMetadata: {
     title: 'PLUS Perth',
     siteUrl: 'http://plusperth.co.uk/',
@@ -15,7 +15,7 @@ export default {
     },
     {
       resolve: `gatsby-plugin-purgecss`,
-      options: { printRejected: false, develop: false, tailwind: true }
+      options: { printRejected: false, develop: false, tailwind: true, ignore: ['swiper.css', 'main.css'] }
     },
     {
       resolve: `gatsby-plugin-google-fonts`, options: { fonts: [`lato\:300,400,700`], display: 'swap' }
