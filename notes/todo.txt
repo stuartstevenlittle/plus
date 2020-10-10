@@ -1,8 +1,13 @@
-get contact us form working - and scroll to bottom
+get contact us form working - and scroll to bottom - finsih wes course
 Change mision stmt to vision stmt
 NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
 in mobile footer put elan below plus
+add map
+add search
+add file upload to digital garden to sanity/netlify
+--> end of Sun night
 
+Monday - add auth from jason course
 
 Categories:
 Self-Help
