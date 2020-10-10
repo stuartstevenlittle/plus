@@ -5,5 +5,13 @@
   @apply transition ease-in-out duration-150;
 }
 
+.left-word {
+  @apply  text-gray-500 font-bold uppercase
+}
+
+.right-word {
+  @apply ml-1 font-light ml-1 
+}
+
 @tailwind utilities;
 

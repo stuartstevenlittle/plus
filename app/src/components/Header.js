@@ -1,47 +1,58 @@
 import React from 'react'
-import { Link } from 'gatsby'
-const Header = () => {
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+export default function Header() {
+
+
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "logo.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <nav className="bg-white py-6 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex items-center justify-between h-16">
           <div className="flex">
             {/* Left */}
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/"><img src="/images/logo.png" alt="Plus Perth logo" /></Link>
-            </div>
+            <Link className="flex-shrink-0 flex items-center  text-2xl sm:text-4xl" to="/">
+              <Img className="w-16 h-16 flex-shrink-0 mx-auto" fluid={image.sharp.fluid} />
+              <span className="ml-2 text-gray-500 font-semibold uppercase">Plus</span><span className="ml-1 text-gray-400">Perth</span>
+            </Link>
           </div>
           {/* Right */}
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="hidden sm:-my-px sm:ml-6 space-x-8 sm:flex">
-              <Link to="/" className="inline-flex items-center px-1 pt-1 text-lg font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out">
+              <Link to="/" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 focus:outline-none transition duration-150 ease-in-out">
                 Home
             </Link>
-              <Link to="digital-garden" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              <Link to="digital-garden" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 Digital Garden
             </Link>
-              <Link to="#" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 Coaching Services
             </Link>
-              <Link to="#" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 What's Happening
             </Link>
-              <Link to="#" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 About Plus
             </Link>
-              <Link to="#" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 Get in Touch
             </Link>
-            </div>
-
-            {/* <!-- Profile dropdown --> */}
-            <div className="ml-3 relative">
-              <div>
-                <button className="focus:outline-none inline ml-4" id="user-menu" aria-label="User menu" aria-haspopup="true">
-                  <svg className="w-12 h-12 p-2 rounded-full text-gray-100 bg-gray-100 hover:text-indigo-100 hover:bg-blue-100 animate" fill="currentColor" stroke="#a0aec0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </button>
-              </div>
-
+              {/* Search */}
+              <button className="focus:outline-none inline" id="user-menu" aria-label="User menu" aria-haspopup="true">
+                <svg className="w-6 h-6 text-gray-400 hover:text-gray-500 animate" fill="transparent" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </button>
             </div>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
@@ -111,4 +122,10 @@ const Header = () => {
     </nav>
   )
 }
-export default Header
+
+
+
+
+
+
+

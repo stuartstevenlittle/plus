@@ -1,3 +1,4 @@
+const path = require('path');
 const dotenv = require('dotenv')
 dotenv.config({ path: '.env' })
 module.exports = {
@@ -5,14 +6,16 @@ module.exports = {
     title: 'PLUS Perth',
     siteUrl: 'http://plusperth.co.uk/',
     description: 'PLUS Perth',
-    twitter: `@PLUS_Perth`
+    twitter: `PLUS_Perth`,
+    facebook: `PlusPerth-1514503322206433`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: { postCssPlugins: [require(`tailwindcss`)] }
-    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    { resolve: 'gatsby-source-filesystem', options: { name: 'images', path: path.join(__dirname, `images`) } },
+    // { resolve: 'gatsby-source-filesystem', options: { name: 'images', path: `images` } },
+    { resolve: `gatsby-plugin-postcss`, options: { postCssPlugins: [require(`tailwindcss`)] } },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: { printRejected: false, develop: false, tailwind: true, ignore: ['swiper.css', 'main.css'] }
