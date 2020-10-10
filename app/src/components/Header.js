@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 
 export default function Header() {
 
-
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "logo.png" }) {
@@ -24,7 +23,7 @@ export default function Header() {
           <div className="flex">
             {/* Left */}
             <Link className="flex-shrink-0 flex items-center  text-2xl sm:text-4xl" to="/">
-              <Img className="w-16 h-16 flex-shrink-0 mx-auto" fluid={image.sharp.fluid} />
+              <Img className="w-8 h-8 sm:w-14 sm:h-14 flex-shrink-0 mx-auto" fluid={image.sharp.fluid} />
               <span className="ml-2 text-gray-500 font-semibold uppercase">Plus</span><span className="ml-1 text-gray-400">Perth</span>
             </Link>
           </div>
@@ -34,14 +33,14 @@ export default function Header() {
               <Link to="/" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 focus:outline-none transition duration-150 ease-in-out">
                 Home
             </Link>
-              <Link to="digital-garden" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                Digital Garden
-            </Link>
-              <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                Coaching Services
+              <Link to="self-help" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                Self-Help
             </Link>
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 What's Happening
+            </Link>
+              <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                Coaching Services
             </Link>
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 About Plus
@@ -82,12 +81,16 @@ export default function Header() {
             Home
         </Link>
 
-          <Link to="#" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-            Digital Garden
+          <Link to="self-help" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+            Self-Help
         </Link>
 
           <Link to="#" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
             What's Happening
+        </Link>
+
+          <Link to="#" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+            Coaching Services
         </Link>
 
           <Link to="#" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
