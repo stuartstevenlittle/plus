@@ -1,0 +1,3 @@
+break shell into layout then components
+use <Img> for logo in Header
+in mobile footer put elan below plus
