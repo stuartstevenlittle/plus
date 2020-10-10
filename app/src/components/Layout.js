@@ -13,8 +13,8 @@ const Layout = ({ children }) => {
       <Helmet>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css" />
       </Helmet>
-      <div className="pt-8 h-stretch min-h-screen text-gray-900">
-        <div className={`container mx-auto shadow ${route === 'digital-garden' ? 'bg-gray-50' : 'bg-white'} `}>
+      <div className="h-stretch min-h-screen text-gray-900">
+        <div className={`mx-auto shadow ${route === 'digital-garden' ? 'bg-gray-50' : 'bg-white'} `}>
           <Header />
           <main>{children}</main>
           <Footer />
