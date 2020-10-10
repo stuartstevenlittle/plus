@@ -1,3 +1,5 @@
+get contact us form working - and scroll to bottom
+Change mision stmt to vision stmt
 NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
 in mobile footer put elan below plus
 

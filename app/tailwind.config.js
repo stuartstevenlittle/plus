@@ -57,6 +57,7 @@ module.exports = {
         '96': '24rem',
       },
       colors: {
+        'dusty-blue-800': '#264697',
         // 'warm-gray-200': 'hsl(40, 15%, 92%)',
         // 'warm-gray-400': 'hsl(40, 15%, 67%)'
         'warm-grey-50': 'hsl(40, 23%, 97%)',
