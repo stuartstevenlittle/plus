@@ -10,7 +10,7 @@ import ContactUs from '../components/ContactUs'
 
 export const pageQuery = graphql`
 {
-#   missionStatement: allSanityMissionStatement {
+#   vision: allSanityVision {
 #     nodes {
 #       text
 #     }
@@ -86,8 +86,8 @@ export const pageQuery = graphql`
 }
 `
 
-export default function Home({ data }) {
-  // const missionStatement = data.missionStatement.nodes[0].text
+const Home = ({ data }) => {
+  // const vision = data.vision.nodes[0].text
   const slideData = data.slideData.nodes
   const funders = data.funders.nodes
   const posts = data.posts.nodes
@@ -101,7 +101,7 @@ export default function Home({ data }) {
       </Section>
       <Section title="" colour='white'>
         <div className="mt-4 mb-4">
-          {/* <p className="mt-4 pb-8 max-w-5xl mx-auto text-2xl text-center text-gray-600">{missionStatement}</p> */}
+          {/* <p className="mt-4 pb-8 max-w-5xl mx-auto text-2xl text-center text-gray-600">{vision}</p> */}
           <p className="pb-8 max-w-5xl mx-auto text-2xl text-center text-gray-600">“Our vision is for a world of wellbeing where people experiencing mental distress are fairly treated with compassion, understanding and respect and can follow their hopes and dreams wherever they lead.”</p>
           <FeatureGrid features={features} />
         </div>
@@ -124,3 +124,4 @@ export default function Home({ data }) {
     </div >
   )
 }
+export default Home

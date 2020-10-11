@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-export default function Header() {
+const Header = () => {
 
   const { image } = useStaticQuery(graphql`
     query {
@@ -34,7 +34,7 @@ export default function Header() {
                 Home
             </Link>
               <Link to="self-help" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                Self-Help
+                Self-Help Tools
             </Link>
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 What's Happening
@@ -70,11 +70,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* <!--
-      Mobile menu, toggle classes based on menu state.
-
-      Open: "block", closed: "hidden"
-    --> */}
       <div className="hidden sm:hidden">
         <div className="pt-2 pb-3 space-y-1">
           <Link to="#" className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">
@@ -125,10 +120,4 @@ export default function Header() {
     </nav>
   )
 }
-
-
-
-
-
-
-
+export default Header

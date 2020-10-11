@@ -1,3 +1,10 @@
+Fiux vision
+Garden top of cards rounded
+Remove right margin on mobile
+Make a tailwind teal to match logo
+Make button that colour
+Change iPad feature descriptions
+Put stylised quotes around the vision
 get contact us form working - and scroll to bottom - finsih wes course
 Change mision stmt to vision stmt
 NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
@@ -9,11 +16,15 @@ add file upload to digital garden to sanity/netlify
 
 Monday - add auth from jason course
 
-Categories:
-Self-Help
-Inspiring Words
-Real People, Real Stories
-What's Happening
-Coaching Services
-About plus
-1675 402
+
+https://joshwcomeau.com/tutorials/ - down chevron for tags. Nice colours
+https://cloudinary.com/features/presentation - nice cards
+"What would you like to see?" Feedback widget
+
+Santity Datasets
+----------------
+Homepage photo frame
+Homepage features
+Homepage news
+
+

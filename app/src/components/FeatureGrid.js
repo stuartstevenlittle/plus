@@ -2,18 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-
 function sortArray(arr, prop) {
   return arr.sort((a, b) => a[prop] - b[prop]);
 }
 
-
-
-
 const FeatureGrid = ({ features }) => {
   sortArray(features, 'order');
   return (
-    <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+    <ul className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {features.map((feature, index) =>
         <FeatureItem key={index} feature={feature} />
       )}

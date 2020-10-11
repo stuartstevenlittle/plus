@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-export default function FunderGrid({ funders }) {
+const FunderGrid = ({ funders }) => {
   return (
     <ul className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
       {
@@ -23,3 +23,4 @@ const Funder = ({ funder }) => (
     </Link>
   </li>
 )
+export default FunderGrid

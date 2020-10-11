@@ -1,7 +1,7 @@
 import { GiStairsGoal as icon } from 'react-icons/gi'
 export default {
-  name: 'missionStatement',
-  title: 'Mission Statement',
+  name: 'vision',
+  title: 'Vision',
   type: 'document',
   icon,
   fields: [
