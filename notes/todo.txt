@@ -1,5 +1,6 @@
 Sunday night
 ------------
+in Garden, make the card: title then name below it. Remove tags.
 get contact us form working - and scroll to bottom - finsih wes course
 add map
 add search
@@ -12,7 +13,7 @@ add file upload to digital garden to sanity/netlify
 Tuesday
 -------
 Garden top of cards rounded
-Add dropdown menu for tag cloud - maybe make it a '#' symbol in a button on the right
+Add dropdown menu for tag cloud - maybe make it 'Tags' in a button on the right
 Make button same height as filterbox
 Probably take away the header bewing white on the garden page
 Remove right margin on mobile
