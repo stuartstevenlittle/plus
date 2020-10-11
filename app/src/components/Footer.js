@@ -1,7 +1,7 @@
 import React from 'react'
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-600">
+    <footer className="bg-gray-100 text-gray-600 border-t">
       <div className="max-w-screen-xl mx-auto pb-4 sm:pb-6 pt-6 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         {/* Left */}
         <div className="mt-2 order-3 md:mt-0 md:order-1">
