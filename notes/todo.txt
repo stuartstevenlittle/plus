@@ -1,6 +1,7 @@
 Sunday night
 ------------
 in Garden, make the card: title then name below it. Remove tags.
+Sofften nbutton text
 get contact us form working - and scroll to bottom - finsih wes course
 add map
 add search

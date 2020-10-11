@@ -77,7 +77,6 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
         <div className="flex">
           <div>
-            <h2 className="text-xs uppercase tracking-wide text-gray-500">Tag Cloud</h2>
             {/* <ul className="mt-1 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {tags.map((tag, index) =>
                 <Tag key={index} tag={tag} />
