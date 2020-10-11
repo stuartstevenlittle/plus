@@ -5,7 +5,6 @@ import NewsCarousel from '../components/NewsCarousel'
 import Section from '../components/Section'
 import FeatureGrid from '../components/FeatureGrid'
 import FunderGrid from '../components/FunderGrid'
-import useForm from '../utils/useForm'
 import ContactUs from '../components/ContactUs'
 
 export const pageQuery = graphql`

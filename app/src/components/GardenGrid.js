@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import FilterBox from '../components/FilterBox'
-import Button from '../components/Button'
 
 const GardenGrid = ({ tags, gardenItems }) => {
   tags.sort((a, b) => a.name.localeCompare(b.name))
@@ -82,7 +81,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </button>
-            <div className="absolute right-0 mt-2 w-screen max-w-4xl sm:px-0">
+            <div className="hidden absolute right-0 mt-2 w-screen max-w-4xl sm:px-0">
               <div className="rounded-lg shadow-lg">
                 <div className="rounded-lg shadow-xs overflow-hidden">
                   <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">

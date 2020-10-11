@@ -1,8 +1,5 @@
 Sunday night
 ------------
-overflow-hidden
-Garden top of cards rounded
-Add dropdown menu for tag cloud - maybe make it 'Tags' in a button on the right
 Make button same height as filterbox
 Probably take away the header bewing white on the garden page
 Remove right margin on mobile
