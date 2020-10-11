@@ -50,7 +50,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
   // A Garden Item
   const Garden = ({ gardenItem }) => (
-    <li key={gardenItem.id} className="col-span-1 flex flex-col rounded shadow bg-white hover:shadow-lg transition ease-in-out duration-150">
+    <li key={gardenItem.id} className="overflow-hidden col-span-1 flex flex-col rounded shadow bg-white hover:shadow-lg transition ease-in-out duration-150">
       <Link className="flex-1 flex flex-col" to={gardenItem.slug.current}>
         <Img className="w-full h-56 flex-shrink-0 mx-auto" fluid={gardenItem.image.asset.fluid} alt={gardenItem.title} />
         <div className="flex justify-between mx-4">
@@ -73,25 +73,35 @@ const GardenGrid = ({ tags, gardenItems }) => {
   // The Actual Page
   return (
     <div className="max-w-screen-xl mx-auto ">
-      <div className="mb-8 mt-3 flex justify-between items-start">
-
-        <div className="flex">
-          <div>
-            {/* <ul className="mt-1 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-              {tags.map((tag, index) =>
-                <Tag key={index} tag={tag} />
-              )}
-            </ul> */}
+      <div className="mb-6 flex justify-end items-start">
+        <div className="flex z-10">
+          <div className="relative">
+            <button type="button" className="mr-4 py-2 group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 animate">
+              <span>Tags</span>
+              <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button>
+            <div className="absolute right-0 mt-2 w-screen max-w-4xl sm:px-0">
+              <div className="rounded-lg shadow-lg">
+                <div className="rounded-lg shadow-xs overflow-hidden">
+                  <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                    <ul className="mt-1 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                      {tags.map((tag, index) =>
+                        <Tag key={index} tag={tag} />
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="flex">
-          <Button colour="blue" />
+          <button className="min-w-32 hover:text-gray-900 text-gray-500 mr-4 shadow-sm focus:outline-none items-center px-4 py-2 col-span-1 flex flex-col text-center rounded border animate">New Post</button>
           <FilterBox />
         </div>
       </div>
 
-      <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-16">
+      <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-12">
         {gardenItems.map((gardenItem, index) =>
           <Garden key={index} gardenItem={gardenItem} />
         )}
