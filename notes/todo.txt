@@ -1,19 +1,33 @@
+Sunday night
+------------
+get contact us form working - and scroll to bottom - finsih wes course
+add map
+add search
+
+Monday 
+------
+add auth from jason course
+add file upload to digital garden to sanity/netlify
+
+Tuesday
+-------
 Garden top of cards rounded
+Add dropdown menu for tag cloud - maybe make it a '#' symbol in a button on the right
+Make button same height as filterbox
+Probably take away the header bewing white on the garden page
 Remove right margin on mobile
+unsderstand how to add "small" etc to a vompoent - for the button - https://egghead.io/lessons/react-style-react-components-with-classname-and-in-line-styles
 Make a tailwind teal to match logo
 Make button that colour
 Change iPad feature descriptions
 Put stylised quotes around the vision
-get contact us form working - and scroll to bottom - finsih wes course
 Change mision stmt to vision stmt
 NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
 in mobile footer put elan below plus
-add map
-add search
-add file upload to digital garden to sanity/netlify
---> end of Sun night
 
-Monday - add auth from jason course
+
+
+
 
 
 

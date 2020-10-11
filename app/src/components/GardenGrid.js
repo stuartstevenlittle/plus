@@ -2,15 +2,16 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import FilterBox from '../components/FilterBox'
+import Button from '../components/Button'
 
 const GardenGrid = ({ tags, gardenItems }) => {
   tags.sort((a, b) => a.name.localeCompare(b.name))
   gardenItems.sort((a, b) => a.title.localeCompare(b.title))
 
   const [tagsFilter, setTagsFilter] = useState([])
-  const [filteredGardens, setFilteredGardens] = useState([])
+  const [filteredItems, setFilteredItems] = useState([])
 
-  let tempFilteredGardens = []
+  let tempFilteredItems = []
 
   // Event Handlers  
   function getTagClasses(tag) {
@@ -25,13 +26,13 @@ const GardenGrid = ({ tags, gardenItems }) => {
       setTagsFilter(tagsFilter => [...tagsFilter, clickedTag])
 
       // create a temporary array of the gardenItems that are returned by applying that tag filter
-      tempFilteredGardens = gardenItems.filter(gardenItem => gardenItem.tags.map(t => t.name).some(tag => tagsFilter.includes(tag)))
+      tempFilteredItems = gardenItems.filter(gardenItem => gardenItem.tags.map(t => t.name).some(tag => tagsFilter.includes(tag)))
 
       // loop over that array
-      tempFilteredGardens.forEach(filteredGarden => {
-        if (filteredGardens.indexOf(filteredGarden) === -1) {
+      tempFilteredItems.forEach(filteredGarden => {
+        if (filteredItems.indexOf(filteredGarden) === -1) {
           // add the item to the gardenItems array, to show on the page
-          setFilteredGardens(filteredGardens => [...filteredGardens, filteredGarden])
+          setFilteredItems(filteredItems => [...filteredItems, filteredGarden])
         }
       });
     }
@@ -75,24 +76,19 @@ const GardenGrid = ({ tags, gardenItems }) => {
       <div className="mb-8 mt-3 flex justify-between items-start">
 
         <div className="flex">
-          {/* Tag Cloud */}
           <div>
             <h2 className="text-xs uppercase tracking-wide text-gray-500">Tag Cloud</h2>
-            <ul className="mt-1 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {/* <ul className="mt-1 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {tags.map((tag, index) =>
                 <Tag key={index} tag={tag} />
               )}
-            </ul>
+            </ul> */}
           </div>
         </div>
 
-        {/* Tools */}
-        <div className="w-52">
-          <h2 className="text-xs uppercase tracking-wide text-gray-500 mb-1">Tools</h2>
-          <div className="grid grid-cols-1 gap-2">
-            <FilterBox />
-            <button className="shadow-sm focus:outline-none bg-white hover:bg-blue-200 hover:border-blue-300 hover:text-blue-800 items-center min-w-28 px-4 py-2 col-span-1 flex flex-col text-center rounded border transition ease-in-out duration-150">New Post</button>
-          </div>
+        <div className="flex">
+          <Button colour="blue" />
+          <FilterBox />
         </div>
       </div>
 
