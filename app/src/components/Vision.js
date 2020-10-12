@@ -1,6 +1,20 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Vision = ({ vision }) => {
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "susan-avatar.jpg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div className="relative mt-4">
       <svg className="absolute top-12 left-4 md:left-0 transform -translate-x-8 -translate-y-24 h-36 w-36 text-indigo-200 opacity-50" stroke="currentColor" fill="none" viewBox="0 0 144 144">
@@ -15,7 +29,7 @@ const Vision = ({ vision }) => {
         <footer className="mt-4">
           <div className="md:flex md:items-center md:justify-center">
             <div className="md:flex-shrink-0">
-              <img className="mx-auto h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+              <Img className="mx-auto h-16 w-16 rounded-full" fluid={image.sharp.fluid} />
             </div>
             <div className="ml-4">
               <div className="text-xl leading-6 font-medium text-gray-900">Susan Scott</div>
