@@ -1,14 +1,6 @@
-Sunday night
-------------
-Make button same height as filterbox
-Probably take away the header bewing white on the garden page
-Remove right margin on mobile
-
-in Garden, make the card: title then name below it. Remove tags.
-Sofften button text
-
 Monday 
 ------
+Remove right margin on mobile
 get contact us form working - and scroll to bottom - finsih wes course
 add map
 add search

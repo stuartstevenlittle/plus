@@ -10,7 +10,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
   const [filteredTags, setFilteredTags] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
-  const [showTags, setShowTags] = useState(false)
+  const [showTagCloud, setShowTagCloud] = useState(false)
 
   // Event Handlers  
   function getTagClasses(tag) {
@@ -19,10 +19,11 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
   function onClickTag(event) {
     const clickedTag = event.target.firstChild.data
-    if (filteredTags.indexOf(clickedTag) === -1) { // the clicked tag isn't already in the filter array, so add it so that it gets a coloured background
+    if (filteredTags.indexOf(clickedTag) === -1) { // the clicked tag isn't already in the filter array
+      // 1. add it so that it gets a coloured background
       setFilteredTags(tagsFilter => [...tagsFilter, clickedTag])
 
-      // loop over that array
+      // 2. filter the garden items array based on the clicked tag, then put those items into the filteredItems array
       gardenItems.filter(gardenItem => gardenItem.tags.map(t => t.name).some(tag => [...filteredTags, clickedTag].includes(tag)))
         .forEach(filteredItem => {
           if (filteredItems.indexOf(filteredItem) === -1) {  // the item isn't already in the filter array, so add it so that it shows on the page
@@ -30,8 +31,18 @@ const GardenGrid = ({ tags, gardenItems }) => {
           }
         });
     }
-    else {
+    else {  // the clicked tag is already in the filter array - i.e. it has now been switched off
+      // 1. remove it from the filter array, to set the background back to white
       setFilteredTags(filteredTags.filter(tag => tag !== clickedTag))
+
+      // 2. remove any items that match the tag that was turned off. So loop over filteredItems, and check each one
+      filteredItems.forEach(item => {
+        // if the value matches the clicked one, remove it from the array
+        if (item.tags.map(t => t.name).includes(clickedTag)) {
+          console.log(item)
+          setFilteredItems(filteredItems.filter(item => !item.tags.map(t => t.name).includes(clickedTag)))
+        }
+      })
     }
   }
 
@@ -47,19 +58,8 @@ const GardenGrid = ({ tags, gardenItems }) => {
     <li key={gardenItem.id} className="overflow-hidden col-span-1 flex flex-col rounded shadow bg-white hover:shadow-lg transition ease-in-out duration-150">
       <Link className="flex-1 flex flex-col" to={gardenItem.slug.current}>
         <Img className="w-full h-56 flex-shrink-0 mx-auto" fluid={gardenItem.image.asset.fluid} alt={gardenItem.title} />
-        <div className="flex justify-between mx-4">
-          {/* Left */}
-          <div>
-            <h3 className="mt-2 uppercase leading-5 font-semibold">{gardenItem.title}</h3>
-            <p className="text-warm-gray-400 mb-2" >{gardenItem.tags.map(tag => { return <span key={tag.name} className="mr-2">#{tag.name}</span> })}</p>
-          </div>
-          {/* Right */}
-          <div className="mt-2 flex flex-col items-end">
-            <p className="ml-1">
-              <span className="ml-1 text-gray-700">{gardenItem.author.name}</span>
-            </p>
-          </div>
-        </div>
+        <h3 className="text-center mt-2 uppercase leading-5 font-semibold">{gardenItem.title}</h3>
+        <p className="mb-2 text-center text-gray-700">{gardenItem.author.name}</p>
       </Link>
     </li >
   )
@@ -72,7 +72,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
       <div className="mb-6 flex justify-end items-start">
         <div className="flex z-10">
           <div className="relative">
-            <button type="button" onClick={() => setShowTags(!showTags)} className="mr-4 py-2 group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 animate">
+            <button type="button" onClick={() => setShowTagCloud(!showTagCloud)} className="mr-4 py-2 group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 animate">
               <span>Tags</span>
               <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -80,11 +80,11 @@ const GardenGrid = ({ tags, gardenItems }) => {
             </button>
             {/* The tag menu */}
             <Transition
-              show={showTags}
-              enter="transition ease-out duration-300"
+              show={showTagCloud}
+              enter="transition ease-out duration-150"
               enterFrom="transform opacity-0 scale-90"
               enterTo="transform opacity-100 scale-100"
-              leave="transition ease-in duration-300"
+              leave="transition ease-in duration-150"
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
