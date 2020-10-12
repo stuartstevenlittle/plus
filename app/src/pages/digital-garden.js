@@ -13,7 +13,6 @@ export const pageQuery = graphql`
     nodes {
       id
       title
-      description
       plantType {
         name
       }

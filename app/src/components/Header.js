@@ -177,9 +177,9 @@ const Header = () => {
 
 const MenuItem = ({ feature, setShowToolsMenu, showToolsMenu }) => (
   <li>
-    <Link to={feature.slug.current} onClick={() => setShowToolsMenu(!showToolsMenu)} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+    <Link to={`/${feature.slug.current}`} onClick={() => setShowToolsMenu(!showToolsMenu)} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-teal-600 text-white sm:h-12 sm:w-12">
-        {feature.icon && <Img className="w-8 h-8 text-white" fluid={feature.icon.asset.fixed} alt={feature.title} />}
+        {feature.icon && <Img className="w-8 h-8 text-white" fixed={feature.icon.asset.fixed} alt={feature.title} />}
       </div>
       <div className="space-y-1">
         <p className="text-lg leading-6 font-medium text-gray-900">{feature.title}</p>

@@ -1,25 +1,24 @@
-Monday 
-------
-Monday night
-------------
-create words, stories & poetry sections - see samaritans etc for inspiration on stories
-garden text filter
+Tuesday
+-------
+Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
+break GardenGrid down into components. Should be easier to re-use some of them for...
+create quotes section:
+  - Reuse the GardenGrid. Rename it as ToolsGrid. 
+  
+create stories & poetry sections:
+  - use text filter for these, no tags
+  - see samaritans etc for inspiration on stories
+
 click outside tag cloud closes it
-make self-help-tools menu item work with nice animation
 see if can animate the cards:
   - https://codesandbox.io/s/list-transitions-ju549
   - https://github.com/aholachek/react-flip-toolkit#simple-example-list-shuffle
   - https://github.com/aholachek/react-flip-toolkit
   - https://github.com/joshwcomeau/react-flip-move
 
-Tuesday
--------
-get contact us form working. put on new page. Get a nice ui component.
-add auth from jason course
-add file upload to digital garden to sanity/netlify
 
-Tuesday
--------
+Wed
+---
 Make a tailwind teal to match logo
 Make button that colour
 Change iPad feature descriptions
@@ -32,27 +31,23 @@ understand how to add "small" etc to a component - for the button - https://eggh
 make self-help tools menu icons white - sanity svg plugin?
 
 
-
-
-
-
-https://joshwcomeau.com/tutorials/ - down chevron for tags. Nice colours
-https://cloudinary.com/features/presentation - nice cards
+Next week
+---------
+add auth from jason course
+add file upload to digital garden to sanity/netlify
 "What would you like to see?" Feedback widget
 
 
 When get plus login
-create a new sanity for them
-
-Datasets
----------
-Homepage Photo Frame
-Homepage Features
-Homepage News
-Blocks of Text
-  - Vision
-  - We are extremely grateful
-Authors
-Funders
-Tags
-Garden Items
+-------------------
+create a new sanity for them with these datasets:
+  Homepage Photo Frame
+  Homepage Features
+  Homepage News
+  Blocks of Text
+    - Vision
+    - We are extremely grateful
+  Authors
+  Funders
+  Tags
+  Garden Items
