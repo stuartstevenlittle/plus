@@ -1,6 +1,6 @@
 Monday 
 ------
-get contact us form working - and scroll to bottom - finsih wes course
+get contact us form working. put on new page. Get a nice ui component.
 add map
 add search
 add auth from jason course
