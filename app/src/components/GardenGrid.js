@@ -11,14 +11,14 @@ const GardenGrid = ({ tags, gardenItems }) => {
   // State
   const [filteredTags, setFilteredTags] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
-  // const [stuItems, setStuItems] = useState([])
+  const [finalItems, setFinalItems] = useState(gardenItems)
   const [showTagCloud, setShowTagCloud] = useState(false)
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    setFilteredItems(
-      gardenItems.filter(item => item.description.includes(search))
-    )
+    // when search input changes
+    setFilteredItems(gardenItems.filter(item => item.description.includes(search)))
+    setFinalItems(gardenItems.filter(item => item.description.includes(search)))
   }, [search, gardenItems])
 
   // Computed properties  
@@ -38,6 +38,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
         .forEach(filteredItem => {
           if (filteredItems.indexOf(filteredItem) === -1) {  // the item isn't already in the filter array, so add it so that it shows on the page
             setFilteredItems(filteredItems => [...filteredItems, filteredItem])
+            setFinalItems(filteredItems => [...filteredItems, filteredItem])
           }
         });
     }
@@ -49,11 +50,12 @@ const GardenGrid = ({ tags, gardenItems }) => {
       filteredItems.forEach(item => {
         // if the value matches the clicked one, remove it from the array
         if (item.tags.map(t => t.name).includes(clickedTag)) {
-          console.log(item)
           setFilteredItems(filteredItems.filter(item => !item.tags.map(t => t.name).includes(clickedTag)))
+          setFinalItems(filteredItems.filter(item => !item.tags.map(t => t.name).includes(clickedTag)))
         }
       })
     }
+    // setFinalItems(filteredItems)
   }
 
   function onChangeFilterbox(event) {
@@ -136,9 +138,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
       {/* The cards */}
       <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-12">
-        {filteredItems.length !== 0 && filteredItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
-        {filteredItems.length === 0 && gardenItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
-        {/* {filteredItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)} */}
+        {finalItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
       </ul>
     </div>
   )
