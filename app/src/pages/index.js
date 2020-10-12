@@ -5,7 +5,6 @@ import NewsCarousel from '../components/NewsCarousel'
 import Section from '../components/Section'
 import FeatureGrid from '../components/FeatureGrid'
 import FunderGrid from '../components/FunderGrid'
-import ContactUs from '../components/ContactUs'
 import Vision from '../components/Vision'
 
 export const pageQuery = graphql`
@@ -107,17 +106,15 @@ const Home = ({ data }) => {
       </Section>
       <Section title="" colour='gray'>
         <div className="grid grid-cols-1 gap-0 sm:grid-cols-2">
-          <Section title="Where We are" colour='gray' noShadow>
-
+          <Section title="Where We are" colour='gray' noShadow noTopGap>
           </Section>
-          <Section title="Contact Us" colour='gray' noShadow>
-            <ContactUs />
+          <Section title="Something else" colour='gray' noShadow noTopGap>
+            <div className="h-80"></div>
           </Section>
         </div >
       </Section>
 
-      <Section title="Funding Providers" colour='white'>
-        <p className="pb-2 mt-6 max-w-4xl mx-auto text-xl text-center text-gray-600">We are extremely grateful to our funders including NHS Tayside and P&K Council for providing our core funding since 2002.</p>
+      <Section title="Funding Providers" subtitle="We are extremely grateful to our funders including NHS Tayside and P&K Council for providing our core funding since 2002." colour='white'>
         <FunderGrid funders={funders} />
       </Section>
     </div >
