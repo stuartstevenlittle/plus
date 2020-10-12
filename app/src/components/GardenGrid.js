@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Transition } from "@headlessui/react";
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
@@ -8,15 +8,25 @@ const GardenGrid = ({ tags, gardenItems }) => {
   tags.sort((a, b) => a.name.localeCompare(b.name))
   gardenItems.sort((a, b) => a.title.localeCompare(b.title))
 
+  // State
   const [filteredTags, setFilteredTags] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
+  const [stuItems, setStuItems] = useState([])
   const [showTagCloud, setShowTagCloud] = useState(false)
+  const [search, setSearch] = useState('')
 
-  // Event Handlers  
-  function getTagClasses(tag) {
+  useEffect(() => {
+    setStuItems(
+      gardenItems.filter(item => item.description.includes(search))
+    )
+  }, [search])
+
+  // Computed properties  
+  const tagClasses = tag => {
     return (filteredTags.indexOf(tag.name) === -1) ? 'bg-white' : 'bg-indigo-100 text-indigo-800'
   }
 
+  // Methods
   function onClickTag(event) {
     const clickedTag = event.target.firstChild.data
     if (filteredTags.indexOf(clickedTag) === -1) { // the clicked tag isn't already in the filter array
@@ -46,10 +56,16 @@ const GardenGrid = ({ tags, gardenItems }) => {
     }
   }
 
+  function onChangeFilterbox(event) {
+    setSearch(event.target.value)
+
+  }
+
+  // Components
   // A Tag
   const Tag = ({ tag }) => (
     <li><button onClick={onClickTag}
-      className={`${getTagClasses(tag)} focus:outline-none items-center min-w-28 px-4 py-2 shadow text-gray-400 bg-white hover:text-indigo-800 hover:bg-indigo-50 col-span-1 flex flex-col text-center rounded animate`}
+      className={`${tagClasses(tag)} focus:outline-none items-center min-w-28 px-4 py-2 shadow text-gray-400 bg-white hover:text-indigo-800 hover:bg-indigo-50 col-span-1 flex flex-col text-center rounded animate`}
     >{tag.name}</button></li >
   )
 
@@ -60,6 +76,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
         <Img className="w-full h-56 flex-shrink-0 mx-auto" fluid={gardenItem.image.asset.fluid} alt={gardenItem.title} />
         <h3 className="text-center mt-2 uppercase leading-5 font-semibold">{gardenItem.title}</h3>
         <p className="mb-2 text-center text-gray-700">{gardenItem.author.name}</p>
+        <p className="mb-2 text-center text-gray-700">{gardenItem.description}</p>
       </Link>
     </li >
   )
@@ -101,14 +118,14 @@ const GardenGrid = ({ tags, gardenItems }) => {
               </div>
             </Transition>
           </div>
-          <button className="min-w-32 hover:bg-blue-200 hover:border-blue-300 hover:text-blue-800 text-gray-500 mr-4 shadow-sm focus:outline-none items-center px-4 py-2 col-span-1 flex flex-col text-center rounded border animate">New Post</button>
+          <button className="min-w-32 hover:bg-blue-200 hover:border-blue-300 hover:text-blue-800 text-gray-500 mr-4 shadow-sm focus:outline-none items-center px-4 py-2 col-span-1 flex flex-col text-center rounded border animate">Submit Post</button>
           {/* <FilterBox /> */}
           <div >
             <div className="w-44 relative shadow-sm">
               <div className="-mr-32 absolute inset-y-0 right-0 flex items-center pointer-events-none">
                 <svg className="w-full h-5 text-gray-400 dark:text-gray-600 transition duration-150" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor" ><path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
               </div>
-              <input type="search" placeholder="Filter" aria-label="Global search box" className="bg-transparent rounded border outline-none h-10 block w-full pl-4 sm:text-sm sm:leading-5" />
+              <input onChange={e => onChangeFilterbox(e)} type="search" placeholder="Filter" aria-label="Global search box" className="bg-transparent rounded border outline-none h-10 block w-full pl-4 sm:text-sm sm:leading-5" />
             </div>
           </div>
         </div>
@@ -116,8 +133,9 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
       {/* The cards */}
       <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-12">
-        {filteredItems.length !== 0 && filteredItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
-        {filteredItems.length === 0 && gardenItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
+        {/* {filteredItems.length !== 0 && filteredItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)} */}
+        {/* {filteredItems.length === 0 && gardenItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)} */}
+        {stuItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
       </ul>
     </div>
   )
