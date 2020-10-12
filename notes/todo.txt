@@ -1,7 +1,6 @@
 Monday 
 ------
 homepage:
-- susan quote
 - cards
 - map
 - something else

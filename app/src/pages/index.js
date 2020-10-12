@@ -6,6 +6,7 @@ import Section from '../components/Section'
 import FeatureGrid from '../components/FeatureGrid'
 import FunderGrid from '../components/FunderGrid'
 import ContactUs from '../components/ContactUs'
+import Vision from '../components/Vision'
 
 export const pageQuery = graphql`
 {
@@ -99,7 +100,9 @@ const Home = ({ data }) => {
       </Section>
       <Section title="" colour='white'>
         <div className="mt-4 mb-4">
-          <p className="mt-4 pb-8  mx-auto text-2xl text-center text-gray-600">{vision}</p>
+          <Section title="" colour='white' noShadow>
+            <Vision vision={vision} />
+          </Section>
           <FeatureGrid features={features} />
         </div>
       </Section>
