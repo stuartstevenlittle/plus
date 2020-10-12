@@ -1,14 +1,11 @@
 Monday 
 ------
-homepage:
-- cards
-- map
-- something else
-- tidy funding
-make self-help-tools a menu item
-click outside tag cloud closes it
-garden text filter
+Monday night
+------------
 create words, stories & poetry sections - see samaritans etc for inspiration on stories
+garden text filter
+click outside tag cloud closes it
+make self-help-tools menu item work with nice animation
 see if can animate the cards:
   - https://codesandbox.io/s/list-transitions-ju549
   - https://github.com/aholachek/react-flip-toolkit#simple-example-list-shuffle
@@ -32,7 +29,7 @@ Change mision stmt to vision stmt
 NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
 in mobile footer put elan below plus
 understand how to add "small" etc to a component - for the button - https://egghead.io/lessons/react-style-react-components-with-classname-and-in-line-styles
-
+make self-help tools menu icons white - sanity svg plugin?
 
 
 
