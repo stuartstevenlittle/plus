@@ -1,8 +1,20 @@
 Monday 
 ------
+homepage:
+- susan quote
+- cards
+- map
+- something else
+- tidy funding
+make self-help-tools a menu item
+click outside tag cloud closes it
+garden text filter
+create words, stories & poetry sections - see samaritans etc for inspiration on stories
+create about us and training pages
+
+Tuesday
+-------
 get contact us form working. put on new page. Get a nice ui component.
-add map
-add search
 add auth from jason course
 add file upload to digital garden to sanity/netlify
 
