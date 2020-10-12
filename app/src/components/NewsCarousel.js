@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 const NewsCarousel = ({ news: posts }) => {
@@ -23,7 +23,7 @@ const NewsItem = ({ newsItem }) => (
     </div>
     <div className="flex-1 flex items-center justify-between truncate">
       <div className="flex-1 px-4 py-2 truncate">
-        <a href="#" className="text-lg uppercase leading-5 font-semibold text-cool-gray-600 hover:text-gray-700 animate">{newsItem.title}</a>
+        <Link to="/" className="text-lg uppercase leading-5 font-semibold text-cool-gray-600 hover:text-gray-700 animate">{newsItem.title}</Link>
         <p className="text-gray-500">{newsItem.exerpt}</p>
       </div>
     </div>

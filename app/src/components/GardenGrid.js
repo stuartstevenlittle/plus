@@ -11,15 +11,15 @@ const GardenGrid = ({ tags, gardenItems }) => {
   // State
   const [filteredTags, setFilteredTags] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
-  const [stuItems, setStuItems] = useState([])
+  // const [stuItems, setStuItems] = useState([])
   const [showTagCloud, setShowTagCloud] = useState(false)
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    setStuItems(
+    setFilteredItems(
       gardenItems.filter(item => item.description.includes(search))
     )
-  }, [search])
+  }, [search, gardenItems])
 
   // Computed properties  
   const tagClasses = tag => {
@@ -71,14 +71,17 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
   // A Garden Item
   const Garden = ({ gardenItem }) => (
-    <li key={gardenItem.id} className="overflow-hidden col-span-1 flex flex-col rounded shadow bg-white hover:shadow-lg transition ease-in-out duration-150">
-      <Link className="flex-1 flex flex-col" to={gardenItem.slug.current}>
-        <Img className="w-full h-56 flex-shrink-0 mx-auto" fluid={gardenItem.image.asset.fluid} alt={gardenItem.title} />
-        <h3 className="text-center mt-2 uppercase leading-5 font-semibold">{gardenItem.title}</h3>
-        <p className="mb-2 text-center text-gray-700">{gardenItem.author.name}</p>
-        <p className="mb-2 text-center text-gray-700">{gardenItem.description}</p>
-      </Link>
-    </li >
+    <>
+      { gardenItem &&
+        <li key={gardenItem.id} className="overflow-hidden col-span-1 flex flex-col rounded shadow bg-white hover:shadow-lg transition ease-in-out duration-150">
+          <Link className="flex-1 flex flex-col" to={gardenItem.slug.current}>
+            <Img className="w-full h-56 flex-shrink-0 mx-auto" fluid={gardenItem.image.asset.fluid} alt={gardenItem.title} />
+            <h3 className="text-center mt-2 uppercase leading-5 font-semibold">{gardenItem.title}</h3>
+            <p className="mb-2 text-center text-gray-700">{gardenItem.author.name}</p>
+            <p className="mb-2 text-center text-gray-700">{gardenItem.description}</p>
+          </Link>
+        </li >}
+    </>
   )
 
   // The Actual Page
@@ -133,9 +136,9 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
       {/* The cards */}
       <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-12">
-        {/* {filteredItems.length !== 0 && filteredItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)} */}
-        {/* {filteredItems.length === 0 && gardenItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)} */}
-        {stuItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
+        {filteredItems.length !== 0 && filteredItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
+        {filteredItems.length === 0 && gardenItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)}
+        {/* {filteredItems.map((gardenItem, index) => <Garden key={index} gardenItem={gardenItem} />)} */}
       </ul>
     </div>
   )
