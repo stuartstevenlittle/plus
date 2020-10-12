@@ -10,7 +10,11 @@ make self-help-tools a menu item
 click outside tag cloud closes it
 garden text filter
 create words, stories & poetry sections - see samaritans etc for inspiration on stories
-create about us and training pages
+see if can animate the cards:
+  - https://codesandbox.io/s/list-transitions-ju549
+  - https://github.com/aholachek/react-flip-toolkit#simple-example-list-shuffle
+  - https://github.com/aholachek/react-flip-toolkit
+  - https://github.com/joshwcomeau/react-flip-move
 
 Tuesday
 -------
