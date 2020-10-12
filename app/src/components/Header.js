@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Transition } from "@headlessui/react";
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import sortArray from '../utils/sortArray'
 
 const Header = () => {
+  const [showToolsMenu, setShowToolsMenu] = useState(false)
+
   const { image, featuresData } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "logo.png" }) {
@@ -40,7 +43,7 @@ const Header = () => {
     <nav className="py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
         <div className="flex items-center justify-between h-16">
-          <div className="flex">
+          <div className="flex z-30">
             {/* Left */}
             <Link className="flex-shrink-0 flex items-center  text-2xl sm:text-4xl" to="/">
               <Img className="w-8 h-8 sm:w-14 sm:h-14 flex-shrink-0 mx-auto" fluid={image.sharp.fluid} />
@@ -59,55 +62,29 @@ const Header = () => {
 
               <div className="relative">
                 {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
-                <button type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   <span>Self-Help Tools</span>
                   <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </button>
-                {/*
-    Flyout menu, show/hide based on flyout menu state.
-
-    Entering: "transition ease-out duration-200"
-From: "opacity-0 translate-y-1"
-To: "opacity-100 translate-y-0"
-    Leaving: "transition ease-in duration-150"
-From: "opacity-100 translate-y-0"
-To: "opacity-0 translate-y-1"
-  */}
-                <div className="z-20 absolute transform mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-3xl">
-                  <div className="rounded-lg shadow-lg">
-                    <div className="rounded-lg shadow-xs overflow-hidden">
-                      <ul className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-
-
-                        {features.map((feature, index) =>
-                          <MenuItem key={index} feature={feature} />
-
-                        )}
-                      </ul>
-                      {/* <div className="p-5 bg-gray-50 sm:px-8 sm:py-4">
-                        <a href="#" className="-m-3 p-3 flow-root space-y-1 rounded-md hover:bg-gray-100 transition ease-in-out duration-150">
-                          <div className="flex items-center space-x-3">
-                            <div className="text-base leading-6 font-medium text-gray-900">
-                              Enterprise
-              </div>
-                            <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800">
-                              New
-              </span>
-                          </div>
-                          <p className="text-sm leading-5 text-gray-500">
-                            Empower your entire team with even more advanced tools.
-            </p>
-                        </a>
-                      </div> */}
+                <Transition
+                  show={showToolsMenu}
+                >
+                  <div className="z-40 absolute transform mt-3 px-2 w-screen max-w-md sm:px-0 lg:max-w-3xl">
+                    <div className="rounded-lg shadow-lg">
+                      <div className="rounded-lg shadow-xs overflow-hidden">
+                        <ul className="z-50 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                          {features.map((feature, index) =>
+                            <MenuItem key={index} feature={feature} showToolsMenu={showToolsMenu} setShowToolsMenu={setShowToolsMenu} />
+                          )}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Transition>
+
               </div>
-
-
-
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
                 What's Happening
             </Link>
@@ -198,11 +175,11 @@ To: "opacity-0 translate-y-1"
 
 
 
-const MenuItem = ({ feature }) => (
+const MenuItem = ({ feature, setShowToolsMenu, showToolsMenu }) => (
   <li>
-    <Link to={feature.slug.current} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+    <Link to={feature.slug.current} onClick={() => setShowToolsMenu(!showToolsMenu)} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-teal-600 text-white sm:h-12 sm:w-12">
-        {feature.icon && <Img className="w-8 h-8 text-white" fluid={feature.icon.asset.fixed} alt={feature.title} xmlns="http://www.w3.org/2000/svg" fill="currentCOlor" viewBox="0 0 24 24" stroke="currentColor" />}
+        {feature.icon && <Img className="w-8 h-8 text-white" fluid={feature.icon.asset.fixed} alt={feature.title} />}
       </div>
       <div className="space-y-1">
         <p className="text-lg leading-6 font-medium text-gray-900">{feature.title}</p>
