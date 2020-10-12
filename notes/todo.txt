@@ -1,6 +1,5 @@
 Monday 
 ------
-Remove right margin on mobile
 get contact us form working - and scroll to bottom - finsih wes course
 add map
 add search
@@ -12,6 +11,7 @@ Tuesday
 Make a tailwind teal to match logo
 Make button that colour
 Change iPad feature descriptions
+Remove right margin on mobile
 Put stylised quotes around the vision
 Change mision stmt to vision stmt
 NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
