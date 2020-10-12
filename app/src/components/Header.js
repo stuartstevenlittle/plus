@@ -196,15 +196,13 @@ To: "opacity-0 translate-y-1"
   )
 }
 
-{/* <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg> */}
+
 
 const MenuItem = ({ feature }) => (
   <li>
     <Link to={feature.slug.current} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-teal-600 text-white sm:h-12 sm:w-12">
-        {feature.icon && <Img className="w-8 h-8" fluid={feature.icon.asset.fixed} alt={feature.title} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" />}
+        {feature.icon && <Img className="w-8 h-8 text-white" fluid={feature.icon.asset.fixed} alt={feature.title} xmlns="http://www.w3.org/2000/svg" fill="currentCOlor" viewBox="0 0 24 24" stroke="currentColor" />}
       </div>
       <div className="space-y-1">
         <p className="text-lg leading-6 font-medium text-gray-900">{feature.title}</p>
