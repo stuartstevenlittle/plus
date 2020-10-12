@@ -98,13 +98,12 @@ const Home = ({ data }) => {
       <Section title="Latest News" colour='gray'>
         <NewsCarousel news={posts} />
       </Section>
+      <Section title="" colour='white' noShadow>
+        <Vision vision={vision} />
+      </Section>
+
       <Section title="" colour='white'>
-        <div className="mt-4 mb-4">
-          <Section title="" colour='white' noShadow>
-            <Vision vision={vision} />
-          </Section>
-          <FeatureGrid features={features} />
-        </div>
+        <FeatureGrid features={features} />
       </Section>
       <Section title="" colour='gray'>
         <div className="grid grid-cols-1 gap-0 sm:grid-cols-2">
