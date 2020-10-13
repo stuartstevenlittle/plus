@@ -1,3 +1,4 @@
+Sort news items descending
 Move news slider dots down a bit
 Get mapbox working
 Get donation button(s) on there
