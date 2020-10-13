@@ -1,6 +1,9 @@
 /* Swiper classes */
+:root {
+  --swiper-theme-color: #047481 !important;
+}
 .swiper-container {
-  width: full;
+  width: full; 
 }
 
 .swiper-wrapper {

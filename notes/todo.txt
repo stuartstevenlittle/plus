@@ -1,7 +1,6 @@
-Tuesday
--------
-News grid
+Move news slider dots down a bit
 Get mapbox working
+Get donation button(s) on there
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 break GardenGrid down into components. Should be easier to re-use some of them for...
 create quotes section:

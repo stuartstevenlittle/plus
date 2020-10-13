@@ -1,7 +1,6 @@
 import React from 'react'
 import SwiperCore, { EffectFade, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import '../styles/main.css'
 
 SwiperCore.use([EffectFade, Autoplay])
 
