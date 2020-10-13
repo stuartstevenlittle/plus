@@ -95,7 +95,7 @@ const Home = ({ data }) => {
     <div className="min-h-screen bg-white">
       <Slider slideData={slideData} />
       <Section title="Latest News" colour='warm-gray'>
-        <NewsCarousel news={posts} />
+        <NewsCarousel newsItems={posts} />
       </Section>
       <Section title="" colour='white' noBorder>
         <Vision vision={vision} />

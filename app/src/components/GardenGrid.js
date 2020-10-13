@@ -69,12 +69,11 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
   // The Actual Page
   return (
-    <div className="max-w-screen-xl mx-auto min-h-screen ">
+    <div className="max-w-screen-xl mx-auto min-h-screen mt-8">
 
       {/* Tags, New post and Filterbox */}
-      <div className="mb-6 flex justify-between items-center">
-        <h1></h1>
-        <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-warm-gray-400 sm:text-4xl sm:leading-10">
+      <div className="mt-4 mb-8 flex justify-between items-center">
+        <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-warm-gray-300 sm:text-4xl sm:leading-10">
           The Digital Garden
         </h2>
 
