@@ -1,4 +1,5 @@
 Sort news items descending
+Make the homepage picture fame a bit bigger so that the feature tops aren't poking up at the bottom.
 Move news slider dots down a bit
 Get mapbox working
 Get donation button(s) on there
