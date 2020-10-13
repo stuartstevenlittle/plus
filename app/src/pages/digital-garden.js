@@ -47,6 +47,8 @@ export const pageQuery = graphql`
 const DigitalGarden = ({ data }) => {
   const tags = data.tags.nodes
   const gardenItems = data.gardenItems.nodes
-  return <GardenGrid tags={tags} gardenItems={gardenItems} />
+  return (
+    <GardenGrid tags={tags} gardenItems={gardenItems} />
+  )
 }
 export default DigitalGarden

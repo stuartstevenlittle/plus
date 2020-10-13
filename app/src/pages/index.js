@@ -94,27 +94,27 @@ const Home = ({ data }) => {
   return (
     <div className="min-h-screen bg-white">
       <Slider slideData={slideData} />
-      <Section title="Latest News" colour='gray'>
+      <Section title="Latest News" colour='warm-gray'>
         <NewsCarousel news={posts} />
       </Section>
-      <Section title="" colour='white' noShadow>
+      <Section title="" colour='white' noBorder>
         <Vision vision={vision} />
       </Section>
 
       <Section title="" colour='white'>
         <FeatureGrid features={features} />
       </Section>
-      <Section title="" colour='gray'>
+      <Section title="" colour='warm-gray' noBorder>
         <div className="grid grid-cols-1 gap-0 sm:grid-cols-2">
-          <Section title="Where We are" colour='gray' noShadow noTopGap>
+          <Section title="Where We are" colour='warm-gray' noBorder noTopGap>
           </Section>
-          <Section title="Something else" colour='gray' noShadow noTopGap>
+          <Section title="Donations" colour='warm-gray' noBorder noTopGap>
             <div className="h-80"></div>
           </Section>
         </div >
       </Section>
 
-      <Section title="Funding Providers" subtitle="We are extremely grateful to our funders including NHS Tayside and P&K Council for providing our core funding since 2002." colour='white'>
+      <Section title="Funding Sources" subtitle="We are extremely grateful to our funders including NHS Tayside and P&K Council for providing our core funding since 2002." colour='white'>
         <FunderGrid funders={funders} />
       </Section>
     </div >

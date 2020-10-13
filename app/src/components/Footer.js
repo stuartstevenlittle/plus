@@ -1,8 +1,8 @@
 import React from 'react'
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-600 border-t">
-      <div className="max-w-screen-xl mx-auto pb-3 sm:pb-3 pt-3 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+    <footer className="bg-warm-gray-50 text-gray-600">
+      <div className="max-w-screen-xl mx-auto pb-3 sm:pb-4 pt-4 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         {/* Left */}
         <div className="mt-2 order-3 md:mt-0 md:order-1">
           <p className="text-center text-sm leading-6">
@@ -19,7 +19,7 @@ const Footer = () => {
 
 
         {/* Right */}
-        <div className=" mt-2 flex justify-center space-x-3 order-1 md:order-3">
+        <div className="flex justify-center space-x-3 order-1 md:order-3">
           <a href="https://www.facebook.com/PlusPerth-1514503322206433/" target="_blank" rel="noreferrer" className="hover:text-blue-700 animate">
             <span className="sr-only">Facebook</span>
             <svg className="h-8 w-8" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">

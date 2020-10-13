@@ -11,6 +11,7 @@ export default {
     { name: 'order', title: 'Order', type: 'number' },
     { name: 'mainImage', title: 'Main image', type: 'image', options: { hotspot: true } },
     { name: 'description', title: 'Description', type: 'text' },
+    { name: 'showInMenu', title: 'Show in Menu', type: 'boolean' },
     { name: 'menuText', title: 'Menu text', type: 'text' },
     { name: 'icon', title: 'Icon', type: 'image' },
   ]

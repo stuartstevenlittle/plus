@@ -6,6 +6,7 @@ export default {
   icon,
   fields: [
     { name: 'title', title: 'Title', type: 'string' },
+    { name: 'description', title: 'Description', type: 'string' },
     { name: 'plantType', title: 'Plant Type', type: 'reference', to: { type: 'plantType' } },
     { name: 'tags', title: 'Tags', type: 'array', of: [{ type: 'reference', to: { type: 'tag' } }] },
     { name: 'image', title: 'Image', type: 'image', options: { hotspot: true } },
