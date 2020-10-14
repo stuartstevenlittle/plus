@@ -9,7 +9,6 @@ const GardenGrid = ({ tags, gardenItems }) => {
   gardenItems.sort((a, b) => a.title.localeCompare(b.title))
 
   // State
-  const [myName, setMyName] = useState('Stuart')
   const [filteredTags, setFilteredTags] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
   const [showTagCloud, setShowTagCloud] = useState(false)
@@ -20,25 +19,25 @@ const GardenGrid = ({ tags, gardenItems }) => {
       // 1. add it so that it gets a coloured background
       setFilteredTags(tagsFilter => [...tagsFilter, clickedTag])
 
-      // // 2. filter the garden items array based on the clicked tag, then put those items into the filteredItems array
-      // gardenItems.filter(gardenItem => gardenItem.tags.map(t => t.name).some(tag => [...filteredTags, clickedTag].includes(tag)))
-      //   .forEach(filteredItem => {
-      //     if (filteredItems.indexOf(filteredItem) === -1) {  // the item isn't already in the filter array, so add it so that it shows on the page
-      //       setFilteredItems(filteredItems => [...filteredItems, filteredItem])
-      //     }
-      //   });
+      // 2. filter the garden items array based on the clicked tag, then put those items into the filteredItems array
+      gardenItems.filter(gardenItem => gardenItem.tags.map(t => t.name).some(tag => [...filteredTags, clickedTag].includes(tag)))
+        .forEach(filteredItem => {
+          if (filteredItems.indexOf(filteredItem) === -1) {  // the item isn't already in the filter array, so add it so that it shows on the page
+            setFilteredItems(filteredItems => [...filteredItems, filteredItem])
+          }
+        });
     }
     else {  // the clicked tag is already in the filter array - i.e. it has now been switched off
       // 1. remove it from the filter array, to set the background back to white
       setFilteredTags(filteredTags.filter(tag => tag !== clickedTag))
 
-      // // 2. remove any items that match the tag that was turned off. So loop over filteredItems, and check each one
-      // filteredItems.forEach(item => {
-      //   // if the value matches the clicked one, remove it from the array
-      //   if (item.tags.map(t => t.name).includes(clickedTag)) {
-      //     setFilteredItems(filteredItems.filter(item => !item.tags.map(t => t.name).includes(clickedTag)))
-      //   }
-      // })
+      // 2. remove any items that match the tag that was turned off. So loop over filteredItems, and check each one
+      filteredItems.forEach(item => {
+        // if the value matches the clicked one, remove it from the array
+        if (item.tags.map(t => t.name).includes(clickedTag)) {
+          setFilteredItems(filteredItems.filter(item => !item.tags.map(t => t.name).includes(clickedTag)))
+        }
+      })
     }
   }
 
@@ -51,11 +50,8 @@ const GardenGrid = ({ tags, gardenItems }) => {
   return (
     <div className="max-w-screen-xl mx-auto min-h-screen">
 
-      <h1>{myName}</h1>
-
       {/* Suubmit link and Tags */}
       <div className="mb-3 flex justify-end items-center">
-
         <div className="flex z-10">
           <div className="relative">
             <Link to="#" className="group text-gray-500 inline-flex text-base leading-6 font-medium hover:text-gray-900 focus:outline-none animate">Submit a picture</Link>
@@ -73,7 +69,6 @@ const GardenGrid = ({ tags, gardenItems }) => {
                     <ul className="px-5 py-6 z-20 relative grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
                       {tags.map((tag, index) =>
                         <Tag key={index} tag={tag} filteredTags={filteredTags} gardenItems={gardenItems} onClickTag={clickedTag => handleTagClick(clickedTag)} />
-                        // <Tag key={index} tag={tag} gardenItems={gardenItems} parentOnClickTag={value => setMyName(value)} />
                       )}
                     </ul>
                   </div>
