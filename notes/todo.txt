@@ -1,6 +1,6 @@
 Tonight
 -------
-have a single line for these -         {filteredItems.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
+have a single line for these -         {filteredTools.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
 then can make ToolsGrid generic?
 
 create quotes section:

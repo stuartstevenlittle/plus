@@ -46,14 +46,13 @@ export const pageQuery = graphql`
 `
 
 const TheDigitalGarden = ({ data }) => {
-
   const tags = data.tags.nodes
   const gardenItems = data.gardenItems.nodes
-  const [filteredItems, setFilteredItems] = useState([])
+  const [filteredTools, setFilteredTools] = useState([])
 
   return (
-    <ToolGrid tags={tags} tools={gardenItems} filteredItems={filteredItems} setFilteredItems={setFilteredItems}>
-      {filteredItems.map((tool, index) => {
+    <ToolGrid tags={tags} tools={gardenItems} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
+      {filteredTools.map((tool, index) => {
         return (
           <PictureCard key={index} picture={tool} />
         )
