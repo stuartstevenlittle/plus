@@ -40,7 +40,7 @@ const Header = () => {
   sortArray(features, 'order');
 
   return (
-    <nav className="py-1 sm:py-4">
+    <nav className="py-1 sm:py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
         <div className="flex items-center justify-between h-16">
           <div className="flex z-30">
@@ -103,7 +103,7 @@ const Header = () => {
             </Link>
               {/* Search */}
               <button className="focus:outline-none inline" id="user-menu" aria-label="User menu" aria-haspopup="true">
-                <svg className="xl:mr-2 w-6 h-6 text-gray-400 hover:text-gray-500 animate" fill="transparent" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <svg className="w-6 h-6 text-gray-400 hover:text-gray-500 animate" fill="transparent" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               </button>
             </div>
           </div>

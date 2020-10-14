@@ -10,27 +10,12 @@ SwiperCore.use([Navigation, Pagination, Autoplay])
 const NewsCarousel = ({ newsItems }) => {
   sortArray(newsItems, 'publishedAt');
 
-  // Phone Only
-  const NewsItem = ({ newsItem }) => (
-    <li className="col-span-1 flex flex-col px-8 xl:px-0 hover:opacity-90 animate">
-      <Link className="flex sm:hidden flex-1 flex-col text-center" to={newsItem.slug.current}>
-        <Img className="w-64 h-64 flex-shrink-0 mx-auto bg-black rounded-full" fluid={newsItem.mainImage.asset.fluid} alt={newsItem.title} />
-        <h3 className="mt-6 text-xl uppercase leading-5 font-semibold">{newsItem.title}</h3>
-        <p className="text-lg mx-8 mt-3">{newsItem.exerpt}</p>
-        <p className="mx-8 mb-4 mt-2 text-blue-600">
-          <span>Read More</span>
-          <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </p>
-      </Link>
-    </li >
-  )
-
   // Tablet and up
   const slides = []
   newsItems.forEach(newsItem => {
     slides.push(
       <SwiperSlide key={newsItem.slug.current} tag="li">
-        <div className="col-span-1 flex flex-col pb-4 pt-8 px-8 xl:px-0 hover:opacity-90 animate">
+        <div className="col-span-1 flex flex-col pb-4 pt-4 px-8 xl:px-0 hover:opacity-90 animate">
           <Link className="hidden sm:flex flex-1 flex-col" to={newsItem.slug.current}>
             {/* News Item Card */}
             <div className="flex">
@@ -55,8 +40,23 @@ const NewsCarousel = ({ newsItems }) => {
     )
   })
 
+  // Phone Only
+  const NewsItem = ({ newsItem }) => (
+    <li className="col-span-1 flex flex-col px-8 xl:px-0 hover:opacity-90 animate">
+      <Link className="flex sm:hidden flex-1 flex-col text-center" to={newsItem.slug.current}>
+        <Img className="w-64 h-64 flex-shrink-0 mx-auto bg-black rounded-full" fluid={newsItem.mainImage.asset.fluid} alt={newsItem.title} />
+        <h3 className="mt-6 text-xl uppercase leading-5 font-semibold">{newsItem.title}</h3>
+        <p className="text-lg mx-8 mt-3">{newsItem.exerpt}</p>
+        <p className="mx-8 mb-4 mt-2 text-blue-600">
+          <span>Read More</span>
+          <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </p>
+      </Link>
+    </li >
+  )
+
   return (
-    <div className="mb-4">
+    <div className="mb-1">
       <ul className="sm:hidden grid mt-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {newsItems.map((newsItem, index) =>
           <NewsItem key={index} newsItem={newsItem} />

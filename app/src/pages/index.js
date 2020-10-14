@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Slider from '../components/Slider'
+import Img from 'gatsby-image'
+// import Slider from '../components/Slider'
 import NewsCarousel from '../components/NewsCarousel'
 import Section from '../components/Section'
 import FeatureGrid from '../components/FeatureGrid'
@@ -9,23 +10,23 @@ import Vision from '../components/Vision'
 
 export const pageQuery = graphql`
 {
-  vision: allSanityVision {
+  general: allSanityGeneral {
     nodes {
-      text
-    }
-}
-
-  slideData: allSanitySlide {
-                nodes {
-                id
-      title
-      order
-      image {
-                asset {
-                fluid(maxWidth: 1675) {
-                src
-              }
+      vision
+      homepageMainPhoto {
+        asset {
+                    fluid(maxWidth: 1250) {
+                          ...GatsbySanityImageFluid
+          }
+        }      
+      }
+      homepageAvatar {
+        asset {
+                              fluid(maxWidth: 1250) {
+                          ...GatsbySanityImageFluid
+          }
         }
+
       }
     }
   }
@@ -86,14 +87,17 @@ export const pageQuery = graphql`
 `
 
 const Home = ({ data }) => {
-  const vision = data.vision.nodes[0].text
-  const slideData = data.slideData.nodes
+  const vision = data.general.nodes[0].vision
+  const homepageMainPhoto = data.general.nodes[0].homepageMainPhoto
+  // const slideData = data.slideData.nodes
   const funders = data.funders.nodes
   const posts = data.posts.nodes
   const features = data.features.nodes
   return (
+
     <div className="min-h-screen bg-white">
-      <Slider slideData={slideData} />
+      {/* <pre>{JSON.stringify(data.general.nodes[0].vision, null, 2)}</pre> */}
+      <Img className="w-full h-56 flex-shrink-0 mx-auto" fluid={homepageMainPhoto.asset.fluid} alt="Picture of PLUS members celebrating" />
       <Section title="Latest News" colour='warm-gray'>
         <NewsCarousel newsItems={posts} />
       </Section>

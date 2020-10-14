@@ -1,3 +1,5 @@
+Move vision above news
+increase hero
 Get mapbox working
 break GardenGrid down into components. Should be easier to re-use some of them for...
 create quotes section:
