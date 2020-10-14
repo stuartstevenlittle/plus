@@ -1,6 +1,5 @@
-Move vision above news
-increase hero
-Get mapbox working
+Tonight
+-------
 break GardenGrid down into components. Should be easier to re-use some of them for...
 create quotes section:
   - Reuse the GardenGrid. Rename it as ToolsGrid. 
@@ -15,10 +14,17 @@ see if can animate the cards:
   - https://github.com/joshwcomeau/react-flip-move
 Sort news items descending
 Move news slider dots down a bit
+
+
+Thu
+---
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 Change iPad feature descriptions
 Remove right margin on mobile
 in mobile footer put elan below plus
+Move vision above news
+increase hero
+Get mapbox working
 
 
 Next week

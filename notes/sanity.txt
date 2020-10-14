@@ -1,0 +1,5 @@
+Blog Website: https://sanity-gatsby-blog-two.netlify.app
+Sanity Studio: https://sanity-gatsby-blog-two-studio.netlify.app
+Repository: https://github.com/stuartstevenlittle/sanity-gatsby-blog-two
+Git URL: git://github.com/stuartstevenlittle/sanity-gatsby-blog-two.git
+Manage Sanity project: https://manage.sanity.io/projects/mowo5rv9

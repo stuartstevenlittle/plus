@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "NODE_OPTIONS='-r esm' gatsby build",
-    "develop": "NODE_OPTIONS='-r esm' gatsby develop",
+    "develop": "NODE_OPTIONS='-r esm' gatsby develop -p 4000",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "NODE_OPTIONS='-r esm' gatsby serve",
