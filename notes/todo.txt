@@ -1,8 +1,4 @@
-Sort news items descending
-Make the homepage picture fame a bit bigger so that the feature tops aren't poking up at the bottom.
-Move news slider dots down a bit
 Get mapbox working
-Get donation button(s) on there
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 break GardenGrid down into components. Should be easier to re-use some of them for...
 create quotes section:
@@ -18,7 +14,8 @@ see if can animate the cards:
   - https://github.com/aholachek/react-flip-toolkit#simple-example-list-shuffle
   - https://github.com/aholachek/react-flip-toolkit
   - https://github.com/joshwcomeau/react-flip-move
-
+Sort news items descending
+Move news slider dots down a bit
 
 Wed
 ---
