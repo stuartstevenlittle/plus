@@ -72,7 +72,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
     <div className="max-w-screen-xl mx-auto min-h-screen">
 
       {/* Tags, New post and Filterbox */}
-      <div className="mb-8 flex justify-end items-center">
+      <div className="mb-3 flex justify-end items-center">
         {/* <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-400 sm:text-4xl sm:leading-10 pb-1">
           The Digital Garden
         </h2> */}
@@ -95,7 +95,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <div className="absolute right-0 mr-4 mt-1 w-screen max-w-4xl sm:px-0">
+              <div className="absolute right-0 mr-4 -mt-1 w-screen max-w-4xl sm:px-0">
                 <div className="rounded-lg shadow-lg bg-white">
                   <div className="rounded-lg shadow-xs overflow-hidden">
                     <ul className="px-5 py-6 z-20 relative grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
@@ -108,7 +108,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
               </div>
             </Transition>
           </div>
-          <button className="ml-5 min-w-32 hover:bg-blue-200 hover:border-blue-300 hover:text-blue-800 text-gray-500 shadow-sm focus:outline-none items-center px-4 py-2 col-span-1 flex flex-col text-center rounded border animate">Submit Post</button>
+          {/* <button className="ml-5 min-w-32 hover:bg-blue-200 hover:border-blue-300 hover:text-blue-800 text-gray-500 shadow-sm focus:outline-none items-center px-4 py-2 col-span-1 flex flex-col text-center rounded border animate">Submit a Post</button> */}
         </div>
       </div>
 
