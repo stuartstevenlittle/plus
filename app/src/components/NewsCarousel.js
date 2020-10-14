@@ -30,7 +30,7 @@ const NewsCarousel = ({ newsItems }) => {
                 <p className="text-base mt-2">{newsItem.exerpt}</p>
                 <p className="mb-4 mt-2 text-blue-600">
                   <span>Read More</span>
-                  <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                  <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                 </p>
               </div>
             </div>
@@ -49,7 +49,7 @@ const NewsCarousel = ({ newsItems }) => {
         <p className="text-lg mx-8 mt-3">{newsItem.exerpt}</p>
         <p className="mx-8 mb-4 mt-2 text-blue-600">
           <span>Read More</span>
-          <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
         </p>
       </Link>
     </li >
