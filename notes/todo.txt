@@ -1,6 +1,8 @@
 Tonight
 -------
-break GardenGrid down into components. Should be easier to re-use some of them for...
+have a single line for these -         {filteredItems.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
+then can make ToolsGrid generic?
+
 create quotes section:
   - Reuse the GardenGrid. Rename it as ToolsGrid. 
 create stories & poetry sections:

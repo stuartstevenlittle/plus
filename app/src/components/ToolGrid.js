@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ToolCard from './ToolCard'
+import PictureCard from './PictureCard'
 import TagCloud from './TagCloud'
 import PlainLink from './PlainLink'
 
@@ -54,8 +54,8 @@ const ToolGrid = ({ tags, tools }) => {
       </div>
       {/* Cards */}
       <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-4">
-        {filteredItems.length === 0 && tools.map((tool, index) => <ToolCard key={index} tool={tool} />)}
-        {filteredItems.length !== 0 && filteredItems.map((tool, index) => <ToolCard key={index} tool={tool} />)}
+        {filteredItems.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
+        {filteredItems.length !== 0 && filteredItems.map((tool, index) => <PictureCard key={index} picture={tool} />)}
       </ul>
     </div>
   )
