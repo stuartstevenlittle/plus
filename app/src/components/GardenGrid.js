@@ -69,13 +69,13 @@ const GardenGrid = ({ tags, gardenItems }) => {
 
   // The Actual Page
   return (
-    <div className="max-w-screen-xl mx-auto min-h-screen mt-8">
+    <div className="max-w-screen-xl mx-auto min-h-screen">
 
       {/* Tags, New post and Filterbox */}
-      <div className="mt-4 mb-8 flex justify-between items-center">
-        <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-warm-gray-300 sm:text-4xl sm:leading-10">
+      <div className="mb-8 flex justify-end items-center">
+        {/* <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-400 sm:text-4xl sm:leading-10 pb-1">
           The Digital Garden
-        </h2>
+        </h2> */}
 
         <div className="flex z-10">
           <div className="relative">
@@ -113,7 +113,7 @@ const GardenGrid = ({ tags, gardenItems }) => {
       </div>
 
       {/* The cards */}
-      <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-12">
+      <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-4">
         {filteredItems.length === 0 && gardenItems.map((gardenItem, index) => <GardenItem key={index} gardenItem={gardenItem} />)}
         {filteredItems.length !== 0 && filteredItems.map((gardenItem, index) => <GardenItem key={index} gardenItem={gardenItem} />)}
       </ul>

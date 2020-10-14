@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-transition-link`,
     { resolve: 'gatsby-source-filesystem', options: { name: 'images', path: path.join(__dirname, `images`) } },
     // { resolve: 'gatsby-source-filesystem', options: { name: 'images', path: `images` } },
     { resolve: `gatsby-plugin-postcss`, options: { postCssPlugins: [require(`tailwindcss`)] } },

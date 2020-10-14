@@ -104,7 +104,7 @@ const Home = ({ data }) => {
       <Section title="" colour='white'>
         <FeatureGrid features={features} />
       </Section>
-      <Section title="" colour='warm-gray' noBorder>
+      <Section title="" colour='warm-gray'>
         <div className="grid grid-cols-1 gap-0 sm:grid-cols-2">
           <Section title="Where We are" colour='warm-gray' noBorder noTopGap>
           </Section>
@@ -114,7 +114,7 @@ const Home = ({ data }) => {
         </div >
       </Section>
 
-      <Section title="Funding Sources" subtitle="We are extremely grateful to our funders including NHS Tayside and P&K Council for providing our core funding since 2002." colour='white'>
+      <Section title="Funding Sources" subtitle="We are extremely grateful to our funders including NHS Tayside and P&K Council for providing our core funding since 2002." colour='white' >
         <FunderGrid funders={funders} />
       </Section>
     </div >

@@ -54,3 +54,10 @@ create a new sanity for them with these datasets:
   Funders
   Tags
   Garden Items
+
+
+Other
+-----
+Donations:
+15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
+https://stripe.com/docs/payments/checkout/client

@@ -26,7 +26,7 @@ const Vision = ({ vision }) => {
             {vision}
           </p>
         </div>
-        <footer className="mt-4">
+        <footer className="mt-2">
           <div className="flex items-center justify-center">
             <div className="flex-shrink-0">
               <Img className="mx-auto h-12 w-12  sm:h-16 sm:w-16 rounded-full" fluid={image.sharp.fluid} />

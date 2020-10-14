@@ -40,11 +40,12 @@ const Header = () => {
   sortArray(features, 'order');
 
   return (
-    <nav className="py-1 border-b border-warm-gray-100 sm:py-4">
+    <nav className="py-1 sm:py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
         <div className="flex items-center justify-between h-16">
           <div className="flex z-30">
             {/* Left */}
+
             <Link className="flex-shrink-0 flex items-center  text-3xl sm:text-4xl" to="/">
               <Img className="w-8 h-8 sm:w-14 sm:h-14 flex-shrink-0 mx-auto" fluid={image.sharp.fluid} />
               <span className="ml-2 text-gray-500 font-semibold uppercase">Plus</span><span className="ml-1 text-gray-400">Perth</span>
