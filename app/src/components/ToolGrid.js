@@ -11,6 +11,9 @@ const ToolGrid = ({ tags, tools }) => {
   const [filteredTags, setFilteredTags] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
 
+  // Computed properties  
+  const items = () => filteredItems.length === 0 ? tools : filteredItems
+
 
   // Methods
   function handleTagClick(clickedTag) {
