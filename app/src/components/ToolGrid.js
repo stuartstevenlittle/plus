@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import GardenItem from './GardenItem'
+import ToolCard from './ToolCard'
 import TagCloud from './TagCloud'
 import PlainLink from './PlainLink'
 
-const GardenGrid = ({ tags, gardenItems }) => {
+const ToolGrid = ({ tags, tools }) => {
   tags.sort((a, b) => a.name.localeCompare(b.name))
-  gardenItems.sort((a, b) => a.title.localeCompare(b.title))
+  tools.sort((a, b) => a.title.localeCompare(b.title))
 
   // State
   const [filteredTags, setFilteredTags] = useState([])
@@ -18,8 +18,8 @@ const GardenGrid = ({ tags, gardenItems }) => {
       // 1. add it so that it gets a coloured background
       setFilteredTags(tagsFilter => [...tagsFilter, clickedTag])
 
-      // 2. filter the garden items array based on the clicked tag, then put those items into the filteredItems array
-      gardenItems.filter(gardenItem => gardenItem.tags.map(t => t.name).some(tag => [...filteredTags, clickedTag].includes(tag)))
+      // 2. filter the tools array based on the clicked tag, then put those items into the filteredItems array
+      tools.filter(tool => tool.tags.map(t => t.name).some(tag => [...filteredTags, clickedTag].includes(tag)))
         .forEach(filteredItem => {
           if (filteredItems.indexOf(filteredItem) === -1) {  // the item isn't already in the filter array, so add it so that it shows on the page
             setFilteredItems(filteredItems => [...filteredItems, filteredItem])
@@ -43,7 +43,6 @@ const GardenGrid = ({ tags, gardenItems }) => {
   // Template
   return (
     <div className="max-w-screen-xl mx-auto min-h-screen">
-
       {/* Toolbar */}
       <div className="mb-3 flex justify-end items-center">
         <div className="flex z-10">
@@ -53,13 +52,12 @@ const GardenGrid = ({ tags, gardenItems }) => {
           </div>
         </div>
       </div>
-
       {/* Cards */}
       <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-4">
-        {filteredItems.length === 0 && gardenItems.map((gardenItem, index) => <GardenItem key={index} gardenItem={gardenItem} />)}
-        {filteredItems.length !== 0 && filteredItems.map((gardenItem, index) => <GardenItem key={index} gardenItem={gardenItem} />)}
+        {filteredItems.length === 0 && tools.map((tool, index) => <ToolCard key={index} tool={tool} />)}
+        {filteredItems.length !== 0 && filteredItems.map((tool, index) => <ToolCard key={index} tool={tool} />)}
       </ul>
     </div>
   )
 }
-export default GardenGrid
+export default ToolGrid

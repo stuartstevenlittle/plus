@@ -54,15 +54,7 @@ const Header = () => {
           {/* Right */}
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="hidden sm:-my-px sm:ml-6 space-x-8 sm:flex">
-              {/* <Link to="/" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 focus:outline-none animate">
-                Home
-            </Link> */}
-              {/* <Link to="digital-garden" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
-                Self-Help Tools
-            </Link> */}
-
               <div className="relative">
-                {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
                 <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   <span>Self-Help Tools</span>
                   <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

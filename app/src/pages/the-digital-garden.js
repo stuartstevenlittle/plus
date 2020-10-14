@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import GardenGrid from '../components/GardenGrid'
+import ToolGrid from '../components/ToolGrid'
 
 export const pageQuery = graphql`
 {
@@ -44,11 +44,11 @@ export const pageQuery = graphql`
 }
 `
 
-const DigitalGarden = ({ data }) => {
+const TheDigitalGarden = ({ data }) => {
   const tags = data.tags.nodes
   const gardenItems = data.gardenItems.nodes
   return (
-    <GardenGrid tags={tags} gardenItems={gardenItems} />
+    <ToolGrid tags={tags} tools={gardenItems} />
   )
 }
-export default DigitalGarden
+export default TheDigitalGarden
