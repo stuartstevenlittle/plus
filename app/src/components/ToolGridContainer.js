@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import ToolGrid from '../components/ToolGrid'
 import PictureCard from '../components/PictureCard'
 
-const ToolGridContainer = ({ gardenItems }) => {
+const ToolGridContainer = ({ tools }) => {
   // Data
   const { tagsData } = useStaticQuery(graphql`
   query {
@@ -22,7 +22,7 @@ const ToolGridContainer = ({ gardenItems }) => {
 
   return (
     // <pre>{JSON.stringify(tags, null, 2)}</pre>
-    <ToolGrid tags={tags} tools={gardenItems} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
+    <ToolGrid tags={tags} tools={tools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
       {filteredTools.map((tool, index) => {
         return (
           <PictureCard key={index} picture={tool} />

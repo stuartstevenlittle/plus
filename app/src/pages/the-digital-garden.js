@@ -40,12 +40,7 @@ export const pageQuery = graphql`
 }
 `
 
-const TheDigitalGarden = ({ data }) => {
-  const gardenItems = data.gardenItems.nodes
-
-  return (
-    <ToolGridContainer gardenItems={gardenItems} />
-
-  )
-}
+const TheDigitalGarden = ({ data }) => (
+  <ToolGridContainer tools={data.gardenItems.nodes} />
+)
 export default TheDigitalGarden
