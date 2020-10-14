@@ -26,9 +26,13 @@ const Header = () => {
       menuText
       icon    {
         asset {
-            fixed {
-              src
-            }
+            fixed(width: 36) {
+    base64
+    width
+    height
+    src
+    srcSet
+}
           }
       }
     }
