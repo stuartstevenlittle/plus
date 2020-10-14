@@ -1,13 +1,10 @@
 Get mapbox working
-Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 break GardenGrid down into components. Should be easier to re-use some of them for...
 create quotes section:
   - Reuse the GardenGrid. Rename it as ToolsGrid. 
-  
 create stories & poetry sections:
   - use text filter for these, no tags
   - see samaritans etc for inspiration on stories
-
 click outside tag cloud closes it
 see if can animate the cards:
   - https://codesandbox.io/s/list-transitions-ju549
@@ -16,19 +13,10 @@ see if can animate the cards:
   - https://github.com/joshwcomeau/react-flip-move
 Sort news items descending
 Move news slider dots down a bit
-
-Wed
----
-Make a tailwind teal to match logo
-Make button that colour
+Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 Change iPad feature descriptions
 Remove right margin on mobile
-Put stylised quotes around the vision
-Change mision stmt to vision stmt
-NewsCarousel into swiper on desktop, but same as FeaturesGrid on phone and tablet
 in mobile footer put elan below plus
-understand how to add "small" etc to a component - for the button - https://egghead.io/lessons/react-style-react-components-with-classname-and-in-line-styles
-make self-help tools menu icons white - sanity svg plugin?
 
 
 Next week
