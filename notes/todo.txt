@@ -1,5 +1,6 @@
-Thursday
+Friday
 --------
+change tag fun to insight
 create stories - https://www.samaritans.org/support-us/campaign/real-people-real-stories/
 put sort into util
 Sort news items descending
