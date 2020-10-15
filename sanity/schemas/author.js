@@ -12,6 +12,16 @@ export default {
       type: 'string'
     },
     {
+      name: 'age',
+      title: 'Age',
+      type: 'number'
+    },
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'string'
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

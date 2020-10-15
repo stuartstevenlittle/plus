@@ -49,7 +49,7 @@ const ToolGrid = ({ tags, tools, toolType, filteredTools, setFilteredTools, chil
         </div>
       </div>
       {/* Cards */}
-      <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-4">
+      <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-2">
         {/* {filteredTools.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
         {filteredTools.length !== 0 && filteredTools.map((tool, index) => <PictureCard key={index} picture={tool} />)} */}
         {children}

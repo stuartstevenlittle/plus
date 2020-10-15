@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import ToolGrid from '../components/ToolGrid'
 import PictureCard from '../components/PictureCard'
 import QuoteCard from '../components/QuoteCard'
-import ToolGrid from '../components/ToolGrid'
+import StoryCard from '../components/StoryCard'
 
 const ToolGridWrapper = ({ toolType, allTools }) => {
   // Data
@@ -36,8 +37,10 @@ const ToolGridWrapper = ({ toolType, allTools }) => {
       case 'Quote':
         mappedTools = tools.map((tool, index) => <QuoteCard key={index} quote={tool} />)
         break
+      case 'Story':
+        mappedTools = tools.map((tool, index) => <StoryCard key={index} quote={tool} />)
+        break
       default:
-        // TODO do something sensible here
         mappedTools = tools.map((tool, index) => <QuoteCard key={index} quote={tool} />)
         break
     }
