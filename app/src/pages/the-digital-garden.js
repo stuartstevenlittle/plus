@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
-import PictureCard from '../components/PictureCard'
-import ToolGridContainer from '../components/ToolGridContainer'
+import ToolGridWrapper from '../components/ToolGridWrapper'
 
 export const pageQuery = graphql`
 {
@@ -40,17 +39,6 @@ export const pageQuery = graphql`
 }
 `
 
-const TheDigitalGarden = ({ data }) => {
-  const tools = data.gardenItems.nodes
-  const [filteredTools, setFilteredTools] = useState([])
+const TheDigitalGarden = ({ data }) => <ToolGridWrapper toolType="Picture" tools={data.gardenItems.nodes} />
 
-  // Computed properties
-  const computedTools = _ => (filteredTools.length > 0) ? filteredTools : tools
-
-  return (
-    <ToolGridContainer toolType="Picture" tools={tools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
-      { computedTools().map((tool, index) => <PictureCard key={index} picture={tool} />)}
-    </ToolGridContainer>
-  )
-}
 export default TheDigitalGarden
