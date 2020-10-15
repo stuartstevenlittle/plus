@@ -15,7 +15,12 @@ const ToolGridWrapper = ({ toolType, allTools }) => {
     }
   }
   `)
-  const tags = tagsData.nodes
+  const allTags = tagsData.nodes
+  const tags = allTags.filter(tag => {
+    return allTools.some(tool => {
+      return tool.tags.some(toolTag => { return tag.name === toolTag.name })
+    });
+  });
 
   // State
   const [filteredTools, setFilteredTools] = useState([])
@@ -41,6 +46,8 @@ const ToolGridWrapper = ({ toolType, allTools }) => {
 
   return (
     <ToolGrid tags={tags} toolType={toolType} tools={allTools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
+      <pre>{JSON.stringify(tags, null, 2)}</pre>
+
       { computedTools()}
     </ToolGrid>
   )
