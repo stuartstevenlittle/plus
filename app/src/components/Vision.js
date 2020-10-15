@@ -1,12 +1,15 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-// import Avatar from './Avatar'
+import Img from 'gatsby-image'
 
 const Vision = ({ vision }) => {
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "susan-avatar.jpg" }) {
         sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
           fixed(width: 200) {
     base64
     width
@@ -30,8 +33,16 @@ const Vision = ({ vision }) => {
             {vision}
           </p>
         </div>
-        <footer>
-          {/* <Avatar image={image} /> */}
+        <footer className="">
+          <div className="flex items-center justify-center">
+            <div className="flex-shrink-0">
+              <Img className="mx-auto h-12 w-12  sm:h-16 sm:w-16 rounded-full" fluid={image.sharp.fluid} />
+            </div>
+            <div className="ml-4 sm:ml-5">
+              <div className=" sm:text-xl leading-6 font-medium text-gray-900">Susan Scott</div>
+              <div className="sm:text-xl sm:mt-1 leading-6 font-medium text-gray-500">Development Manager at PLUS</div>
+            </div>
+          </div>
         </footer>
       </blockquote>
     </div>
