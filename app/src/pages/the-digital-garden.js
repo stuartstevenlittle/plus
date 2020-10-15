@@ -39,6 +39,6 @@ export const pageQuery = graphql`
 }
 `
 
-const TheDigitalGarden = ({ data }) => <ToolGridWrapper toolType="Picture" tools={data.gardenItems.nodes} />
+const TheDigitalGarden = ({ data }) => <ToolGridWrapper toolType="Picture" allTools={data.gardenItems.nodes} />
 
 export default TheDigitalGarden

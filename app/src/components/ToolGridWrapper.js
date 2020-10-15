@@ -4,7 +4,7 @@ import PictureCard from '../components/PictureCard'
 import QuoteCard from '../components/QuoteCard'
 import ToolGrid from '../components/ToolGrid'
 
-const ToolGridWrapper = ({ toolType, tools }) => {
+const ToolGridWrapper = ({ toolType, allTools }) => {
   // Data
   const { tagsData } = useStaticQuery(graphql`
   query {
@@ -22,15 +22,25 @@ const ToolGridWrapper = ({ toolType, tools }) => {
 
   // Computed properties
   const computedTools = _ => {
-    const arrayToUse = (filteredTools.length > 0) ? filteredTools : tools
-    return (toolType === 'Picture') ?
-      arrayToUse.map((tool, index) => <PictureCard key={index} picture={tool} />)
-      :
-      arrayToUse.map((tool, index) => <QuoteCard key={index} quote={tool} />)
+    const tools = (filteredTools.length > 0) ? filteredTools : allTools
+    let mappedTools
+    switch (toolType) {
+      case 'Picture':
+        mappedTools = tools.map((tool, index) => <PictureCard key={index} picture={tool} />)
+        break
+      case 'Quote':
+        mappedTools = tools.map((tool, index) => <QuoteCard key={index} quote={tool} />)
+        break
+      default:
+        // TODO do something sensible here
+        mappedTools = tools.map((tool, index) => <QuoteCard key={index} quote={tool} />)
+        break
+    }
+    return mappedTools
   }
 
   return (
-    <ToolGrid tags={tags} toolType={toolType} tools={tools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
+    <ToolGrid tags={tags} toolType={toolType} tools={allTools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
       { computedTools()}
     </ToolGrid>
   )

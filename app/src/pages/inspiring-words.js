@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
-import QuoteCard from '../components/QuoteCard'
-import ToolGridContainer from '../components/ToolGridContainer'
+import ToolGridWrapper from '../components/ToolGridWrapper'
 
 export const pageQuery = graphql`
 {
@@ -28,18 +27,5 @@ export const pageQuery = graphql`
 }
 `
 
-const InspiringWords = ({ data }) => {
-
-  const [filteredTools, setFilteredTools] = useState([])
-
-  return (
-    <ToolGridContainer toolType="Quote" tools={data.quotes.nodes} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
-      {filteredTools.map((tool, index) => {
-        return (
-          <QuoteCard key={index} quote={tool} />
-        )
-      })}
-    </ToolGridContainer>
-  )
-}
+const InspiringWords = ({ data }) => <ToolGridWrapper toolType="Quote" allTools={data.quotes.nodes} />
 export default InspiringWords
