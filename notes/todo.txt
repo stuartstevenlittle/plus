@@ -1,7 +1,6 @@
 Thursday
 --------
-make Susan a person, so that the homepage works
-have a single line for these -         {filteredTools.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
+react computed properties - have a single line for these -         {filteredTools.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
 look at UI book and online for beautiful card designs.
 create stories & poetry sections - see samaritans etc for inspiration on stories
 click outside tag cloud closes it
@@ -11,13 +10,14 @@ see if can animate the cards:
   - https://github.com/aholachek/react-flip-toolkit
   - https://github.com/joshwcomeau/react-flip-move
 Sort news items descending
+Move vision above news
+increase hero
 Move news slider dots down a bit
+make Susan a person, so that the homepage works
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 Change iPad feature descriptions
 Remove right margin on mobile
 in mobile footer put elan below plus
-Move vision above news
-increase hero
 Get mapbox working
 
 
