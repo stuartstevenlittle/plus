@@ -4,7 +4,6 @@ import PlainLink from './PlainLink'
 
 const ToolGrid = ({ tags, tools, toolType, filteredTools, setFilteredTools, children }) => {
   tags.sort((a, b) => a.name.localeCompare(b.name))
-  // tools.sort((a, b) => a.title.localeCompare(b.title))
 
   // State
   const [filteredTags, setFilteredTags] = useState([])

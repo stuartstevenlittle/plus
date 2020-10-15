@@ -27,5 +27,10 @@ export const pageQuery = graphql`
 }
 `
 
-const InspiringWords = ({ data }) => <ToolGridWrapper toolType="Quote" allTools={data.quotes.nodes} />
+
+const InspiringWords = ({ data }) => {
+  const quotes = data.quotes.nodes
+  quotes.sort((a, b) => a.text.localeCompare(b.text))
+  return <ToolGridWrapper toolType="Quote" allTools={quotes} />
+}
 export default InspiringWords

@@ -4,11 +4,11 @@ const Footer = () => {
     <footer className="bg-transparent text-gray-600">
       <div className="max-w-screen-xl mx-auto pb-3 sm:pb-4 pt-4 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         {/* Left */}
-        <div className="mt-2 order-3 md:mt-0 md:order-1">
+        {/* <div className="mt-2 order-3 md:mt-0 md:order-1">
           <p className="text-center text-sm leading-6">
             Website by <a href="https://www.elansoftware.co.uk" target="_blank" rel="noreferrer" className="text-blue-700 hover:text-blue-800 animate" >&#233;lan software</a>
           </p>
-        </div>
+        </div> */}
 
         {/* Middle */}
         <div className="mt-2 order-2 md:mt-0 md:order-1">
