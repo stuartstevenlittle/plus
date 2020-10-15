@@ -46,8 +46,6 @@ const ToolGridWrapper = ({ toolType, allTools }) => {
 
   return (
     <ToolGrid tags={tags} toolType={toolType} tools={allTools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
-      <pre>{JSON.stringify(tags, null, 2)}</pre>
-
       { computedTools()}
     </ToolGrid>
   )
