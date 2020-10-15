@@ -26,13 +26,9 @@ const Header = () => {
       menuText
       icon    {
         asset {
-            fixed(width: 36) {
-    base64
-    width
-    height
-    src
-    srcSet
-}
+            fixed {
+              src
+            }
           }
       }
     }
@@ -44,13 +40,12 @@ const Header = () => {
   sortArray(features, 'order');
 
   return (
-    <nav className="py-1 sm:py-2">
+    <nav className="py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
         <div className="flex items-center justify-between h-16">
           <div className="flex z-30">
             {/* Left */}
-
-            <Link className="flex-shrink-0 flex items-center  text-3xl sm:text-4xl" to="/">
+            <Link className="flex-shrink-0 flex items-center  text-2xl sm:text-4xl" to="/">
               <Img className="w-8 h-8 sm:w-14 sm:h-14 flex-shrink-0 mx-auto" fluid={image.sharp.fluid} />
               <span className="ml-2 text-gray-500 font-semibold uppercase">Plus</span><span className="ml-1 text-gray-400">Perth</span>
             </Link>
@@ -58,7 +53,15 @@ const Header = () => {
           {/* Right */}
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="hidden sm:-my-px sm:ml-6 space-x-8 sm:flex">
+              {/* <Link to="/" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 focus:outline-none animate">
+                Home
+            </Link> */}
+              {/* <Link to="digital-garden" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
+                Self-Help Tools
+            </Link> */}
+
               <div className="relative">
+                {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
                 <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   <span>Self-Help Tools</span>
                   <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -99,7 +102,7 @@ const Header = () => {
             </Link>
               {/* Search */}
               <button className="focus:outline-none inline" id="user-menu" aria-label="User menu" aria-haspopup="true">
-                <svg className="w-6 h-6 text-gray-400 hover:text-gray-500 animate" fill="transparent" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <svg className="xl:mr-2 w-6 h-6 text-gray-400 hover:text-gray-500 animate" fill="transparent" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               </button>
             </div>
           </div>
@@ -174,9 +177,9 @@ const Header = () => {
 
 const MenuItem = ({ feature, setShowToolsMenu, showToolsMenu }) => (
   <li>
-    <Link to={`/${feature.slug.current}`} onClick={() => setShowToolsMenu(!showToolsMenu)} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+    <Link to={feature.slug.current} onClick={() => setShowToolsMenu(!showToolsMenu)} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-teal-600 text-white sm:h-12 sm:w-12">
-        {feature.icon && <Img className="w-8 h-8 text-white" fixed={feature.icon.asset.fixed} alt={feature.title} />}
+        {feature.icon && <Img className="w-8 h-8 text-white" fluid={feature.icon.asset.fixed} alt={feature.title} />}
       </div>
       <div className="space-y-1">
         <p className="text-lg leading-6 font-medium text-gray-900">{feature.title}</p>
