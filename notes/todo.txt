@@ -18,6 +18,36 @@ ask if can put my site in footer
 
 
 
+ui 189 - general 
+
+quote
+ui - 36
+ui - 102 - follow maybe
+
+
+story
+https://www.samaritans.org/support-us/campaign/real-people-real-stories/
+ui - 137
+  Text
+  Excerpt
+  Image
+  Button text
+  Author
+    Name
+    
+poem
+ui - 171
+(ui - 64)
+  Text
+  Excerpt
+  Image
+  Button text
+  Author
+    Name
+
+
+
+
 Next week
 ---------
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
