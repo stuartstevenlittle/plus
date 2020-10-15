@@ -5,10 +5,14 @@ import general from './general'
 import category from './category'
 import post from './post'
 import author from './author'
+import quoteAuthor from './quoteAuthor'
 import slide from './slide'
 import funder from './funder'
 import tag from './tag'
 import plant from './plant'
+import quote from './quote'
+import story from './story'
+import poem from './poem'
 import plantType from './plantType'
 
 export default createSchema({
@@ -17,6 +21,7 @@ export default createSchema({
     general,
     post,
     author,
+    quoteAuthor,
     category,
     slide,
     funder,
@@ -24,5 +29,8 @@ export default createSchema({
     tag,
     plantType,
     plant,
+    quote,
+    story,
+    poem
   ])
 })

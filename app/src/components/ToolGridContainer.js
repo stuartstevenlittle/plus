@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import ToolGrid from '../components/ToolGrid'
-import PictureCard from '../components/PictureCard'
 
-const ToolGridContainer = ({ tools }) => {
-  // Data
+const ToolGridContainer = ({ children, toolType, tools, filteredTools, setFilteredTools }) => {
+
   const { tagsData } = useStaticQuery(graphql`
   query {
     tagsData: allSanityTag {
@@ -16,18 +15,10 @@ const ToolGridContainer = ({ tools }) => {
   `)
   const tags = tagsData.nodes
 
-  // State
-  const [filteredTools, setFilteredTools] = useState([])
-
 
   return (
-    // <pre>{JSON.stringify(tags, null, 2)}</pre>
-    <ToolGrid tags={tags} tools={tools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
-      {filteredTools.map((tool, index) => {
-        return (
-          <PictureCard key={index} picture={tool} />
-        )
-      })}
+    <ToolGrid tags={tags} toolType={toolType} tools={tools} filteredTools={filteredTools} setFilteredTools={setFilteredTools}>
+      {children}
     </ToolGrid>
 
   )

@@ -1,13 +1,9 @@
-Tonight
--------
+Thursday
+--------
+make Susan a person, so that the homepage works
 have a single line for these -         {filteredTools.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
-then can make ToolsGrid generic?
-
-create quotes section:
-  - Reuse the GardenGrid. Rename it as ToolsGrid. 
-create stories & poetry sections:
-  - use text filter for these, no tags
-  - see samaritans etc for inspiration on stories
+look at UI book and online for beautiful card designs.
+create stories & poetry sections - see samaritans etc for inspiration on stories
 click outside tag cloud closes it
 see if can animate the cards:
   - https://codesandbox.io/s/list-transitions-ju549
@@ -16,10 +12,6 @@ see if can animate the cards:
   - https://github.com/joshwcomeau/react-flip-move
 Sort news items descending
 Move news slider dots down a bit
-
-
-Thu
----
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 Change iPad feature descriptions
 Remove right margin on mobile
