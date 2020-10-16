@@ -1,7 +1,9 @@
 Friday
 --------
 change tag fun to insight
-create stories - https://www.samaritans.org/support-us/campaign/real-people-real-stories/
+Remove relief tag
+Add margin to cards on phone. Then demo phone later. 
+Make the cards buttons not links.
 put sort into util
 Sort news items descending
 Move vision above news
@@ -11,40 +13,38 @@ make tool page stay full screen when you filter
 try paper texture on quote cards:
  - try doing it with gatsby for the fade in effect. Or:
  - https://tailwindcss.com/docs/background-image. 
-ask if can put my site in footer
 
 
+Curate the tags to demo 3 moods - peace and success and confidence
 
-ui 189 - general 
+success quotes
+A quitter never wins and a winner never quits. Nopelon Hill
+Assume the feeling of the wish fulfilled. 				Neville Goddard
 
-quote
-ui - 36
-ui - 102 - follow maybe
+Confidence 
+The death of uniqueness is self-comparison. Dan Sullivan
+A proctor quote
+The world changes I improve
 
 
-story
-ui - 137
-  Text
-  Excerpt
-  Button text
-  Author
-    Name
-    
-poem
-ui - 171
-(ui - 64)
-  Text
-  Excerpt
-  Image
-  Button text
-  Author
-    Name
+Peace
+Oprah, beyond belief only movement and ...
+
+
+happiness
+Achieve your meaning through creativity, not consumption. Dab Sullivan
+
+
 
 
 
 
 Next week
 ---------
+Check the hue of warm gray
+datatype: Quote author --> Quote source
+create stories and poems - https://www.samaritans.org/support-us/campaign/real-people-real-stories/
+Cards Design - see bottom of this page
 see if can animate the cards:
   - https://codesandbox.io/s/list-transitions-ju549
   - https://github.com/aholachek/react-flip-toolkit#simple-example-list-shuffle
@@ -56,10 +56,15 @@ Finish wes course. So: get contact us form working. put on new page. Get a nice 
 Change iPad feature descriptions
 Remove right margin on mobile
 in mobile footer put elan below plus
+Gatsby pwa?
 add auth from jason course
 add file upload to digital garden to sanity/netlify
 "What would you like to see?" Feedback widget
 create poetry section
+Look at Mary’s meals donation model. And mind etc
+How to use the tool
+Turn off netlify auto publish on commit
+
 
 When get plus login
 -------------------
@@ -81,3 +86,34 @@ Other
 Donations:
 15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
 https://stripe.com/docs/payments/checkout/client
+
+
+
+Cards Design
+------------
+ui 189 - general 
+
+quote
+ui - 36
+ui - 102 - follow maybe
+
+
+story
+ui - 137
+  Text
+  Excerpt
+  Button text
+  Author
+    Name
+    
+poem
+"Submit original poems of your own for publication."
+ui - 171
+(ui - 64)
+  Text
+  Excerpt
+  Image
+  Button text
+  Author
+    Name
+
