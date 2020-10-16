@@ -1,12 +1,5 @@
 Friday
 --------
-Check the hue of warm gray
-make tool page stay full screen when you filter - used to do it i think
-try paper texture on quote cards:
- - try doing it with gatsby for the fade in effect. Or:
- - https://tailwindcss.com/docs/background-image. 
-
-
 Next week
 ---------
 datatype: Quote author --> Quote source

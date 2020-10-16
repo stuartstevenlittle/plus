@@ -95,7 +95,7 @@ const Home = ({ data }) => {
   const features = data.features.nodes
   return (
 
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Img className="w-full flex-shrink-0 mx-auto" fluid={homepageMainPhoto.asset.fluid} alt="Picture of PLUS members celebrating" />
       <Section title="" colour='white'>
         <Vision vision={vision} />

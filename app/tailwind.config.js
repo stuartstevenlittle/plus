@@ -5,6 +5,7 @@ module.exports = {
   },
   purge: [],
   theme: {
+
     minHeight: {
       '0': '0',
       '1': '0.25rem',
@@ -26,6 +27,7 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '196': '49rem',
       '1/8': '12.5%',
       '1/4': '25%',
       '1/2': '50%',
@@ -81,6 +83,9 @@ module.exports = {
       backgroundImage: {
         'paper-texture': "url('/paper.png')"
       },
+      height: {
+        '196': '49rem'
+      },
       maxWidth: {
         '6xl': '70rem',
         '96': '24rem',
@@ -107,7 +112,7 @@ module.exports = {
         '90': '.9',
       },
       backgroundImage: theme => ({
-        'texture': "url('/images/background.png')",
+        'texture': "url('/images/paper.png')",
       })
     },
   },
