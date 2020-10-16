@@ -6,7 +6,7 @@ import sortArray from '../utils/sortArray'
 const FeatureGrid = ({ features }) => {
   sortArray(features, 'order');
   return (
-    <ul className="mt-2 pb-6 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="mt-6 pb-6 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {features.map((feature, index) =>
         <FeatureItem key={index} feature={feature} />
       )}

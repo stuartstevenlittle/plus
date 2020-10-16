@@ -58,13 +58,13 @@ const NewsCarousel = ({ newsItems }) => {
   )
 
   return (
-    <div className="mb-1">
+    <div className="pb-6">
       <ul className="sm:hidden grid mt-6 gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {newsItems.map((newsItem, index) =>
           <NewsItem key={index} newsItem={newsItem} />
         )}
       </ul>
-      <Swiper className="hidden sm:block" id="main" tag="section" wrapperTag="ul"
+      <Swiper className="hidden sm:block mt-2" id="main" tag="section" wrapperTag="ul"
         spaceBetween={50}
         slidesPerView={3}
         speed={800}

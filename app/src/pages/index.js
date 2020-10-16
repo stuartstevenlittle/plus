@@ -90,7 +90,6 @@ export const pageQuery = graphql`
 const Home = ({ data }) => {
   const vision = data.general.nodes[0].vision
   const homepageMainPhoto = data.general.nodes[0].homepageMainPhoto
-  // const slideData = data.slideData.nodes
   const funders = data.funders.nodes
   const posts = data.posts.nodes
   const features = data.features.nodes
@@ -98,10 +97,10 @@ const Home = ({ data }) => {
 
     <div className="min-h-screen bg-white">
       <Img className="w-full flex-shrink-0 mx-auto" fluid={homepageMainPhoto.asset.fluid} alt="Picture of PLUS members celebrating" />
-      <Section title="" colour='white' noBorder>
+      <Section title="" colour='white'>
         <Vision vision={vision} />
       </Section>
-      <Section title="Latest News" colour='warm-gray'>
+      <Section title="Latest News" colour='warm-gray' noBorder>
         <NewsCarousel newsItems={posts} />
       </Section>
 
