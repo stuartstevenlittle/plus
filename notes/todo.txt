@@ -6,6 +6,9 @@ see if can animate the cards:
   - https://github.com/aholachek/react-flip-toolkit
   - https://github.com/joshwcomeau/react-flip-move
 Get mapbox working
+Implement Donations
+Add another 3 big circles on the homepage - Training, About Plus & Contact Us
+Use "Poetry corner"etc descriptions on the homepage
 put sort into util
 datatype: Quote author --> Quote source
 click outside tag cloud closes it
