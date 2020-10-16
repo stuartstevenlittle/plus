@@ -15,12 +15,14 @@ const ToolGrid = ({ tags, tools, toolType, filteredTools, setFilteredTools, chil
       setFilteredTags(tagsFilter => [...tagsFilter, clickedTag])
 
       // 2. filter the tools array based on the clicked tag, then put those items into the filteredTools array
+
       tools.filter(tool => tool.tags.map(t => t.name).some(tag => [...filteredTags, clickedTag].includes(tag)))
         .forEach(filteredItem => {
           if (filteredTools.indexOf(filteredItem) === -1) {  // the item isn't already in the filter array, so add it so that it shows on the page
             setFilteredTools(filteredTools => [...filteredTools, filteredItem])
           }
         });
+
     }
     else {  // the clicked tag is already in the filter array - i.e. it has now been switched off
       // 1. remove it from the filter array, to set the background back to white
@@ -50,8 +52,6 @@ const ToolGrid = ({ tags, tools, toolType, filteredTools, setFilteredTools, chil
       </div>
       {/* Cards */}
       <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 pb-2">
-        {/* {filteredTools.length === 0 && tools.map((tool, index) => <PictureCard key={index} picture={tool} />)}
-        {filteredTools.length !== 0 && filteredTools.map((tool, index) => <PictureCard key={index} picture={tool} />)} */}
         {children}
       </ul>
     </div>
