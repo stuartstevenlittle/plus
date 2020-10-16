@@ -15,75 +15,76 @@ export const pageQuery = graphql`
       vision
       homepageMainPhoto {
         asset {
-                    fluid(maxWidth: 1250) {
-                          ...GatsbySanityImageFluid
+          fluid(maxWidth: 1250) {
+            ...GatsbySanityImageFluid
           }
-        }      
+        }
       }
       homepageAvatar {
         asset {
-                              fluid(maxWidth: 1250) {
-                          ...GatsbySanityImageFluid
+          fluid(maxWidth: 1250) {
+            ...GatsbySanityImageFluid
           }
         }
-
       }
     }
   }
   posts: allSanityPost {
-                nodes {
-                title
-         publishedAt(formatString: "DD MMM YYYY")
-         exerpt
-        slug {
-                current
-              }
-        author {
-                name
-              }
-        mainImage {
-                asset {
-                fluid(maxWidth: 400) {
-                ...GatsbySanityImageFluid
-              }
+    nodes {
+      title
+      publishedAt(formatString: "DD MMM YYYY")
+      exerpt
+      slug {
+        current
+      }
+      author {
+        name
+      }
+      mainImage {
+        asset {
+          fluid(maxWidth: 400) {
+            ...GatsbySanityImageFluid
           }
         }
       }
     }
+  }
   features: allSanityCategory {
-                nodes {
-                title
-                description
-                order
-        slug {
-                current
-              }
+    nodes {
+      title
+      description
+      order
+      slug {
+        current
+      }
       mainImage {
-                asset {
-                fluid(maxWidth: 400) {
-                ...GatsbySanityImageFluid
-              }
+        asset {
+          fluid(maxWidth: 400) {
+            ...GatsbySanityImageFluid
+          }
         }
       }
     }
   }
-    funders: allSanityFunder {
-                nodes {
-                id
+  funders: allSanityFunder {
+    nodes {
+      id
       title
-        slug {
-                current
-              }      order
+      slug {
+        current
+      }
+      order
       image {
-                asset {
-                fluid(maxWidth: 400) {
-                ...GatsbySanityImageFluid
-              }
+        asset {
+          fluid(maxWidth: 400) {
+            ...GatsbySanityImageFluid
+          }
         }
       }
     }
   }
 }
+
 `
 
 const Home = ({ data }) => {

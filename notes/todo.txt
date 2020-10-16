@@ -1,11 +1,5 @@
 Friday
 --------
-change tag fun to insight
-Remove relief tag
-Add margin to cards on phone. Then demo phone later. 
-Make the cards buttons not links.
-put sort into util
-Sort news items descending
 Move vision above news
 increase hero
 Move news slider dots down a bit
@@ -14,7 +8,8 @@ try paper texture on quote cards:
  - try doing it with gatsby for the fade in effect. Or:
  - https://tailwindcss.com/docs/background-image. 
 
-
+change tag fun to insight
+Remove relief tag
 Curate the tags to demo 3 moods - peace and success and confidence
 
 success quotes
@@ -51,6 +46,7 @@ see if can animate the cards:
   - https://github.com/aholachek/react-flip-toolkit
   - https://github.com/joshwcomeau/react-flip-move
 Get mapbox working
+put sort into util
 click outside tag cloud closes it
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 Change iPad feature descriptions

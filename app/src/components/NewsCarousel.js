@@ -3,12 +3,14 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import sortArray from '../utils/sortArray'
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const NewsCarousel = ({ newsItems }) => {
-  sortArray(newsItems, 'publishedAt');
+
+  newsItems.sort(function (a, b) {
+    return new Date(b.publishedAt) - new Date(a.publishedAt);
+  });
 
   // Tablet and up
   const slides = []
