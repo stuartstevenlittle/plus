@@ -6,7 +6,7 @@ const TagCloud = ({ tags, filteredTags, onClickTag }) => {
   const [showTagCloud, setShowTagCloud] = useState(false)
   return (
     <div>
-      <button type="button" onClick={() => setShowTagCloud(!showTagCloud)} className="ml-6 py-2 group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none animate">
+      <button type="button" onClick={() => setShowTagCloud(!showTagCloud)} className="ml-6 pb-2 group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none animate">
         <span>Tags</span>
         <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
           <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />

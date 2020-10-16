@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import TagCloud from './TagCloud'
-import PlainLink from './PlainLink'
+// import PlainLink from './PlainLink'
 
 const ToolGrid = ({ tags, tools, toolType, filteredTools, setFilteredTools, children }) => {
   tags.sort((a, b) => a.name.localeCompare(b.name))
@@ -45,7 +45,7 @@ const ToolGrid = ({ tags, tools, toolType, filteredTools, setFilteredTools, chil
       <div className="mb-3 flex justify-end items-center">
         <div className="flex z-10">
           <div className="relative flex items-baseline">
-            <PlainLink label={`Submit a ${toolType}`} to="#" />
+            {/* <PlainLink label={`Submit a ${toolType}`} to="#" /> */}
             <TagCloud tags={tags} filteredTags={filteredTags} onClickTag={clickedTag => handleTagClick(clickedTag)} />
           </div>
         </div>

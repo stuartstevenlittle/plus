@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
         <html className="bg-warm-gray-50" lang="en" />
       </Helmet> */}
       <div className="h-stretch min-h-screen text-gray-900 bg-warm-gray-50">
-        <div className={`mx-auto shadow ${route === 'the-digital-garden' || route === 'inspiring-words' || route === 'our-stories' ? 'bg-warm-gray-50' : 'bg-white'} `}>
+        <div className={`mx-auto shadow ${route === 'pictures' || route === 'quotes' || route === 'stories' || route === 'poems' ? 'bg-warm-gray-50' : 'bg-white'} `}>
           <Header />
           <main>{children}</main>
           <Footer />

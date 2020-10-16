@@ -1,8 +1,3 @@
-Friday
---------
-Next week
----------
-datatype: Quote author --> Quote source
 create stories and poems - https://www.samaritans.org/support-us/campaign/real-people-real-stories/
 Cards Design - see bottom of this page
 see if can animate the cards:
@@ -12,6 +7,7 @@ see if can animate the cards:
   - https://github.com/joshwcomeau/react-flip-move
 Get mapbox working
 put sort into util
+datatype: Quote author --> Quote source
 click outside tag cloud closes it
 Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
 Change iPad feature descriptions
@@ -25,12 +21,8 @@ create poetry section
 Look at Mary’s meals donation model. And mind etc
 How to use the tool
 Turn off netlify auto publish on commit
-
-
-When get plus login
--------------------
-create a new sanity for them with these datasets:
-  Homepage Photo Frame
+create a new sanity with these datasets:
+  Homepage Photo
   Homepage Features
   Homepage News
   Blocks of Text
