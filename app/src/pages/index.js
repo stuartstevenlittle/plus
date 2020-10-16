@@ -15,7 +15,7 @@ export const pageQuery = graphql`
       vision
       homepageMainPhoto {
         asset {
-          fluid(maxWidth: 1250) {
+          fluid(maxWidth: 1903) {
             ...GatsbySanityImageFluid
           }
         }
@@ -97,13 +97,12 @@ const Home = ({ data }) => {
   return (
 
     <div className="min-h-screen bg-white">
-      {/* <pre>{JSON.stringify(data.general.nodes[0].vision, null, 2)}</pre> */}
-      <Img className="w-full h-56 flex-shrink-0 mx-auto" fluid={homepageMainPhoto.asset.fluid} alt="Picture of PLUS members celebrating" />
-      <Section title="Latest News" colour='warm-gray'>
-        <NewsCarousel newsItems={posts} />
-      </Section>
+      <Img className="w-full flex-shrink-0 mx-auto" fluid={homepageMainPhoto.asset.fluid} alt="Picture of PLUS members celebrating" />
       <Section title="" colour='white' noBorder>
         <Vision vision={vision} />
+      </Section>
+      <Section title="Latest News" colour='warm-gray'>
+        <NewsCarousel newsItems={posts} />
       </Section>
 
       <Section title="" colour='white'>
