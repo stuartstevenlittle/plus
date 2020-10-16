@@ -1,39 +1,14 @@
 Friday
 --------
+Check the hue of warm gray
 make tool page stay full screen when you filter - used to do it i think
 try paper texture on quote cards:
  - try doing it with gatsby for the fade in effect. Or:
  - https://tailwindcss.com/docs/background-image. 
 
-change tag fun to insight
-Remove relief tag
-Curate the tags to demo 3 moods - peace and success and confidence
-
-success quotes
-A quitter never wins and a winner never quits. Nopelon Hill
-Assume the feeling of the wish fulfilled. 				Neville Goddard
-
-Confidence 
-The death of uniqueness is self-comparison. Dan Sullivan
-A proctor quote
-The world changes I improve
-
-
-Peace
-Oprah, beyond belief only movement and ...
-
-
-happiness
-Achieve your meaning through creativity, not consumption. Dab Sullivan
-
-
-
-
-
 
 Next week
 ---------
-Check the hue of warm gray
 datatype: Quote author --> Quote source
 create stories and poems - https://www.samaritans.org/support-us/campaign/real-people-real-stories/
 Cards Design - see bottom of this page
