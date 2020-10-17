@@ -46,39 +46,39 @@ const ContactUs = () => {
   // const { values, updateValue } = useForm({ firstName: '', lastName: '', email: '', message: '' })
   return (
     <div>
-      <div class="text-center">
-        <p class="mt-4 text-lg leading-6 text-gray-500">
+      <div className="text-center">
+        <p className="mt-4 text-lg leading-6 text-gray-500">
           Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.
               </p>
       </div>
-      <div class="mt-12">
-        <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+      <div className="mt-12">
+        <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
           <div>
-            <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">First name</label>
-            <div class="mt-1 relative rounded-md shadow-sm">
-              <input id="first_name" class="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+            <label for="first_name" className="block text-sm font-medium leading-5 text-gray-700">First name</label>
+            <div className="mt-1 relative rounded-md shadow-sm">
+              <input id="first_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
             </div>
           </div>
           <div>
-            <label for="last_name" class="block text-sm font-medium leading-5 text-gray-700">Last name</label>
-            <div class="mt-1 relative rounded-md shadow-sm">
-              <input id="last_name" class="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+            <label for="last_name" className="block text-sm font-medium leading-5 text-gray-700">Last name</label>
+            <div className="mt-1 relative rounded-md shadow-sm">
+              <input id="last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
             </div>
           </div>
-          <div class="sm:col-span-2">
-            <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email</label>
-            <div class="mt-1 relative rounded-md shadow-sm">
-              <input id="email" type="email" class="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+          <div className="sm:col-span-2">
+            <label for="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
+            <div className="mt-1 relative rounded-md shadow-sm">
+              <input id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
             </div>
           </div>
-          <div class="sm:col-span-2">
-            <label for="message" class="block text-sm font-medium leading-5 text-gray-700">Message</label>
-            <div class="mt-1 relative rounded-md shadow-sm">
-              <textarea id="message" rows="4" class="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
+          <div className="sm:col-span-2">
+            <label for="message" className="block text-sm font-medium leading-5 text-gray-700">Message</label>
+            <div className="mt-1 relative rounded-md shadow-sm">
+              <textarea id="message" rows="4" className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
             </div>
           </div>
-          <div class="sm:col-span-2">
-            <span class="w-full inline-flex rounded-md shadow-sm">
+          <div className="sm:col-span-2">
+            <span className="w-full inline-flex rounded-md shadow-sm">
               <button type="button" className="w-full inline-flex text-xl items-center justify-center px-6 py-3 mt-2 border border-transparent leading-6 font-medium rounded-md text-white bg-dusty-blue-800 hover:bg-blue-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray active:bg-gray-900 animate">
                 Get in Touch
               </button>

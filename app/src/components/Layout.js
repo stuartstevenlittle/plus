@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     <div>
       <Helmet>
         <html lang="en" />
-        <body class="debug-screens" />
+        <body className="debug-screens" />
       </Helmet>
       <div className="h-stretch min-h-screen text-gray-900 bg-warm-gray-50">
         <div className={`mx-auto shadow ${route === 'pictures' || route === 'quotes' || route === 'stories' || route === 'poems' ? 'bg-warm-gray-50' : 'bg-white'} `}>

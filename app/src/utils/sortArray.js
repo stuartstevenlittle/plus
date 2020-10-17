@@ -1,5 +1,5 @@
 export default function sortArray(arr, prop) {
-  return arr.sort((a, b) => a[prop] - b[prop]);
+  return arr.sort((a, b) => b[prop] - a[prop]);
 
   // this works for string properties byut not dates:
   // const newsItemsSorted = newsItems.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));

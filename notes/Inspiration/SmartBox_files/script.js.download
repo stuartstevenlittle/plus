@@ -177,7 +177,7 @@ function backgoundInit() {
     } );
     // special case for ie8 full width background page. We create a fixed position image.
     if(window.PIE){
-        $('body[data-background-size]').prepend('<div class="iefullbg"></div>');
+        $('body[data-background-size]').prepend('<div className="iefullbg"></div>');
     }
 }
 
@@ -314,7 +314,7 @@ function createTwitter() {
             count: 3,
             username: 'tweepsum',
             loading_text: "searching twitter...",
-            template: '<i class="icon-twitter"></i>{text} <small class="info text-italic"> {time}</small>'
+            template: '<i className="icon-twitter"></i>{text} <small className="info text-italic"> {time}</small>'
         });
     });
 }

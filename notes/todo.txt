@@ -1,26 +1,8 @@
 to go live - have this all finished by next Friday
 ==================================================
-calender
---------
-
-  name
-
-wellbeingEvent
-  name
-  Image
-  slug
-  when
-
-email icon --> modal
-You were supposed to sing and dance wuhile the music was being played.
-All you have to do is live today really really well.
-try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
-Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
---> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
---> find a good tailwind ui template for that
 get a basic contact us page working:
-  - create a quick form
- - wes course
+create a quick form
+then wes course
 then implement these:
 get involved 
   --> implement with however I decide to do it above
@@ -31,6 +13,7 @@ contact us
   modal - https://mdbootstrap.com/docs/jquery/modals/forms/
   http://plusperth.co.uk/contact-us/
   tailwind ui
+  email icon --> modal
 
 Misc fixes
 ==========
@@ -39,6 +22,11 @@ put sort into util
 Change iPad feature descriptions
 Remove right margin on mobile
 in mobile footer put elan below plus
+try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
+Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
+--> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
+--> find a good tailwind ui template for that
+
 
 map 
   https://www.youtube.com/watch?v=JJatzkPcmoI&t=33s
@@ -129,5 +117,15 @@ create stories and poems - https://www.samaritans.org/support-us/campaign/real-p
   ui 189
   ui 36
 
+calender
+--------
+probably use smaller images - look at tailwind UI for nice component that would fit these
 
+fix the fade in on my site
 --> go live
+
+
+
+quotes for my site
+You were supposed to sing and dance wuhile the music was being played.
+All you have to do is live today really really well.
