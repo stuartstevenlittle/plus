@@ -1,0 +1,35 @@
+CSS										Tailwind Example		Description
+---										----------------		-----------
+display: flex							flex 					A layout (i.e. 'display') mode. Easier to design flexible responsive layout structure without float or positioning.
+justify-content: 						justify-center 			Horizontal layout of flex items.
+	- justify-start 	| position left
+	- justify-center	| position center
+	- justify-end		| position right
+	- justify-between	| force left and right (space-between)
+	- justify-around	| space out equally
+
+align-items: 							items-center 			Vertical layout of flex items.
+	- items-start 		| position top
+	- items-center 		| position center
+	- items-end 		| position bottom
+	- items-baseline	| items are aligned such as their baselines align
+	- items-stretch 	| stretch to fill the container (still respect min-width/max-width) (default)
+
+text-align:								text-center 			text-align is used for aligning the INNER content of a block element.
+	- left    | The default value. Content aligns along the left side.
+	- right   | Content aligns along the right side.
+	- center  | Content centers between the left and right edges. White space on the left and right sides of each line should be equal.
+	- justify | Content spaces out such that as many blocks fit onto one line as possible. The first word is on the left edge and the last word is on the right edge.
+	- inherit | The value will be whatever the parent element's is.
+
+flex: 1 
+	- a grouping of multiple properties. The same as "font" is actually a grouping of "family", "size" etc.
+	- just think: "we want each item to be flexible to take up the available space".
+	- when we say 1 - they'll all be equal.
+	- flex-4 for one of the li's in an unordered list would mean: "I want this one to take up 4 times more space than the others."
+
+flex-direction - can swap the axis, and reverse the order with this command.
+
+
+
+

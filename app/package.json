@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "NODE_OPTIONS='-r esm' gatsby build",
-    "develop": "NODE_OPTIONS='-r esm' cross-env GATSBY_EXPERIMENTAL_ENABLE_ADMIN=true gatsby develop -p 4000",
+    "develop": "NODE_OPTIONS='-r esm' cross-env GATSBY_EXPERIMENTAL_ENABLE_ADMIN=true gatsby develop -p 4001",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "NODE_OPTIONS='-r esm' gatsby serve",

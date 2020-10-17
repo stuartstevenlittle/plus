@@ -52,8 +52,8 @@ const Header = () => {
             </Link>
           </div>
           {/* Right */}
-          <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <div className="hidden sm:-my-px sm:ml-6 space-x-8 sm:flex">
+          <div className="hidden sm:ml-2 sm:flex sm:items-center">
+            <div className="hidden sm:-my-px sm:ml-2 space-x-8 sm:flex">
               <div className="relative">
                 <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   <span>Digital Garden</span>
@@ -80,6 +80,9 @@ const Header = () => {
               </div>
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
                 What's Happening
+            </Link>
+              <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
+                Resources
             </Link>
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
                 Training

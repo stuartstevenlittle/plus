@@ -1,75 +1,115 @@
-create stories and poems - https://www.samaritans.org/support-us/campaign/real-people-real-stories/
-Cards Design - see bottom of this page
+to go live - have this all finished by next Friday
+==================================================
+get a basic contact us page working:
+  - create a quick form
+ - wes course
+then implement these:
+get involved 
+  --> implement with however I decide to do it above
+  - http://plusperth.co.uk/get-involved/
+
+contact us  
+  --> implement with however I decide to do it above
+  modal - https://mdbootstrap.com/docs/jquery/modals/forms/
+  http://plusperth.co.uk/contact-us/
+  tailwind ui
+
+Misc fixes
+==========
+add the lines either side of section headings - like "Latest News" on file:///C:/Users/Stuart/Code/plus/notes/Inspiration/SmartBox.html
+put sort into util
+Change iPad feature descriptions
+Remove right margin on mobile
+in mobile footer put elan below plus
+
+map 
+  https://www.youtube.com/watch?v=JJatzkPcmoI&t=33s
+
+donations
+  Look at Mary’s meals donation model. And mind etc. Big research - fundamental value add I can make for them.
+  15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
+  https://stripe.com/docs/payments/checkout/client
+
+news items pages
+================
+sanity default? check tutorial
+
+activities pages
+================
+e.g. http://plusperth.co.uk/our-services/horners-plot-2/
+
+pages - there was a sanity.io tutorial on pages. Uses "nodes"?
+=====
+whats happening - http://plusperth.co.uk/whats-happening/
+Training
+about plus
+  who we are - http://plusperth.co.uk/about-plus/
+  what we do - http://plusperth.co.uk/what-we-do/
+resources
+  wellbeing calender
+  newsletter archive - http://plusperth.co.uk/past-newsletters/
+
+content
+=======
+create a new sanity account for plus
+datatypes: 
+  Category --> Digital garden
+  Quote author --> Quote source
+Change the susan avatar pic on homepage
+change the big circles on the homepage to:
+  digital garden
+  what's happening
+  resources
+  training
+  about plus
+  get involved
+general dataset:
+  Homepage Photo
+    Vision text
+    Funders text
+
+"What would you like to see?" Feedback widget
+Gatsby pwa
+
+algolia
+=======
+click mag glass --> menu drops down with a searchbox in it
+
+
+digital garden
+==============
+click outside tag cloud closes it
 see if can animate the cards:
   - https://codesandbox.io/s/list-transitions-ju549
   - https://github.com/aholachek/react-flip-toolkit#simple-example-list-shuffle
   - https://github.com/aholachek/react-flip-toolkit
   - https://github.com/joshwcomeau/react-flip-move
-Get mapbox working
-Implement Donations
-Add another 3 big circles on the homepage - Training, About Plus & Contact Us
-Use "Poetry corner"etc descriptions on the homepage
-put sort into util
-datatype: Quote author --> Quote source
-click outside tag cloud closes it
-Finish wes course. So: get contact us form working. put on new page. Get a nice ui component.
-Change iPad feature descriptions
-Remove right margin on mobile
-in mobile footer put elan below plus
-Gatsby pwa?
-add auth from jason course
-add file upload to digital garden to sanity/netlify
-"What would you like to see?" Feedback widget
-create poetry section
-Look at Mary’s meals donation model. And mind etc
-How to use the tool
-Turn off netlify auto publish on commit
-create a new sanity with these datasets:
-  Homepage Photo
-  Homepage Features
-  Homepage News
-  Blocks of Text
-    - Vision
-    - We are extremely grateful
-  Authors
-  Funders
-  Tags
-  Garden Items
+create modal - instagram style popout when click on a card
+create stories and poems - https://www.samaritans.org/support-us/campaign/real-people-real-stories/
+  story
+  -----
+  ui - 137
+    Text
+    Excerpt
+    Button text
+    Author
+      Name
+      
+  poem
+  ----
+  "Submit original poems of your own for publication."
+  ui - 171
+  (ui - 64)
+    Text
+    Excerpt
+    Image
+    Button text
+    Author
+      Name
+      
+  other inspirations
+  ui 189
+  ui 36
 
 
-Other
------
-Donations:
-15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
-https://stripe.com/docs/payments/checkout/client
-
-
-
-Cards Design
-------------
-ui 189 - general 
-
-quote
-ui - 36
-ui - 102 - follow maybe
-
-
-story
-ui - 137
-  Text
-  Excerpt
-  Button text
-  Author
-    Name
-    
-poem
-"Submit original poems of your own for publication."
-ui - 171
-(ui - 64)
-  Text
-  Excerpt
-  Image
-  Button text
-  Author
-    Name
-
+--> go live

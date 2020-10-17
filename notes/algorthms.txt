@@ -1,0 +1,20 @@
+Filter array of objects by sub array of values
+https://stackoverflow.com/questions/48997590/filter-array-of-objects-by-sub-array-of-values
+
+      // plants array: [
+      //  { title: 'Night', plantType: { name: 'Painting'}}
+      //  { title: 'Abstract', plantType: { name: 'Painting'}}
+      //  { title: 'Sunset', plantType: { name: 'Photo'}}
+      //]
+      // when click 'Photo', want to filter the plants array by the sub property 'name' inside the property plantType
+
+      //example:
+      // movies = [
+      //   { 'title': 'a', 'genres': ['Romance', 'Comedy'] },
+      //   { 'title': 'b', 'genres': ['Drama', 'Comedy'] },
+      //   { 'title': 'c', 'genres': ['Action', 'Adventure'] }
+      // ]
+      // filters = ['Romance', 'Drama']
+
+      // const filteredArray = movies.filter(x => x.genres.some(g => filters.includes(g)))
+

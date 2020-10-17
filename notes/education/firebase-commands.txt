@@ -1,0 +1,215 @@
+import db from './config'
+rule of thumb in designing models - think about your app screens and strive for simplicity with your frontend code:
+  - if my queries are really concise and readable - then it probably means I have an effective data model. 
+  - if my query code is complex - doing all kinds of joins etc, then I might want to rethink the data model.
+
+1. Reads of single documents
+============================
+Single doc read
+---------------
+const ref = db.collection('posts').doc('postId')
+              .get() -->  returns it as a promise
+              .onSnapshot() --> returns a realtime stream of the data
+
+Subcollection read
+------------------
+const ref = db.collection('posts').doc('postId').collection('tags')
+
+Bucket read
+-----------
+ these run concurrently using the same document Id
+const posts = db.collection('posts').doc('PostId')
+const tags = db.collection('tags).doc('postId')
+
+--> you have an extra document read, but if you're only showing tags on a small subset of the views in the app, then it probably makes sense to separate this data into its own document in a differnet collection
+
+Multi-document read
+-------------------
+when you have an array of Ids - see video for helper function
+
+
+2. Queries of collections
+=========================
+const query = db.collection('posts').orderBy('published', 'desc').limit(20) -- ordering happens server side
+orderBy can be used as a filter as well - see video
+
+can paginate using startAt and endAt. Exlcuisnve . Use startBefore to be inclusive.
+
+most commonly used query mothod is "where". 3 arguments:
+1. field to filter by
+2. operator
+3. value
+
+e.g. .where('date','==', today)
+chain multiple wheres to give you AND
+can only use 1 range operaor per query
+as many equal to operators as you weant
+no 'not equal to' or OR clause
+so you run 2 range queries and combine them
+good to have multiple small queries that you combine in client, rather than one giant query that's hard to understand and maintain
+'array-contains' is a special operator that only works on the array data type. Returns any documents that have a match. Can only check for 1 value at a time
+ 
+
+ 3. Indexes
+ ==========
+ At scale we need Indexes. Let firestore tell you in the console when you need an index
+
+4. Security
+===========
+Can't read part of a document, have to read the whole thing.
+So model your user data in separate collections. Private collections for emails etc.
+
+5. Cardinality
+==============
+When modelling, most important question to ask is how many items can be in a set? Is it:
+- 1 to a few
+- 1 to a few hundred
+- 1 to a feew million
+--> the enswer will help drive your data models
+
+one to a few
+------------
+e.g. an author has up to 20 books
+the payload of a book is small, eg 2 fields - name and publish date
+--> embed the books on the author document
+especially if your app will frequently show the books authored by a specific author
+becuase then we just have a single read to get all the data we need to populate such a screen
+
+one to a few hundred
+--------------------
+but if:
+- an author could write hundreds of books, or
+- the data payload for each book is bigger
+you might want to look into using a bucket document for the author's books
+this is a good strategy where you know:
+- all the data for a book will still fit into 1Mb, and
+- you don't need to query the bigs in any kind of sophisticsated way.
+--> we create a one to many relationship by creating 2 documents using the same Id - see video 10-cardinality, 1min
+
+one to a few million
+--------------------
+where you have very high cardinality, you want a collection
+could be a subcollection or a root collection
+collections can scale up to an unlimted number of documents and they can still be queried efficiently
+
+
+6. One to One
+=============
+easiest to model
+first thing to consider - do we want to expose a specific piece of information in the frontend?
+
+6.1 Embedded one to one
+-----------------------
+if yes - embed it on the parent document
+
+if no - separate it out into it's own document in a different collection. 
+then connect the 2 documents by either:
+  1. using the same Document ID in both collections. Preferred. Simpler and slightly faster. And enforces uniqueness on this relationship ie can't accidentally create a 1-many relationship.
+  2. adding a "foreign key" field to the parent document - see video 11, 44secs. Only do if you have constraints enforced on you by the business to use specific IDs.
+
+code examples
+
+const authorWithAccount = db.collection('authors').doc(userId)      -- embedded
+
+// shared document ID
+const author = db.collection('authors').doc(userId)
+const author = db.collection('account').doc(userId)
+
+// join related documernts with IDs
+see video for function code
+
+7. One to many
+==============
+most common data relationship
+many ways to model it
+the important thing to understand is the trade offs.
+
+7.1 Embedded one to many
+------------------------
+embed an array of maps on the parent document
+great when:
+  - you have a smal number of items in the set, and
+  - you don't need to query those items across other parent documents
+e.g. a query of "give me all the books published after 1971" wouldn't be a good fit for this model. Because you'd have to return all of the author documents, then do all of the filtering client side.
+
+so the first question to ask for modelling a 1-n relationship is: 
+"do I need to query this data?"
+
+7.2 Sub collection
+------------------
+if the answer is yes, then consider doing it as a subcollection.
+but have to keep in mind that you can only query scope to this particular author.
+i.e. could query for all the books written after 1971, but only for the author Stephen King
+
+next question to ask is "do I need to query across multiple parents?"
+i.e. do I need to know all books after 1971 for all authors?
+
+7.3 Root collection
+-------------------
+if yes, then we'd set the books up as a root collection
+then in each book document we'd have an author field that references the author documnent ID
+in general this is the most flexible way to model a 1-n relationship
+so best if we don't know how the model will eviolve in the future
+
+code examples
+-------------
+const authorWithBooks = db.collection('authors').doc(authorId)                                                  -- embedded
+const books =           db.collection('authors').doc(authorId).collection()                                     -- sub collection
+const booksAfter1971 =  db.collection('books').where('author', '==', authorId).where('published', '>', 1971)    -- root collection (reuqires index, because it's a compound query)
+
+
+8. Many to many
+===============
+Very common
+Most complex
+
+books -> reviews <-- authors
+
+create with a "middle man" collection. Like a mapping table
+
+const userReviews = db.collection('reviews).where('author','==', authorId)
+const bookReviews = db.collection('reviews).where('book','==', bookId)
+const specificReview = db.collection('reviews).doc(`${bookId}_$authorId}`) -- uses the composite key
+
+key takeaway: whenever you model your data using multiple root collections, 
+              you gain flexibility at the cost of speed, 
+              becuase you need to execute a lot of document reads to get all the reviews.
+
+an alternative is to embed the reviews on the books collection as a map
+- each key in that map is the ID of the author
+
+he shows how you would implement Cawtegories, which are obvioulsy n-n, at video 13, 3 mins:
+
+in the books collection you'd have a field called 'categories' which is an array. Each value is the document ID of a category.
+and you have a second collction called "categories"
+the category document has no knowledge about the relationship. It's just there to hold additional metatdata about a given category.
+--> see the diagram
+and if you also have a screen for a category that shows all the books that are in that category, you can easily pull that data back using the 'array-contains' operator:
+
+const books = db.collection('books').where('categories', 'array-contains', 'fiction')
+
+many to many bucket - an example would be "likes"
+
+--> end of lesson 13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
