@@ -1,5 +1,6 @@
 to go live - have this all finished by next Friday
 ==================================================
+try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
 get a basic contact us page working:
   - create a quick form
  - wes course

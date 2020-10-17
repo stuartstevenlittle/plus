@@ -63,6 +63,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'FreightTextBook',
         'Lato',
         'system-ui',
         '-apple-system',

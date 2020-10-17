@@ -15,3 +15,4 @@
 
 @tailwind utilities;
 
+@include font-face( FreightTextBook, './fonts/FreightTextBook', 400, normal, otf);
