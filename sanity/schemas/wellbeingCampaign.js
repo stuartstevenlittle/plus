@@ -7,9 +7,12 @@ export default {
   type: 'document',
   fields: [
     { name: 'name', title: 'Name', type: 'string' },
-    { name: 'slug', title: 'Slug', type: 'slug', options: { source: 'title', maxLength: 96 } },
+    { name: 'link', title: 'Link', type: 'string' },
     { name: 'month', title: 'Month', type: 'reference', to: { type: 'month' } },
+    { name: 'startDate', title: 'Start Date', type: 'datetime' },
+    { name: 'timeDescription', title: 'Time Description', type: 'string' },
     { name: 'image', title: 'Image', type: 'image', options: { hotspot: true } },
-    { name: 'when', title: 'When', type: 'string' },
   ],
 }
+
+
