@@ -1,5 +1,19 @@
 to go live - have this all finished by next Friday
 ==================================================
+calender
+--------
+
+  name
+
+wellbeingEvent
+  name
+  Image
+  slug
+  when
+
+email icon --> modal
+You were supposed to sing and dance wuhile the music was being played.
+All you have to do is live today really really well.
 try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
 Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
 --> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
@@ -49,8 +63,6 @@ Training
 about plus
   who we are - http://plusperth.co.uk/about-plus/
   what we do - http://plusperth.co.uk/what-we-do/
-resources
-  wellbeing calender
   newsletter archive - http://plusperth.co.uk/past-newsletters/
 
 content

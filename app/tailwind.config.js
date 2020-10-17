@@ -89,6 +89,9 @@ module.exports = {
       },
       maxWidth: {
         '6xl': '70rem',
+        // '7xl': '76rem',
+        '7xl': '80rem',
+        '8xl': '96rem',
         '96': '24rem',
       },
       spacing: {

@@ -13,7 +13,10 @@ import plant from './plant'
 import quote from './quote'
 import story from './story'
 import poem from './poem'
+import wellbeingCampaign from './wellbeingCampaign'
+import month from './month'
 import plantType from './plantType'
+
 
 export default createSchema({
   name: 'default',
@@ -31,6 +34,8 @@ export default createSchema({
     plant,
     quote,
     story,
-    poem
+    poem,
+    wellbeingCampaign,
+    month
   ])
 })
