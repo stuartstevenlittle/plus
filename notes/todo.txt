@@ -57,12 +57,14 @@ datatypes:
   Quote author --> Quote source
 Change the susan avatar pic on homepage
 change the big circles on the homepage to:
-  digital garden
-  what's happening
-  resources
-  training
-  about plus
-  get involved
+  Digital Garden
+  What's Happening
+  Resources
+  Training
+  About Plus
+  Get Involved
+  Contact Us
+
 general dataset:
   Homepage Photo
     Vision text
