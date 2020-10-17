@@ -21,7 +21,7 @@ const QuoteCard = ({ quote }) => (
               <Img className="mx-auto h-10 w-10 rounded-full" fluid={quote.quoteAuthor.image.asset.fluid} alt="" />
             </div>
             <div className="ml-3">
-              <div className="text-lg text-gray-400 uppercase tracking-wide leading-6 font-medium">{quote.quoteAuthor.name}</div>
+              <div className="text-base text-gray-400 uppercase tracking-wide leading-6 font-medium">{quote.quoteAuthor.name}</div>
             </div>
           </div>
         </div>
