@@ -1,6 +1,9 @@
 to go live - have this all finished by next Friday
 ==================================================
 try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
+Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
+--> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
+--> find a good tailwind ui template for that
 get a basic contact us page working:
   - create a quick form
  - wes course
