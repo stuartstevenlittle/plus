@@ -2,7 +2,7 @@ to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Monday
 ======
-finish forms:
+do forms:
  - contact us
     modal - https://mdbootstrap.com/docs/jquery/modals/forms/
     http://perth.co.uk/contact-us/
