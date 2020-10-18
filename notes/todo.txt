@@ -2,7 +2,91 @@ to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Sunday
 ======
-get a basic contact us page working:
+datatypes
+
+General
+	homepage picture
+	vision text
+	
+Person
+	name
+	image
+
+News
+	title
+	mainImage
+	body
+	excerpt
+	author --> person
+	tags
+	publishedAt
+	slug
+
+
+Digital Garden Section (was category)
+	title
+	mainImage
+	description
+	excerpt
+	author --> person
+	tags
+	order	
+	slug
+
+
+Funder
+	name
+	image
+	order
+	link	
+
+Tag
+	name
+
+Picture
+	title
+	description
+	image
+	author --> person
+	tags
+	publishedAt
+	slug
+
+Quote
+	text
+	author --> person
+	tags
+	publishedAt
+
+Story
+	text
+	excerpt
+	buttonText
+	image
+	author --> person
+	tags
+	publishedAt
+
+Wellbeing Campaign
+	name
+	month
+	startDate
+	link
+
+month
+	order
+
+
+
+do jason netlify forms / YT tute
+click submit:
+- submits message to netlify
+- emails me
+- webhook creates a message record somewhere
+- look at Wes course - is similar?
+
+
+
 then wes course
 then implement these:
 get involved 
