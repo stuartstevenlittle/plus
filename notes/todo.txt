@@ -3,7 +3,6 @@ to go live - have this all finished by next Friday
 Sunday
 ======
 get a basic contact us page working:
-create a quick form
 then wes course
 then implement these:
 get involved 
@@ -29,9 +28,6 @@ Use a "My story" page to play weith it. Make that page beautiful, and a total pl
 --> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
 --> find a good tailwind ui template for that
 
-
-map 
-  https://www.youtube.com/watch?v=JJatzkPcmoI&t=33s
 
 donations
   Look at Mary’s meals donation model. And mind etc. Big research - fundamental value add I can make for them.

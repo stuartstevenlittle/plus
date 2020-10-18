@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ReactMapGL, { Marker } from 'react-map-gl'
 
 const Map = () => {
-
   const [viewport, setViewport] = useState({
     latitude: 56.394675,
     longitude: -3.43163,
