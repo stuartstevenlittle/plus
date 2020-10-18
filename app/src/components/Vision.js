@@ -11,13 +11,13 @@ const Vision = ({ vision }) => {
             ...GatsbyImageSharpFluid_withWebp
           }
           fixed(width: 200) {
-    base64
-    width
-    height
-    src
-    srcSet
+            base64
+            width
+            height
+            src
+            srcSet
+          }
         }
-      }
       }
     }
   `)

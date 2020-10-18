@@ -2,7 +2,6 @@ to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Sunday
 ======
-finish calender design
 get a basic contact us page working:
 create a quick form
 then wes course

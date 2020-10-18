@@ -48,7 +48,7 @@ const WellbeingCalender = ({ data }) => {
   return (
     <div className="border-b">
       <PageTitle title="Wellbeing Calender" subtitle="To access information about any of the campaigns, please click the blue link" />
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 border-b border-l mt-4 mb-16 mx-16">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 border-b border-l mt-4 mb-16 mx-16 rounded overflow-hidden">
         {months.map(month => <Month key={month.name} month={month} campaigns={campaigns.filter(campaign => campaign.month.name === month.name)} />)}
       </ul>
     </div>

@@ -85,6 +85,8 @@ module.exports = {
         'paper-texture': "url('/paper.png')"
       },
       height: {
+        '64': '16rem',
+        '128': '14rem',
         '196': '49rem'
       },
       maxWidth: {
