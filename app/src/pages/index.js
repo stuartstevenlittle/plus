@@ -13,6 +13,7 @@ export const pageQuery = graphql`
   general: allSanityGeneral {
     nodes {
       vision
+      fundersMessage
       homepagePicture {
         asset {
           fluid(maxWidth: 1903) {
@@ -20,6 +21,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      homepagePictureDescription
     }
   }
   posts: allSanityNews {
@@ -67,7 +69,7 @@ export const pageQuery = graphql`
       order
       image {
         asset {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 200) {
             ...GatsbySanityImageFluid
           }
         }
@@ -80,14 +82,16 @@ export const pageQuery = graphql`
 
 const Home = ({ data }) => {
   const vision = data.general.nodes[0].vision
+  const fundersMessage = data.general.nodes[0].fundersMessage
   const homepagePicture = data.general.nodes[0].homepagePicture
+  const homepagePictureDescription = data.general.nodes[0].homepagePictureDescription
   const funders = data.funders.nodes
   const posts = data.posts.nodes
   const features = data.features.nodes
   return (
 
     <div className="min-h-screen">
-      <Img className="w-full flex-shrink-0 mx-auto" fluid={homepagePicture.asset.fluid} alt="Picture of PLUS members celebrating" />
+      <Img className="w-full flex-shrink-0 mx-auto" fluid={homepagePicture.asset.fluid} alt={homepagePictureDescription} />
       <Section title="" colour='white'>
         <Vision vision={vision} />
       </Section>
@@ -109,7 +113,7 @@ const Home = ({ data }) => {
         </div >
       </Section>
 
-      <Section title="Funding Sources" subtitle="We are extremely grateful to our funders including NHS Tayside and P&K Council for providing our core funding since 2002." colour='white' >
+      <Section title="Funding Sources" subtitle={fundersMessage} colour='white' >
         <FunderGrid funders={funders} />
       </Section>
     </div >

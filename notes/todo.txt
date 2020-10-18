@@ -1,31 +1,34 @@
 to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Sunday
+Monday
 ======
-do jason netlify forms / YT tute
+finish forms:
+ - contact us
+    modal - https://mdbootstrap.com/docs/jquery/modals/forms/
+    http://perth.co.uk/contact-us/
+    tailwind ui
+    email icon --> modal
+ - become a member - http://perth.co.uk/get-involved/
+do jason netlify forms / YT tutorial
 click submit:
 - submits message to netlify
 - emails me
 - webhook creates a message record somewhere
 - look at Wes course - is similar?
 
+Learn how to use nodes for pages, and loop over them for the 6 circles on the homepage:
+  Digital Garden
+  Resources
+  What's Happening
+  Training
+  About Plus
+  Get Involved
 
-
-then wes course
-then implement these:
-get involved 
-  --> implement with however I decide to do it above
-  - http://perth.co.uk/get-involved/
-
-contact us  
-  --> implement with however I decide to do it above
-  modal - https://mdbootstrap.com/docs/jquery/modals/forms/
-  http://perth.co.uk/contact-us/
-  tailwind ui
-  email icon --> modal
 
 Misc fixes
 ==========
+get a better Susan pic on homepage
+make the footer stic to the bottom of the screen, eg on http://localhost:4000/wellbeing-calendar
 add the lines either side of section headings - like "Latest News" on file:///C:/Users/Stuart/Code//notes/Inspiration/SmartBox.html
 put sort into util
 Change iPad feature descriptions

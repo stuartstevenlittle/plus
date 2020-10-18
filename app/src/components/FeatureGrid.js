@@ -17,7 +17,7 @@ const FeatureGrid = ({ features }) => {
 const FeatureItem = ({ feature }) => (
   <li className="col-span-1 flex flex-col text-center px-8 xl:px-0 hover:opacity-90 animate">
     <Link className="flex-1 flex flex-col" to={feature.slug.current}>
-      <Img className="w-72 h-72 flex-shrink-0 mx-auto bg-black rounded-full" fluid={feature.mainImage.asset.fluid} alt={feature.title} />
+      <Img className="w-72 h-72 flex-shrink-0 mx-auto bg-black rounded-full" fluid={feature.image.asset.fluid} alt={feature.title} />
       <h3 className="mt-6 text-xl uppercase leading-5 font-semibold">{feature.title}</h3>
       <p className="text-lg mx-8 mb-4 mt-2">{feature.description}</p>
     </Link>
