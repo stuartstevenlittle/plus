@@ -1,20 +1,6 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 const ContactUs = () => {
-  const { image } = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "contact.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
-
 
   // const { values, updateValue } = useForm({ firstName: '', lastName: '', email: '', message: '' })
 
@@ -96,7 +82,6 @@ const ContactUs = () => {
                 </span>
               </div>
             </form>
-            <Img className="h-64 w-1/2 flex-shrink-0 mx-auto" fluid={image.sharp.fluid} />
           </div>
         </div>
       </div>
