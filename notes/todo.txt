@@ -1,5 +1,8 @@
 to go live - have this all finished by next Friday
-==================================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sunday
+======
+finish calender design
 get a basic contact us page working:
 create a quick form
 then wes course
@@ -36,6 +39,9 @@ donations
   15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
   https://stripe.com/docs/payments/checkout/client
 
+
+Monday
+======
 news items pages
 ================
 sanity default? check tutorial

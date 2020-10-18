@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 
+.hyperlink {
+@apply text-blue-700 animate
+}
+
+.hyperlink:hover {
+@apply text-blue-500
+}
+
 .animate {
   @apply transition ease-in-out duration-150;
 }

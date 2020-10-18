@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import PageTitle from '../components/PageTitle'
 
 
@@ -14,7 +13,7 @@ export const pageQuery = graphql`
       month {
         name
       }
-      startDate
+      startDate(formatString: "Do")
       timeDescription
       image {
         asset {
@@ -48,7 +47,7 @@ const WellbeingCalender = ({ data }) => {
 
   return (
     <div className="border-b">
-      <PageTitle title="Wellbeing Calender" subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aliquam" />
+      <PageTitle title="Wellbeing Calender" subtitle="To access information about any of the campaigns, please click the blue link" />
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 border-b border-l mt-4 mb-16 mx-16">
         {months.map(month => <Month key={month.name} month={month} campaigns={campaigns.filter(campaign => campaign.month.name === month.name)} />)}
       </ul>
@@ -59,10 +58,10 @@ const WellbeingCalender = ({ data }) => {
 export default WellbeingCalender
 
 const Month = ({ month, campaigns }) => (
-  <li className="overflow-hidden p-8 col-span-1 flex flex-col border-t border-r bg-white">
+  <li className="overflow-hidden p-8 col-span-1 flex flex-col border-t border-r bg-warm-gray-50">
     <div className="cursor-pointer flex-1 flex flex-col">
-      <h3 className="text-center text-2xl text-teal-800 uppercase leading-5 font-semibold">{month.name}</h3>
-      <ul className="flex mt-4">
+      <h3 className="text-center text-xl text-gray-500 uppercase leading-5 font-semibold">{month.name}</h3>
+      <ul className="flex flex-col mb-2">
         {
           campaigns.map((campaign, index) =>
             <Campaign key={index} campaign={campaign} />
@@ -74,11 +73,10 @@ const Month = ({ month, campaigns }) => (
 )
 
 const Campaign = ({ campaign }) => (
-  <li className=" mr-8">
-    <a href={campaign.link} className="">
-      <h3 className="mt-2 font-semibold">{campaign.timeDescription}</h3>
-      <p className=" mb-3 text-gray-700">{campaign.name}</p>
-      <Img className="h-32 w-32 shadow hover:opacity-90 rounded-lg" fluid={campaign.image.asset.fluid} alt={campaign.name} />
+  <li className="mt-6 mr-8">
+    <a href={campaign.link} className="flex items-center">
+      <p className="p-2 w-16 text-center text-lg rounded border border-warm-gray-200 bg-warm-gray-100 text-warm-gray-600 group-hover:bg-warm-gray-100 animate">{campaign.startDate}</p>
+      <p className="ml-4 text-lg hyperlink">{campaign.name}</p>
     </a>
   </li>
 )

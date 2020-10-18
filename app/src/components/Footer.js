@@ -6,7 +6,7 @@ const Footer = () => {
         {/* Left */}
         <div className="mt-2 order-3 md:mt-0 md:order-1">
           <p className="text-center text-sm leading-6">
-            Website by <a href="https://www.elansoftware.co.uk" target="_blank" rel="noreferrer" className="text-blue-700 hover:text-blue-800 animate" >&#233;lan software</a>
+            Website by <a href="https://www.elansoftware.co.uk" target="_blank" rel="noreferrer" className="hyperlink" >&#233;lan software</a>
           </p>
         </div>
 
@@ -33,9 +33,6 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-
-
-
       </div>
     </footer>
   )
