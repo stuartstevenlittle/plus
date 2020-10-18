@@ -35,6 +35,7 @@ map
 
 donations
   Look at Mary’s meals donation model. And mind etc. Big research - fundamental value add I can make for them.
+  https://whoisandy.github.io/react-rangeslider/
   15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
   https://stripe.com/docs/payments/checkout/client
 

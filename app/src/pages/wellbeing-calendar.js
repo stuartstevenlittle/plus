@@ -59,7 +59,7 @@ export default WellbeingCalender
 
 const Month = ({ month, campaigns }) => (
   <li className="overflow-hidden p-8 col-span-1 flex flex-col border-t border-r bg-warm-gray-50">
-    <div className="cursor-pointer flex-1 flex flex-col">
+    <div className="flex-1 flex flex-col">
       <h3 className="text-center text-xl text-gray-500 uppercase leading-5 font-semibold">{month.name}</h3>
       <ul className="flex flex-col mb-2">
         {
