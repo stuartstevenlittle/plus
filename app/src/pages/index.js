@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-// import Slider from '../components/Slider'
 import NewsCarousel from '../components/NewsCarousel'
 import Section from '../components/Section'
 import FeatureGrid from '../components/FeatureGrid'
@@ -14,27 +13,20 @@ export const pageQuery = graphql`
   general: allSanityGeneral {
     nodes {
       vision
-      homepageMainPhoto {
+      homepagePicture {
         asset {
           fluid(maxWidth: 1903) {
             ...GatsbySanityImageFluid
           }
         }
       }
-      homepageAvatar {
-        asset {
-          fluid(maxWidth: 1250) {
-            ...GatsbySanityImageFluid
-          }
-        }
-      }
     }
   }
-  posts: allSanityPost {
+  posts: allSanityNews {
     nodes {
       title
       publishedAt(formatString: "DD MMM YYYY")
-      exerpt
+      excerpt
       slug {
         current
       }
@@ -50,7 +42,7 @@ export const pageQuery = graphql`
       }
     }
   }
-  features: allSanityCategory {
+  features: allSanityDigitalGardenSections {
     nodes {
       title
       description
@@ -58,7 +50,7 @@ export const pageQuery = graphql`
       slug {
         current
       }
-      mainImage {
+      image {
         asset {
           fluid(maxWidth: 400) {
             ...GatsbySanityImageFluid
@@ -67,13 +59,11 @@ export const pageQuery = graphql`
       }
     }
   }
-  funders: allSanityFunder {
+  funders: allSanityFunders {
     nodes {
       id
-      title
-      slug {
-        current
-      }
+      name
+      link
       order
       image {
         asset {
@@ -90,14 +80,14 @@ export const pageQuery = graphql`
 
 const Home = ({ data }) => {
   const vision = data.general.nodes[0].vision
-  const homepageMainPhoto = data.general.nodes[0].homepageMainPhoto
+  const homepagePicture = data.general.nodes[0].homepagePicture
   const funders = data.funders.nodes
   const posts = data.posts.nodes
   const features = data.features.nodes
   return (
 
     <div className="min-h-screen">
-      <Img className="w-full flex-shrink-0 mx-auto" fluid={homepageMainPhoto.asset.fluid} alt="Picture of PLUS members celebrating" />
+      <Img className="w-full flex-shrink-0 mx-auto" fluid={homepagePicture.asset.fluid} alt="Picture of PLUS members celebrating" />
       <Section title="" colour='white'>
         <Vision vision={vision} />
       </Section>

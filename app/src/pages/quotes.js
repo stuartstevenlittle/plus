@@ -4,14 +4,14 @@ import ToolGridWrapper from '../components/ToolGridWrapper'
 
 export const pageQuery = graphql`
 {
-  quotes: allSanityQuote {
+  quotes: allSanityDigitalGardenQuotes {
     nodes {
       id
       text
             tags {
         name
       }
-          quoteAuthor {
+          author {
         name
         image {
           asset {

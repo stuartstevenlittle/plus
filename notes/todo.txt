@@ -2,82 +2,6 @@ to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Sunday
 ======
-set up sanity preview
-
-General
-	homepage picture
-	vision text
-	
-Person
-	name
-	image
-
-News
-	title
-	mainImage
-	body
-	excerpt
-	author --> person
-	tags
-	publishedAt
-	slug
-
-
-Digital Garden Section (was category)
-	title
-	mainImage
-	description
-	excerpt
-	author --> person
-	tags
-	order	
-	slug
-
-
-Funder
-	name
-	image
-	order
-	link	
-
-Tag
-	name
-
-Picture
-	title
-	description
-	image
-	author --> person
-	tags
-	publishedAt
-	slug
-
-Quote
-	text
-	author --> person
-	tags
-	publishedAt
-
-Story
-	text
-	excerpt
-	buttonText
-	image
-	author --> person
-	tags
-	publishedAt
-
-Wellbeing Campaign
-	name
-	month
-	startDate
-	link
-
-month
-	order
-
-
-
 do jason netlify forms / YT tute
 click submit:
 - submits message to netlify
@@ -91,22 +15,22 @@ then wes course
 then implement these:
 get involved 
   --> implement with however I decide to do it above
-  - http://plusperth.co.uk/get-involved/
+  - http://perth.co.uk/get-involved/
 
 contact us  
   --> implement with however I decide to do it above
   modal - https://mdbootstrap.com/docs/jquery/modals/forms/
-  http://plusperth.co.uk/contact-us/
+  http://perth.co.uk/contact-us/
   tailwind ui
   email icon --> modal
 
 Misc fixes
 ==========
-add the lines either side of section headings - like "Latest News" on file:///C:/Users/Stuart/Code/plus/notes/Inspiration/SmartBox.html
+add the lines either side of section headings - like "Latest News" on file:///C:/Users/Stuart/Code//notes/Inspiration/SmartBox.html
 put sort into util
 Change iPad feature descriptions
 Remove right margin on mobile
-in mobile footer put elan below plus
+in mobile footer put elan below 
 try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
 Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
 --> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
@@ -128,20 +52,20 @@ sanity default? check tutorial
 
 activities pages
 ================
-e.g. http://plusperth.co.uk/our-services/horners-plot-2/
+e.g. http://perth.co.uk/our-services/horners-plot-2/
 
 pages - there was a sanity.io tutorial on pages. Uses "nodes"?
 =====
-whats happening - http://plusperth.co.uk/whats-happening/
+whats happening - http://perth.co.uk/whats-happening/
 Training
-about plus
-  who we are - http://plusperth.co.uk/about-plus/
-  what we do - http://plusperth.co.uk/what-we-do/
-  newsletter archive - http://plusperth.co.uk/past-newsletters/
+about 
+  who we are - http://perth.co.uk/about-/
+  what we do - http://perth.co.uk/what-we-do/
+  newsletter archive - http://perth.co.uk/past-newsletters/
 
 content
 =======
-create a new sanity account for plus
+create a new sanity account for 
 datatypes: 
   Category --> Digital garden
   Quote author --> Quote source
@@ -208,8 +132,10 @@ calender
 probably use smaller images - look at tailwind UI for nice component that would fit these
 
 
-add testimonials from existing site, e.g. http://plusperth.co.uk/newsletters/  - look at other charity sites for inspiration
+add testimonials from existing site, e.g. http://perth.co.uk/newsletters/  - look at other charity sites for inspiration
+set up sanity previews - video 12: 7:30mins
 fix the fade in on my site
+
 --> go live
 
 
@@ -226,3 +152,6 @@ sanirty commands
 ▪ sanity manage to open the project settings in a browser
 ▪ sanity help to explore the CLI manual
 ▪ sanity start to run your studio
+
+
+Success! Studio deployed to https://plus.sanity.studio/

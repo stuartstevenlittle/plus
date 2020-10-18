@@ -33,7 +33,7 @@ const NewsCarousel = ({ newsItems }) => {
               {/* Right */}
               <div className="ml-4">
                 <h3 className="text-lg uppercase leading-5 font-semibold">{newsItem.title}</h3>
-                <p className="text-base mt-2">{newsItem.exerpt}</p>
+                <p className="text-base mt-2">{newsItem.excerpt}</p>
                 <p className="mb-4 mt-2 text-blue-600">
                   <span>Read More</span>
                   <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
@@ -52,7 +52,7 @@ const NewsCarousel = ({ newsItems }) => {
       <Link className="flex sm:hidden flex-1 flex-col text-center" to={newsItem.slug.current}>
         <Img className="w-64 h-64 flex-shrink-0 mx-auto bg-black rounded-full" fluid={newsItem.mainImage.asset.fluid} alt={newsItem.title} />
         <h3 className="mt-6 text-xl uppercase leading-5 font-semibold">{newsItem.title}</h3>
-        <p className="text-lg mx-8 mt-3">{newsItem.exerpt}</p>
+        <p className="text-lg mx-8 mt-3">{newsItem.excerpt}</p>
         <p className="mx-8 mb-4 mt-2 text-blue-600">
           <span>Read More</span>
           <svg className="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>

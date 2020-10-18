@@ -12,7 +12,7 @@ export default {
     { name: 'mainImage', title: 'Main image', type: 'image', options: { hotspot: true } },
     { name: 'categories', title: 'Categories', type: 'array', of: [{ type: 'reference', to: { type: 'category' } }] },
     { name: 'publishedAt', title: 'Published at', type: 'datetime' },
-    { name: 'exerpt', title: 'Exerpt', type: 'text' },
+    { name: 'excerpt', title: 'Exerpt', type: 'text' },
     { name: 'body', title: 'Body', type: 'blockContent' },
 
   ],

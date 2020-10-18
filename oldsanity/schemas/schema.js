@@ -5,7 +5,7 @@ import general from './general'
 import category from './category'
 import post from './post'
 import author from './author'
-import quoteAuthor from './quoteAuthor'
+import author from './author'
 import slide from './slide'
 import funder from './funder'
 import tag from './tag'
@@ -24,7 +24,7 @@ export default createSchema({
     general,
     post,
     author,
-    quoteAuthor,
+    author,
     category,
     slide,
     funder,

@@ -4,13 +4,10 @@ import ToolGridWrapper from '../components/ToolGridWrapper'
 
 export const pageQuery = graphql`
 {
-  gardenItems: allSanityPlant {
+  gardenItems: allSanityDigitalGardenPictures {
     nodes {
       id
       title
-      plantType {
-        name
-      }
       image {
           asset {
             fluid(maxWidth: 600) {
@@ -18,10 +15,7 @@ export const pageQuery = graphql`
             }
           }
         }
-      slug {
-        current
-      }
-      author {
+      artist {
         name
         image {
           asset {

@@ -6,7 +6,7 @@ const ToolGridContainer = ({ children, toolType, tools, filteredTools, setFilter
 
   const { tagsData } = useStaticQuery(graphql`
   query {
-    tagsData: allSanityTag {
+    tagsData: allSanityTags {
       nodes {
         name
       }

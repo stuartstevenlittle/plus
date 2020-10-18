@@ -8,7 +8,7 @@ export default {
   fields: [
     { name: 'title', title: 'Title', type: 'string' },
     { name: 'body', title: 'Body', type: 'blockContent' },
-    { name: 'exerpt', title: 'Exerpt', type: 'text' },
+    { name: 'excerpt', title: 'Exerpt', type: 'text' },
     { name: 'buttonText', title: 'Button Text', type: 'string' },
     { name: 'image', title: 'Image', type: 'image', options: { hotspot: true } },
     { name: 'author', title: 'Author', type: 'reference', to: { type: 'people' } },

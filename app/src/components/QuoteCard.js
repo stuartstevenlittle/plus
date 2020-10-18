@@ -18,10 +18,10 @@ const QuoteCard = ({ quote }) => (
           {/* // Bottom */}
           <div className="flex items-center justify-center">
             <div className="flex-shrink-0">
-              <Img className="mx-auto h-8 w-8 opacity-75 rounded-full" fluid={quote.quoteAuthor.image.asset.fluid} alt="" />
+              <Img className="mx-auto h-8 w-8 opacity-75 rounded-full" fluid={quote.author.image.asset.fluid} alt="" />
             </div>
             <div className="ml-3">
-              <div className="text-base text-gray-400 uppercase tracking-wide leading-6 font-medium">{quote.quoteAuthor.name}</div>
+              <div className="text-base text-gray-400 uppercase tracking-wide leading-6 font-medium">{quote.author.name}</div>
             </div>
           </div>
         </div>

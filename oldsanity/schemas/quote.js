@@ -6,7 +6,7 @@ export default {
   icon,
   fields: [
     { name: 'text', title: 'Text', type: 'text' },
-    { name: 'quoteAuthor', title: 'Author', type: 'reference', to: { type: 'quoteAuthor' } },
+    { name: 'author', title: 'Author', type: 'reference', to: { type: 'author' } },
     { name: 'tags', title: 'Tags', type: 'array', of: [{ type: 'reference', to: { type: 'tag' } }] },
   ],
 }

@@ -9,7 +9,7 @@ const ToolGridWrapper = ({ toolType, allTools }) => {
   // Data
   const { tagsData } = useStaticQuery(graphql`
   query {
-    tagsData: allSanityTag {
+    tagsData: allSanityTags {
       nodes {
         name
       }

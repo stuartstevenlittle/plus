@@ -15,7 +15,7 @@ const Map = () => {
       <ReactMapGL
         className=" rounded overflow-hidden"
         {...viewport}
-        mapboxApiAccessToken="pk.eyJ1Ijoic3R1YXJ0c3RldmVubGl0dGxlIiwiYSI6ImNrZ2V6dmRhajB0bWIycXMxMTh5bWs3d2QifQ.a5Nt-xUOhBJl8K8H_pr7gQ"
+        mapboxApiAccessToken={"pk.eyJ1Ijoic3R1YXJ0c3RldmVubGl0dGxlIiwiYSI6ImNrZ2V6dmRhajB0bWIycXMxMTh5bWs3d2QifQ.a5Nt-xUOhBJl8K8H_pr7gQ"}
         onViewportChange={viewport => setViewport(viewport)}
 
       >

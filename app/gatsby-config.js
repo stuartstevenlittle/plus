@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-sanity`,
-      options: { projectId: 'ob7gy76r', dataset: 'production', watchMode: true, token: process.env.SANITY_TOKEN }
+      options: { projectId: 'en8f6bw8', dataset: 'production', watchMode: true, token: process.env.SANITY_TOKEN }
     },
 
   ],

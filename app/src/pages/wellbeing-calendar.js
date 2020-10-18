@@ -5,7 +5,7 @@ import PageTitle from '../components/PageTitle'
 
 export const pageQuery = graphql`
 {
-  campaigns: allSanityWellbeingCampaign {
+  campaigns: allSanityWellbeingCampaigns {
     nodes {
       id
       name
@@ -14,17 +14,9 @@ export const pageQuery = graphql`
         name
       }
       startDate(formatString: "Do")
-      timeDescription
-      image {
-        asset {
-          fluid(maxWidth: 600) {
-            src
-          }
-        }
-      }
     }
   }
-  months: allSanityMonth {
+  months: allSanityMonths {
     nodes {
       name
       order

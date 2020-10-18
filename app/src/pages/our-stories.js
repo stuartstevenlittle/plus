@@ -4,10 +4,14 @@ import ToolGridWrapper from '../components/ToolGridWrapper'
 
 export const pageQuery = graphql`
 {
-  stories: allSanityStory {
+  stories: allSanityDigitalGardenStories {
     nodes {
       id
-      text
+      body  {
+        children {
+          text
+        }
+      }
       excerpt
             buttonText
       tags {

@@ -6,7 +6,7 @@ export default {
   icon,
   fields: [
     { name: 'vision', title: 'Vision', type: 'text' },
-    { name: 'homepageMainPhoto', title: 'Homepage Main Photo', type: 'image', options: { hotspot: true } },
+    { name: 'homepagePicture', title: 'Homepage Main Photo', type: 'image', options: { hotspot: true } },
     { name: 'homepageAvatar', title: 'Homepage Avatar', type: 'image', options: { hotspot: true } },
   ],
 }

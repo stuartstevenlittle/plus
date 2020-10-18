@@ -1,7 +1,7 @@
 import { RiPlantLine as icon } from 'react-icons/ri'
 
 export default {
-  name: 'digitalGarden',
+  name: 'digitalGardenSections',
   title: 'Digital Garden Sections',
   type: 'document',
   icon,

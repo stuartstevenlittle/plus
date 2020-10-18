@@ -1,7 +1,7 @@
 import { RiUserVoiceLine as icon } from 'react-icons/ri'
 
 export default {
-  name: 'quoteAuthor',
+  name: 'author',
   title: 'Quote Author',
   type: 'document',
   icon,
