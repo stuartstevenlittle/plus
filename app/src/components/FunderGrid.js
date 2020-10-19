@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 
 const FunderGrid = ({ funders }) => {
   return (
-    <ul className="mt-4 pb-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+    <ul className="mt-4 pb-2 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
       {
         funders.map((funder, index) =>
           <Funder key={index} funder={funder} />

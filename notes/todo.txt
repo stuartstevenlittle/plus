@@ -16,6 +16,9 @@ click submit:
 - webhook creates a message record somewhere
 - look at Wes course - is similar?
 
+
+get tailwind screens workin g
+
 Learn how to use nodes for pages, and loop over them for the 6 circles on the homepage:
   Digital Garden
   Resources
@@ -40,7 +43,7 @@ try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthro
 Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
 --> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
 --> find a good tailwind ui template for that
-
+Once have a really nice serif font working, try the nice paper background for quotes cards - https://www.youtube.com/watch?v=K1Vt0fEiuhE&t=2s
 
 donations
   Look at Mary’s meals donation model. And mind etc. Big research - fundamental value add I can make for them.
@@ -160,3 +163,6 @@ sanirty commands
 
 
 Success! Studio deployed to https://plus.sanity.studio/
+
+
+How to make a sticky footer - https://www.youtube.com/watch?v=NQ_Ym8juJqo

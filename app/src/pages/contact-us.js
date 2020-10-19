@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div className="relative bg-white" >
+    <div className="relative bg-white " >
       <div className="absolute inset-0">
         <div className="absolute inset-y-0 left-0 w-1/2 bg-warm-gray-50" />
       </div>

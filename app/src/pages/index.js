@@ -113,7 +113,7 @@ const Home = ({ data }) => {
         </div >
       </Section>
 
-      <Section title="Funding Sources" subtitle={fundersMessage} colour='white' >
+      <Section title="Funding Sources" subtitle={fundersMessage} colour='white' noBorder >
         <FunderGrid funders={funders} />
       </Section>
     </div >
