@@ -27,6 +27,8 @@ Learn how to use nodes for pages, and loop over them for the 6 circles on the ho
 
 Misc fixes
 ==========
+add 2 new garden types - videos and short stories. Change "stories" to "personal stories"
+add address, phone and email below map
 get a better Susan pic on homepage
 make the footer stic to the bottom of the screen, eg on http://localhost:4000/wellbeing-calendar
 add the lines either side of section headings - like "Latest News" on file:///C:/Users/Stuart/Code//notes/Inspiration/SmartBox.html
