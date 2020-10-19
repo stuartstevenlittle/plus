@@ -23,7 +23,6 @@ this one? - https://www.youtube.com/watch?v=kzWIUX3CpuI&list=PLE8UH9yEJFs6xzS4u_
 
 Misc fixes
 ==========
-add 2 new garden types - videos and short stories. Change "stories" to "personal stories"
 add address, phone and email below map
 get a better Susan pic on homepage
 make the footer stic to the bottom of the screen, eg on http://localhost:4000/wellbeing-calendar
@@ -32,6 +31,8 @@ put sort into util
 Change iPad feature descriptions
 Remove right margin on mobile
 in mobile footer put elan below 
+add 2 new garden types - videos and short stories. Change "stories" to "personal stories"
+
 
 Tuesday
 ======
