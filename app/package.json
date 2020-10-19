@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^0.2.0",
+    "@sanity/block-content-to-react": "^2.0.7",
     "@tailwindcss/ui": "^0.6.2",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
@@ -31,6 +32,7 @@
     "gatsby-source-filesystem": "^2.3.34",
     "gatsby-source-sanity": "^6.0.4",
     "gatsby-transformer-sharp": "^2.5.17",
+    "get-youtube-id": "^1.0.1",
     "google-map-react": "^2.1.7",
     "gsap": "^3.5.1",
     "node-fetch": "^2.6.1",
@@ -40,6 +42,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "react-map-gl": "^5.2.9",
+    "react-youtube": "^7.13.0",
     "swiper": "^6.3.2",
     "tailwindcss-debug-screens": "^1.1.0"
   },
