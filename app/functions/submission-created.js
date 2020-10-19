@@ -10,17 +10,11 @@ exports.handler = async event => {
       headers: { Authorization: `Bearer ${process.env.FAUNA_API_SECRET}` },
       body: JSON.stringify({
         query: `
-        mutation($name: String! $email: String!  $message: String!  ) {
-          mutation {
-            createPlus(data: {
-              name: $name
-              email: $email
-              message: $message
-            }) {
-              _id
-            }
-          }
-        }
+        mutation($name: String!, $email: String!, $message: String!) {
+  createPlus(data: { name: $name, email: $email, message: $message }) {
+    _id
+  }
+}
         `,
         variables: { name, email, message }
       })
