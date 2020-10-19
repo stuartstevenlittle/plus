@@ -59,11 +59,7 @@ const ContactUs = () => {
               netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="sr-only">
-                <label>Don't fill this out if you're human:<input type="hidden" name="bot-field" /></label>
-              </p>
-
+              <input type="hidden" name="bot-field" /> <input type="hidden" name="form-name" value="contact" />
 
               <div>
                 <label htmlFor="name" className="sr-only">Name</label>
