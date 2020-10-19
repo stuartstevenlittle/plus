@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 exports.handler = async event => {
   const body = JSON.parse(event.body)
   const { name, email, message } = body.payload
