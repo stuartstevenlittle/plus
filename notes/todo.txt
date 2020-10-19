@@ -3,6 +3,9 @@ to go live - have this all finished by next Friday
 Monday
 ======
 do forms:
+- whizz thro jason servelseess funcs courese
+- pick up netlify forms again at: 35:20mins - https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=i6dZTL7gsCY&feature=emb_logo
+
  - contact us
     modal - https://mdbootstrap.com/docs/jquery/modals/forms/
     http://perth.co.uk/contact-us/
