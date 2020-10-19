@@ -8,7 +8,7 @@ exports.handler = async event => {
     {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.FAUNA_API_SECRET}` },
-      body: {
+      body: JSON.stringify({
         query: `
         mutation($name: String! $email: String!  $message: String!  ) {
           mutation {
@@ -23,7 +23,7 @@ exports.handler = async event => {
         }
         `,
         variables: { name, email, message }
-      }
+      })
     })
     .then(response => response.json())
     .catch(error => console.error(error))
