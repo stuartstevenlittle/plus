@@ -58,21 +58,21 @@ const ContactUs = () => {
             <form name="contact" method="POST" data-netlify="true" className="grid grid-cols-1 gap-y-6">
               <input type="hidden" name="form-name" value="contact" />
               <div>
-                <label htmlFor="full_name" className="sr-only">Name</label>
+                <label htmlFor="name" className="sr-only">Name</label>
                 <div className="relative rounded-md shadow-sm">
-                  <input id="full_name" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Name" />
+                  <input id="name" name="name" placeholder="Name" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" />
                 </div>
               </div>
               <div>
                 <label htmlFor="email" className="sr-only">Email</label>
                 <div className="relative rounded-md shadow-sm">
-                  <input id="email" type="email" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Email" />
+                  <input id="email" name="email" placeholder="Email" type="email" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" />
                 </div>
               </div>
               <div>
                 <label htmlFor="message" className="sr-only">Message</label>
                 <div className="relative rounded-md shadow-sm">
-                  <textarea id="message" rows={4} className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Message" defaultValue={""} />
+                  <textarea id="message" name="message" rows={4} className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Message" defaultValue={""} />
                 </div>
               </div>
               <div>
