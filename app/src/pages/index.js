@@ -7,6 +7,7 @@ import FeatureGrid from '../components/FeatureGrid'
 import FunderGrid from '../components/FunderGrid'
 import Vision from '../components/Vision'
 import Map from '../components/Map'
+import Location from '../components/Location'
 
 export const pageQuery = graphql`
 {
@@ -106,6 +107,7 @@ const Home = ({ data }) => {
         <div className="grid grid-cols-1 gap-0 sm:grid-cols-2">
           <Section title="Where We are" colour='warm-gray' noBorder noTopGap>
             <Map />
+            <Location />
           </Section>
           <Section title="Donations" colour='warm-gray' noBorder noTopGap>
             <div className="h-80"></div>
