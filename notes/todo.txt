@@ -2,10 +2,9 @@ to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Monday
 ======
-do forms:
-- pick up netlify forms again at: 35:20mins - https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=i6dZTL7gsCY&feature=emb_logo
-- get it writing to a db
-- put the form in a modal - https://mdbootstrap.com/docs/jquery/modals/forms/
+finish serverless function --> fauna:
+install this: https://github.com/jlengstorf/jamstack-registration and get ti working
+modewl that in my code. If need be just put "app" into a git repo, and connect that to netlify instead. Do that until confident with all this.
 email icon --> modal
   http://perth.co.uk/contact-us/
   http://perth.co.uk/get-involved/
@@ -30,7 +29,7 @@ Change iPad feature descriptions
 Remove right margin on mobile
 Make <Location/> responsive
 in mobile footer put elan below 
-sticky footer not working in live
+sticky footer not working in live 
 add 2 new garden types - videos and short stories. Change "stories" to "personal stories"
 
 

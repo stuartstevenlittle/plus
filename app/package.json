@@ -12,7 +12,7 @@
     "serve": "NODE_OPTIONS='-r esm' gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "functions": "cd functions && npm i && cd .."
+    "functions": "cd functions && npm i"
   },
   "dependencies": {
     "@headlessui/react": "^0.2.0",
