@@ -56,7 +56,7 @@ const ContactUs = () => {
               method="POST"
               action="/contact-submitted"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
             >
               <input type="hidden" name="bot-field" /> <input type="hidden" name="form-name" value="contact" />
