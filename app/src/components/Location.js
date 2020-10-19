@@ -2,7 +2,7 @@ import React from 'react'
 
 const Location = () => {
   return (
-    <div className="flex justify-between text-lg mb-4">
+    <div className="flex justify-between text-lg mb-6">
       {/* Left */}
       <div>
         <dt className="sr-only">Postal address</dt>

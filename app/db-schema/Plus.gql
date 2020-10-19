@@ -1,0 +1,9 @@
+type Plus {
+  name: String!
+  email: String!
+  message: String!
+}
+
+type Query {
+  allPlus: [Plus]
+}
