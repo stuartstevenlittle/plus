@@ -33,20 +33,8 @@ put sort into util
 Change iPad feature descriptions
 Remove right margin on mobile
 in mobile footer put elan below 
-try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
-Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
---> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
---> find a good tailwind ui template for that
-Once have a really nice serif font working, try the nice paper background for quotes cards - https://www.youtube.com/watch?v=K1Vt0fEiuhE&t=2s
 
-donations
-  Look at Mary’s meals donation model. And mind etc. Big research - fundamental value add I can make for them.
-  https://whoisandy.github.io/react-rangeslider/
-  15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
-  https://stripe.com/docs/payments/checkout/client
-
-
-Monday
+Tuesday
 ======
 news items pages
 ================
@@ -64,6 +52,14 @@ about
   who we are - http://perth.co.uk/about-/
   what we do - http://perth.co.uk/what-we-do/
   newsletter archive - http://perth.co.uk/past-newsletters/
+
+
+donations
+  Look at Mary’s meals donation model. And mind etc. Big research - fundamental value add I can make for them.
+  https://whoisandy.github.io/react-rangeslider/
+  15:55mins -  https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=Htqo27ooM6Y&feature=emb_logo
+  https://stripe.com/docs/payments/checkout/client
+
 
 content
 =======
@@ -133,6 +129,11 @@ calender
 --------
 probably use smaller images - look at tailwind UI for nice component that would fit these
 
+try modelling maggie appletion fonts - https://maggieappleton.com/digital-anthropology. See font directory. Worth doing tutorials to know how to use fints in gatsby with tailwind.
+Use a "My story" page to play weith it. Make that page beautiful, and a total pleasure to read. 
+--> Like https://www.mind.org.uk/information-support/your-stories/how-i-learnt-to-focus-on-self-care
+--> find a good tailwind ui template for that
+Once have a really nice serif font working, try the nice paper background for quotes cards - https://www.youtube.com/watch?v=K1Vt0fEiuhE&t=2s
 
 add testimonials from existing site, e.g. http://perth.co.uk/newsletters/  - look at other charity sites for inspiration
 set up sanity previews - video 12: 7:30mins

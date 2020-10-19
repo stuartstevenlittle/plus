@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
 import { globalHistory as history } from '@reach/router'
 import Footer from './Footer'
 import Header from './Header'
@@ -10,11 +9,6 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <Helmet>
-        <html lang="en" />
-        <body className="debug-screens" />
-      </Helmet>
-
       {/* TODO do this more elegently */}
       <div className={`flex flex-col h-screen text-gray-900 mx-auto shadow ${route === 'pictures' || route === 'quotes' || route === 'stories' || route === 'poems' ? 'bg-warm-gray-50' : 'bg-white'} `}>
         <Header />

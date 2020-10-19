@@ -124,5 +124,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('@tailwindcss/ui', 'tailwindcss-debug-screens')],
+  plugins: [require('@tailwindcss/ui'), require('tailwindcss-debug-screens')],
 }
