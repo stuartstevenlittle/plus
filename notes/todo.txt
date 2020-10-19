@@ -1,16 +1,20 @@
+finish serverless function --> fauna:
+build a new ssl.com doing this tutorial (as it does authentication): https://egghead.io/playlists/building-a-serverless-jamstack-todo-app-with-netlify-gatsby-graphql-and-faunadb-53bb
+if needed, install this: https://github.com/jlengstorf/jamstack-registration and get it working
+model that in my code. If need be just put "app" into a git repo, and connect that to netlify instead. Do that until confident with all this.
+email icon --> modal
+  http://perth.co.uk/contact-us/
+  http://perth.co.uk/get-involved/
+
+
 build the About Plus page using the sanity page builder:
+do the torrent sanity course first. Then:
   https://sanity-nextjs-landing-pages-studio-3mgq1xyb.netlify.app/desk/pages;356db831-c321-45f4-bb5f-01329b3798c3
   https://www.sanity.io/guides/how-to-use-structured-content-for-page-building?utm_source=hints&utm_medium=sanity-io/sanity-template-nextjs-landing-pages
   https://www.sanity.io/create?taskId=92mw88JRpJUsoADJuGyB&template=sanity-io%2Fsanity-template-kitchen-sink
 Learn how to use nodes for pages?? 6 circles on homepage. Users can add more.
 then when know sanity better, create a video section in the digfital garden that contains embedded YT videos.
 
-finish serverless function --> fauna:
-install this: https://github.com/jlengstorf/jamstack-registration and get ti working
-modewl that in my code. If need be just put "app" into a git repo, and connect that to netlify instead. Do that until confident with all this.
-email icon --> modal
-  http://perth.co.uk/contact-us/
-  http://perth.co.uk/get-involved/
 
 Misc fixes
 ==========
