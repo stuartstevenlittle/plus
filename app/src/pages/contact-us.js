@@ -21,8 +21,8 @@ const ContactUs = () => {
           <rect width={404} height={404} fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
         </svg>
         <div className="text-center">
-          <h2 className="text-3xl leading-9 font-extrabold text-gray-500 sm:text-4xl sm:leading-10">
-            Contact us
+          <h2 className="text-2xl leading-9 font-extrabold text-gray-800 sm:text-4xl sm:leading-10">
+            Get in touch
       </h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
             Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.

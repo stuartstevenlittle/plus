@@ -2,25 +2,15 @@ to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Monday
 ======
+get tailwind screens working
 do forms:
-- whizz thro jason servelseess funcs courese
 - pick up netlify forms again at: 35:20mins - https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=i6dZTL7gsCY&feature=emb_logo
+- get it writing to a db
+- put the form in a modal - https://mdbootstrap.com/docs/jquery/modals/forms/
+email icon --> modal
+  http://perth.co.uk/contact-us/
+  http://perth.co.uk/get-involved/
 
- - contact us
-    modal - https://mdbootstrap.com/docs/jquery/modals/forms/
-    http://perth.co.uk/contact-us/
-    tailwind ui
-    email icon --> modal
- - become a member - http://perth.co.uk/get-involved/
-do jason netlify forms / YT tutorial
-click submit:
-- submits message to netlify
-- emails me
-- webhook creates a message record somewhere
-- look at Wes course - is similar?
-
-
-get tailwind screens workin g
 
 Learn how to use nodes for pages, and loop over them for the 6 circles on the homepage:
 this one? - https://www.youtube.com/watch?v=kzWIUX3CpuI&list=PLE8UH9yEJFs6xzS4u_NZHpq2KBWAy0DcU&index=275
