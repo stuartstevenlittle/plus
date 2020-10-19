@@ -100,13 +100,11 @@ const Header = () => {
                   </div>
                 </Transition>
               </div> */}
-
-              <Link to="/wellbeing-calendar" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
-                Calendar
-            </Link>
-
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
                 What's Happening
+            </Link>
+              <Link to="/wellbeing-calendar" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
+                Wellbeing Calendar
             </Link>
               <Link to="#" className="inline-flex items-center px-1 text-lg font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 focus:border-gray-300 animate">
                 Training
