@@ -5,8 +5,5 @@
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.1"
-  },
-  "scripts": {
-    "functions": "cd functions && npm i && cd .."
   }
 }
