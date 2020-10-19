@@ -23,6 +23,7 @@ click submit:
 get tailwind screens workin g
 
 Learn how to use nodes for pages, and loop over them for the 6 circles on the homepage:
+this one? - https://www.youtube.com/watch?v=kzWIUX3CpuI&list=PLE8UH9yEJFs6xzS4u_NZHpq2KBWAy0DcU&index=275
   Digital Garden
   Resources
   What's Happening
