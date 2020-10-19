@@ -29,14 +29,14 @@ const ContactUs = () => {
       </p>
         </div>
         <div className="mt-12">
-          <form name="contact v2"
+          <form name="contact-us"
             method="POST"
             action="/contact-submitted"
             data-netlify="true"
             netlify-honeypot="bot-field"
             className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
           >
-            <input type="hidden" name="bot-field" /> <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" /> <input type="hidden" name="form-name" value="contact-us" />
 
             <div className="sm:col-span-2">
               <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">Name</label>
