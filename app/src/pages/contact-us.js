@@ -59,8 +59,8 @@ const ContactUs = () => {
               data-netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <input className="hidden" name="bot-field" />
+              <input type="hidden" name="bot-field" /> <input type="hidden" name="form-name" value="contact" />
+
               <div>
                 <label htmlFor="name" className="sr-only">Name</label>
                 <div className="relative rounded-md shadow-sm">
