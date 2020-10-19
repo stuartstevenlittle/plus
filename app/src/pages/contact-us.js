@@ -9,8 +9,8 @@ const ContactUs = () => {
       <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
         <div className="bg-warm-gray-50 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
           <div className="max-w-lg mx-auto">
-            <h2 className="text-2xl leading-8 font-extrabold tracking-tight text-warm-gray-600 sm:text-3xl sm:leading-9">
-              Get in touch
+            <h2 className="text-2xl leading-8 font-extrabold text-warm-gray-500 sm:text-3xl sm:leading-9">
+              Contact us
         </h2>
 
             <p className="mt-3 text-lg leading-6 text-gray-500">
