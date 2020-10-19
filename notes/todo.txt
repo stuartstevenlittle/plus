@@ -2,7 +2,6 @@ to go live - have this all finished by next Friday
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Monday
 ======
-get tailwind screens working
 do forms:
 - pick up netlify forms again at: 35:20mins - https://www.youtube.com/watch?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx&v=i6dZTL7gsCY&feature=emb_logo
 - get it writing to a db

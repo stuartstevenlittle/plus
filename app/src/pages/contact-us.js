@@ -29,7 +29,7 @@ const ContactUs = () => {
       </p>
         </div>
         <div className="mt-12">
-          <form name="contact"
+          <form name="contact v2"
             method="POST"
             action="/contact-submitted"
             data-netlify="true"
@@ -38,27 +38,27 @@ const ContactUs = () => {
           >
             <input type="hidden" name="bot-field" /> <input type="hidden" name="form-name" value="contact" />
 
-            <div>
+            <div className="sm:col-span-2">
               <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">Name</label>
               <div className="mt-1 relative rounded-md shadow-sm">
-                <input id="name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+                <input id="name" className="form-input py-3 px-4 block w-full transition animate" value="Stuart" />
               </div>
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
               <div className="mt-1 relative rounded-md shadow-sm">
-                <input id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+                <input id="email" type="email" className="form-input py-3 px-4 block w-full transition animate" value="stuart@exelwines.co.uk" />
               </div>
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="message" className="block text-sm font-medium leading-5 text-gray-700">Message</label>
               <div className="mt-1 relative rounded-md shadow-sm">
-                <textarea id="message" rows={4} className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150" defaultValue={""} />
+                <textarea id="message" rows={4} className="form-textarea py-3 px-4 block w-full transition animate" defaultValue={""} value="This is the contact form" />
               </div>
             </div>
             <div className="sm:col-span-2">
               <span className="w-full inline-flex rounded-md shadow-sm">
-                <button type="button" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal active:bg-teal-700 transition ease-in-out duration-150">
+                <button type="submit" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal active:bg-teal-700 transition animate">
                   Submit
             </button>
               </span>
@@ -131,19 +131,19 @@ const ContactUs = () => {
     //           <div>
     //             <label htmlFor="name" className="sr-only">Name</label>
     //             <div className="relative rounded-md shadow-sm">
-    //               <input id="name" name="name" placeholder="Name" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" />
+    //               <input id="name" name="name" placeholder="Name" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition animate" />
     //             </div>
     //           </div>
     //           <div>
     //             <label htmlFor="email" className="sr-only">Email</label>
     //             <div className="relative rounded-md shadow-sm">
-    //               <input id="email" name="email" placeholder="Email" type="email" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" />
+    //               <input id="email" name="email" placeholder="Email" type="email" className="form-input block w-full py-3 px-4 placeholder-gray-500 transition animate" />
     //             </div>
     //           </div>
     //           <div>
     //             <label htmlFor="message" className="sr-only">Message</label>
     //             <div className="relative rounded-md shadow-sm">
-    //               <textarea id="message" name="message" rows={4} className="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Message" defaultValue={""} />
+    //               <textarea id="message" name="message" rows={4} className="form-input block w-full py-3 px-4 placeholder-gray-500 transition animate" placeholder="Message" defaultValue={""} />
     //             </div>
     //           </div>
     //           <div>

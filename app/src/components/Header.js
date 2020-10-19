@@ -54,9 +54,9 @@ const Header = () => {
           <div className="hidden sm:ml-2 sm:flex sm:items-center">
             <div className="hidden sm:-my-px sm:ml-2 space-x-8 sm:flex">
               <div className="relative">
-                <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition animate">
                   <span>Digital Garden</span>
-                  <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition animate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </button>
@@ -78,9 +78,9 @@ const Header = () => {
               </div>
 
               {/* <div className="relative">
-                <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                <button onClick={() => setShowToolsMenu(!showToolsMenu)} type="button" className="group text-gray-500 inline-flex items-center text-lg space-x-2 leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition animate">
                   <span>Resources</span>
-                  <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <svg className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition animate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </button>
@@ -194,7 +194,7 @@ const Header = () => {
 const MenuItem = ({ feature, setShowToolsMenu, showToolsMenu }) => (
   <>
     <li >
-      <Link to={`/${feature.slug.current}`} onClick={() => setShowToolsMenu(!showToolsMenu)} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+      <Link to={`/${feature.slug.current}`} onClick={() => setShowToolsMenu(!showToolsMenu)} className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition animate">
         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-teal-600 text-white sm:h-12 sm:w-12">
           {feature.icon && <Img className="w-8 h-8 text-white" fluid={feature.icon.asset.fixed} alt={feature.title} />}
         </div>

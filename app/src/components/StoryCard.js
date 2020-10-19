@@ -6,7 +6,7 @@ import LeftQuote from '../components/LeftQuote'
 const StoryCard = ({ story }) => (
   <>
     { story &&
-      <li key={story.id} className="text-2xl text-center p-4 min-h-64 overflow-hidden col-span-1 flex flex-col  rounded shadow bg-white hover:shadow-lg transition ease-in-out duration-150">
+      <li key={story.id} className="text-2xl text-center p-4 min-h-64 overflow-hidden col-span-1 flex flex-col  rounded shadow bg-white hover:shadow-lg transition animate">
         <button className="flex-1 flex flex-col">
           {/* // Left */}
           <div className="flex flex-col flex-1 items-center justify-center">

@@ -5,7 +5,7 @@ import RightQuote from '../components/RightQuote'
 const QuoteCard = ({ quote }) => (
   <>
     { quote &&
-      <li key={quote.id} className="bg-white text-2xl text-center p-4 min-h-64 overflow-hidden col-span-1 flex flex-col  rounded shadow hover:shadow-lg transition ease-in-out duration-150">
+      <li key={quote.id} className="bg-white text-2xl text-center p-4 min-h-64 overflow-hidden col-span-1 flex flex-col  rounded shadow hover:shadow-lg transition animate">
         <div className="cursor-pointer flex-1 flex flex-col">
           {/* // Top */}
           <div className="flex flex-col flex-1 items-center justify-center">
