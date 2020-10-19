@@ -1,7 +1,11 @@
-to go live - have this all finished by next Friday
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Monday
-======
+
+build the About Plus page using the sanity page builder:
+  https://sanity-nextjs-landing-pages-studio-3mgq1xyb.netlify.app/desk/pages;356db831-c321-45f4-bb5f-01329b3798c3
+  https://www.sanity.io/guides/how-to-use-structured-content-for-page-building?utm_source=hints&utm_medium=sanity-io/sanity-template-nextjs-landing-pages
+  https://www.sanity.io/create?taskId=92mw88JRpJUsoADJuGyB&template=sanity-io%2Fsanity-template-kitchen-sink
+Learn how to use nodes for pages?? 6 circles on homepage. Users can add more.
+then when know sanity better, create a video section in the digfital garden that contains embedded YT videos.
+
 finish serverless function --> fauna:
 install this: https://github.com/jlengstorf/jamstack-registration and get ti working
 modewl that in my code. If need be just put "app" into a git repo, and connect that to netlify instead. Do that until confident with all this.
@@ -9,20 +13,8 @@ email icon --> modal
   http://perth.co.uk/contact-us/
   http://perth.co.uk/get-involved/
 
-
-Learn how to use nodes for pages, and loop over them for the 6 circles on the homepage:
-this one? - https://www.youtube.com/watch?v=kzWIUX3CpuI&list=PLE8UH9yEJFs6xzS4u_NZHpq2KBWAy0DcU&index=275
-  Digital Garden
-  Resources
-  What's Happening
-  Training
-  About Plus
-  Get Involved
-
-
 Misc fixes
 ==========
-get a better Susan pic on homepage
 add the lines either side of section headings - like "Latest News" on file:///C:/Users/Stuart/Code//notes/Inspiration/SmartBox.html
 put sort into util
 Change iPad feature descriptions
@@ -33,11 +25,9 @@ sticky footer not working in live
 add 2 new garden types - videos and short stories. Change "stories" to "personal stories"
 
 
-Tuesday
-======
 news items pages
 ================
-sanity default? check tutorial
+sanity default? check kitchen sink project
 
 activities pages
 ================
