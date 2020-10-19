@@ -29,17 +29,19 @@ const ContactUs = () => {
       </p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form name="contact"
+            method="POST"
+            action="/contact-submitted"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+          >
+            <input type="hidden" name="bot-field" /> <input type="hidden" name="form-name" value="contact" />
+
             <div>
               <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">Name</label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <input id="name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
-              </div>
-            </div>
-            <div className="sm:col-span-2">
-              <label htmlFor="company" className="block text-sm font-medium leading-5 text-gray-700">Company</label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <input id="company" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
               </div>
             </div>
             <div className="sm:col-span-2">
@@ -49,51 +51,15 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="sm:col-span-2">
-              <label htmlFor="phone_number" className="block text-sm font-medium leading-5 text-gray-700">Phone Number</label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 flex items-center">
-                  <select aria-label="Country" className="form-select h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 transition ease-in-out duration-150">
-                    <option>US</option>
-                    <option>CA</option>
-                    <option>EU</option>
-                  </select>
-                </div>
-                <input id="phone_number" className="form-input py-3 px-4 block w-full pl-20 transition ease-in-out duration-150" placeholder="+1 (555) 987-6543" />
-              </div>
-            </div>
-            <div className="sm:col-span-2">
               <label htmlFor="message" className="block text-sm font-medium leading-5 text-gray-700">Message</label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <textarea id="message" rows={4} className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150" defaultValue={""} />
               </div>
             </div>
             <div className="sm:col-span-2">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  {/*
-          Simple toggle
-
-          On: "bg-indigo-600", Off: "bg-gray-200"
-        */}
-                  <span role="checkbox" tabIndex={0} aria-checked="false" className="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:shadow-outline">
-                    {/* On: "translate-x-5", Off: "translate-x-0" */}
-                    <span aria-hidden="true" className="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200" />
-                  </span>
-                </div>
-                <div className="ml-3">
-                  <p className="text-base leading-6 text-gray-500">
-                    By selecting this, you agree to the
-                <a href="#" className="font-medium text-gray-700 underline">Privacy Policy</a>
-                and
-                <a href="#" className="font-medium text-gray-700 underline">Cookie Policy</a>.
-              </p>
-                </div>
-              </div>
-            </div>
-            <div className="sm:col-span-2">
               <span className="w-full inline-flex rounded-md shadow-sm">
-                <button type="button" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-                  Let's talk
+                <button type="button" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal active:bg-teal-700 transition ease-in-out duration-150">
+                  Submit
             </button>
               </span>
             </div>
